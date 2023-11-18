@@ -54,14 +54,94 @@
 		007822432B089F8F008F0E17 /* Carrot-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				007822442B089F8F008F0E17 /* AppDelegate.swift */,
-				007822462B089F8F008F0E17 /* SceneDelegate.swift */,
-				007822482B089F8F008F0E17 /* ViewController.swift */,
-				0078224D2B089F90008F0E17 /* Assets.xcassets */,
-				0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */,
+				007822582B08A1EF008F0E17 /* Application */,
+				007822592B08A1F9008F0E17 /* Data */,
+				0078225A2B08A202008F0E17 /* Global */,
+				0078225B2B08A209008F0E17 /* Network */,
+				0078225C2B08A214008F0E17 /* Presentation */,
+				0078225D2B08A21F008F0E17 /* Resource */,
 				007822522B089F90008F0E17 /* Info.plist */,
 			);
 			path = "Carrot-iOS";
+			sourceTree = "<group>";
+		};
+		007822582B08A1EF008F0E17 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				007822442B089F8F008F0E17 /* AppDelegate.swift */,
+				007822462B089F8F008F0E17 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		007822592B08A1F9008F0E17 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0078225A2B08A202008F0E17 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				0078225F2B08A268008F0E17 /* Constant */,
+				007822602B08A272008F0E17 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		0078225B2B08A209008F0E17 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				007822612B08A286008F0E17 /* Foundation */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0078225C2B08A214008F0E17 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				007822622B08A29D008F0E17 /* Base */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0078225D2B08A21F008F0E17 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0078224D2B089F90008F0E17 /* Assets.xcassets */,
+				0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0078225F2B08A268008F0E17 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		007822602B08A272008F0E17 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		007822612B08A286008F0E17 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		007822622B08A29D008F0E17 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				007822482B089F8F008F0E17 /* ViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
