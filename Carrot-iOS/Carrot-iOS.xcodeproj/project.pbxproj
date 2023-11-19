@@ -44,6 +44,10 @@
 		D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475DE2B0A6AFA0098432F /* UITextField+.swift */; };
 		D23475E12B0A6B070098432F /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475E02B0A6B070098432F /* UIView+.swift */; };
 		D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475E22B0A6B180098432F /* UIViewController+.swift */; };
+		D23475E62B0A6B5D0098432F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D23475E52B0A6B5D0098432F /* SnapKit */; };
+		D23475E92B0A6B660098432F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D23475E82B0A6B660098432F /* Then */; };
+		D23475EC2B0A6B7D0098432F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EB2B0A6B7D0098432F /* Moya */; };
+		D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EE2B0A6B890098432F /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */,
+				D23475E62B0A6B5D0098432F /* SnapKit in Frameworks */,
+				D23475E92B0A6B660098432F /* Then in Frameworks */,
+				D23475EC2B0A6B7D0098432F /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +440,12 @@
 			dependencies = (
 			);
 			name = "Carrot-iOS";
+			packageProductDependencies = (
+				D23475E52B0A6B5D0098432F /* SnapKit */,
+				D23475E82B0A6B660098432F /* Then */,
+				D23475EB2B0A6B7D0098432F /* Moya */,
+				D23475EE2B0A6B890098432F /* Kingfisher */,
+			);
 			productName = "Carrot-iOS";
 			productReference = 007822412B089F8F008F0E17 /* Carrot-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -460,6 +474,12 @@
 				Base,
 			);
 			mainGroup = 007822382B089F8F008F0E17;
+			packageReferences = (
+				D23475E42B0A6B5D0098432F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D23475E72B0A6B660098432F /* XCRemoteSwiftPackageReference "Then" */,
+				D23475EA2B0A6B7D0098432F /* XCRemoteSwiftPackageReference "Moya" */,
+				D23475ED2B0A6B890098432F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 007822422B089F8F008F0E17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -735,6 +755,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D23475E42B0A6B5D0098432F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		D23475E72B0A6B660098432F /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D23475EA2B0A6B7D0098432F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D23475ED2B0A6B890098432F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D23475E52B0A6B5D0098432F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23475E42B0A6B5D0098432F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D23475E82B0A6B660098432F /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23475E72B0A6B660098432F /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		D23475EB2B0A6B7D0098432F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23475EA2B0A6B7D0098432F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		D23475EE2B0A6B890098432F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D23475ED2B0A6B890098432F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 007822392B089F8F008F0E17 /* Project object */;
 }
