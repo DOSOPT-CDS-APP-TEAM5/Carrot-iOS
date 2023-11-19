@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1512B0A6C83002D06A5 /* UIColor+.swift */; };
 		007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822442B089F8F008F0E17 /* AppDelegate.swift */; };
 		007822472B089F8F008F0E17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822462B089F8F008F0E17 /* SceneDelegate.swift */; };
 		007822492B089F8F008F0E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822482B089F8F008F0E17 /* ViewController.swift */; };
@@ -26,7 +27,6 @@
 		007BACA92B08A703005A34C3 /* 19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA82B08A703005A34C3 /* 19.swift */; };
 		007BACAB2B08A711005A34C3 /* 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAA2B08A711005A34C3 /* 7.swift */; };
 		007BACAD2B08A725005A34C3 /* 5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAC2B08A725005A34C3 /* 5.swift */; };
-		007BACAF2B08A72A005A34C3 /* 6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAE2B08A72A005A34C3 /* 6.swift */; };
 		007BACB52B08A78B005A34C3 /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB42B08A78B005A34C3 /* 1.swift */; };
 		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
@@ -34,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0057F1512B0A6C83002D06A5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		007822412B089F8F008F0E17 /* Carrot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		007822442B089F8F008F0E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007822462B089F8F008F0E17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		007BACA82B08A703005A34C3 /* 19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.swift; sourceTree = "<group>"; };
 		007BACAA2B08A711005A34C3 /* 7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
 		007BACAC2B08A725005A34C3 /* 5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5.swift; sourceTree = "<group>"; };
-		007BACAE2B08A72A005A34C3 /* 6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6.swift; sourceTree = "<group>"; };
 		007BACB42B08A78B005A34C3 /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
 		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		007822602B08A272008F0E17 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				007BACAE2B08A72A005A34C3 /* 6.swift */,
+				0057F1512B0A6C83002D06A5 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -435,7 +435,6 @@
 				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				007BAC952B08A6B4005A34C3 /* 9.swift in Sources */,
-				007BACAF2B08A72A005A34C3 /* 6.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
 				007BACA32B08A6ED005A34C3 /* 16.swift in Sources */,
@@ -447,6 +446,7 @@
 				007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,
 				007BAC972B08A6BD005A34C3 /* 10.swift in Sources */,
+				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
 				007822472B089F8F008F0E17 /* SceneDelegate.swift in Sources */,
 				007BAC932B08A6A5005A34C3 /* 8.swift in Sources */,
