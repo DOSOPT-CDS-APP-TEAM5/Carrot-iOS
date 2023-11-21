@@ -34,6 +34,7 @@
 		D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5C2B0C6538007ECC1B /* MainTopView.swift */; };
 		D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */; };
 		D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */; };
+		D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
 		D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CA2B0A693A0098432F /* UIApplication+.swift */; };
 		D23475CD2B0A69450098432F /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CC2B0A69450098432F /* UIButton+.swift */; };
@@ -84,6 +85,7 @@
 		D206CA5C2B0C6538007ECC1B /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
 		D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionViewCell.swift; sourceTree = "<group>"; };
 		D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionView.swift; sourceTree = "<group>"; };
+		D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionFooterView.swift; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D23475CA2B0A693A0098432F /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D23475CC2B0A69450098432F /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		007822642B08A487008F0E17 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D206CA622B0C6E5F007ECC1B /* HeaderFooterView */,
 				D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */,
 			);
 			path = Cell;
@@ -416,6 +419,14 @@
 			path = AssistantView;
 			sourceTree = "<group>";
 		};
+		D206CA622B0C6E5F007ECC1B /* HeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */,
+			);
+			path = HeaderFooterView;
+			sourceTree = "<group>";
+		};
 		D23475C32B0A68E70098432F /* Foundation+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +542,7 @@
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
+				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,

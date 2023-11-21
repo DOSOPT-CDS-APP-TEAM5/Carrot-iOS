@@ -17,7 +17,7 @@ final class MainView: UIView {
     private let topView = MainTopView()
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    private let moreClubView = UIView()
+    let moreClubView = MainMoreClubCollectionView()
     private let categoryView = UIView()
     private let postView = UIView()
     
