@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class ClubViewController: UIViewController {
+final class ClubViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -20,6 +20,7 @@ class ClubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .white
         setUI()
     }
