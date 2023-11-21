@@ -16,8 +16,6 @@
 		0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0078224D2B089F90008F0E17 /* Assets.xcassets */; };
 		007822512B089F90008F0E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */; };
 		007BAC932B08A6A5005A34C3 /* 8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC922B08A6A5005A34C3 /* 8.swift */; };
-		007BAC952B08A6B4005A34C3 /* 9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC942B08A6B4005A34C3 /* 9.swift */; };
-		007BAC972B08A6BD005A34C3 /* 10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC962B08A6BD005A34C3 /* 10.swift */; };
 		007BAC992B08A6CC005A34C3 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC982B08A6CC005A34C3 /* 11.swift */; };
 		007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9A2B08A6D0005A34C3 /* 12.swift */; };
 		007BAC9D2B08A6D4005A34C3 /* 13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9C2B08A6D4005A34C3 /* 13.swift */; };
@@ -32,6 +30,8 @@
 		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
+		D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA572B0C5B9E007ECC1B /* MainViewController.swift */; };
+		D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA592B0C5EE1007ECC1B /* MainView.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
 		D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CA2B0A693A0098432F /* UIApplication+.swift */; };
 		D23475CD2B0A69450098432F /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CC2B0A69450098432F /* UIButton+.swift */; };
@@ -64,8 +64,6 @@
 		007822502B089F90008F0E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007822522B089F90008F0E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		007BAC922B08A6A5005A34C3 /* 8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
-		007BAC942B08A6B4005A34C3 /* 9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9.swift; sourceTree = "<group>"; };
-		007BAC962B08A6BD005A34C3 /* 10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10.swift; sourceTree = "<group>"; };
 		007BAC982B08A6CC005A34C3 /* 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
 		007BAC9A2B08A6D0005A34C3 /* 12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		007BAC9C2B08A6D4005A34C3 /* 13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 13.swift; sourceTree = "<group>"; };
@@ -80,6 +78,8 @@
 		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
+		D206CA572B0C5B9E007ECC1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D206CA592B0C5EE1007ECC1B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D23475CA2B0A693A0098432F /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D23475CC2B0A69450098432F /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		007822652B08A48D008F0E17 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC942B08A6B4005A34C3 /* 9.swift */,
+				D206CA592B0C5EE1007ECC1B /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 		007822662B08A494008F0E17 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC962B08A6BD005A34C3 /* 10.swift */,
+				D206CA572B0C5B9E007ECC1B /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -515,7 +515,6 @@
 				007BACB92B08A79A005A34C3 /* 3.swift in Sources */,
 				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
-				007BAC952B08A6B4005A34C3 /* 9.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
@@ -533,10 +532,11 @@
 				007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,
 				D23475D52B0A69B90098432F /* UILabel+.swift in Sources */,
+				D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */,
 				D23475D72B0A69C70098432F /* UINavagationController+.swift in Sources */,
-				007BAC972B08A6BD005A34C3 /* 10.swift in Sources */,
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
+				D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
 				D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */,
