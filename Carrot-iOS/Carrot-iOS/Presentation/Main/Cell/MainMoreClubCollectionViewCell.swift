@@ -47,11 +47,20 @@ final class MainWeatherCollectionViewCell: UICollectionViewCell {
     }
     
     private func hieararchy() {
-        
+        contentView.addSubviews(clubImageView, clubNameLabel)
     }
     
     private func layout() {
+        clubImageView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(6)
+            $0.height.equalTo(54)
+        }
         
+        clubNameLabel.snp.makeConstraints {
+            $0.top.equalTo(clubImageView.snp.bottom).offset(6)
+            $0.centerX.equalToSuperview()
+        }
     }
     
     func dataBind() {
