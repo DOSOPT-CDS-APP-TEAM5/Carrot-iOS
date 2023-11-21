@@ -60,7 +60,7 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case rootView.moreClubView:
-            return 10
+            return MainClubModel.clubList.count
         case rootView.categoryView:
             return MainCategoryModel.categoryList.count
         case rootView.postView:
@@ -74,6 +74,7 @@ extension MainViewController: UICollectionViewDataSource {
         switch collectionView {
         case rootView.moreClubView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainMoreClubCollectionViewCell.cellIdentifier, for: indexPath) as? MainMoreClubCollectionViewCell else { return UICollectionViewCell() }
+            cell.dataBind(MainClubModel.clubList[indexPath.item])
             return cell
         case rootView.categoryView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MainCategoryCollectionViewCell else { return UICollectionViewCell() }
