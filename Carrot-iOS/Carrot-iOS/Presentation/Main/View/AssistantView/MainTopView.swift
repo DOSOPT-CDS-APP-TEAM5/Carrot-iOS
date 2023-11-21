@@ -47,8 +47,8 @@ final class MainTopView: UIView {
         
         iconStackView.do {
             $0.axis = .horizontal
-            $0.distribution = .fillEqually
-            $0.spacing = 0
+            $0.distribution = .equalSpacing
+            $0.spacing = 12
         }
     }
     
@@ -80,7 +80,8 @@ final class MainTopView: UIView {
         iconStackView.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(15)
             $0.width.equalTo(108)
-            $0.height.equalTo(36)
+            $0.centerY.equalToSuperview()
+            $0.top.equalToSuperview().offset(6)
         }
     }
 }

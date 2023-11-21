@@ -52,6 +52,4 @@ extension MainViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
     }
-    
-    
 }

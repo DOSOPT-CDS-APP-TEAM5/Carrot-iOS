@@ -18,6 +18,7 @@ final class MainView: UIView {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     let moreClubView = MainMoreClubCollectionView()
+    let moreClubFooterView = MainMoreClubFooterView()
     private let categoryView = UIView()
     private let postView = UIView()
     
@@ -45,7 +46,6 @@ final class MainView: UIView {
         scrollView.do {
             $0.alwaysBounceVertical = true
         }
-        moreClubView.backgroundColor = .yellow
         categoryView.backgroundColor = .red
         postView.backgroundColor = .blue
     }
@@ -55,6 +55,7 @@ final class MainView: UIView {
         scrollView.addSubview(contentView)
         contentView.addSubviews(
             moreClubView,
+            moreClubFooterView,
             categoryView,
             postView
         )
@@ -81,14 +82,23 @@ final class MainView: UIView {
         
         moreClubView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide).offset(50)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(163)
+            $0.leading.equalToSuperview().offset(15)
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(100)
         }
+        
+        moreClubFooterView.snp.makeConstraints {
+            $0.top.equalTo(moreClubView.snp.bottom).offset(17)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(48)
+        }
+        
         categoryView.snp.makeConstraints {
-            $0.top.equalTo(moreClubView.snp.bottom).offset(8)
+            $0.top.equalTo(moreClubFooterView.snp.bottom).offset(8)
             $0.width.equalToSuperview()
             $0.height.equalTo(349)
         }
+        
         postView.snp.makeConstraints {
             $0.top.equalTo(categoryView.snp.bottom)
             $0.width.equalToSuperview()

@@ -413,6 +413,7 @@
 		D206CA5B2B0C6509007ECC1B /* AssistantView */ = {
 			isa = PBXGroup;
 			children = (
+				D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */,
 				D206CA5C2B0C6538007ECC1B /* MainTopView.swift */,
 				D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */,
 			);
@@ -422,7 +423,6 @@
 		D206CA622B0C6E5F007ECC1B /* HeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */,
 			);
 			path = HeaderFooterView;
 			sourceTree = "<group>";

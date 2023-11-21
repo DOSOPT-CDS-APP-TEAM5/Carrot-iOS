@@ -45,12 +45,9 @@ final class MainMoreClubCollectionView: UICollectionView {
             )
             layout.minimumLineSpacing = 13
             layout.minimumInteritemSpacing = 0
-            layout.footerReferenceSize = CGSize(
-                width: 375,
-                height: 56
-            )
             
             $0.collectionViewLayout = layout
+            $0.showsHorizontalScrollIndicator = false
             $0.backgroundColor = .clear
         }
     }
