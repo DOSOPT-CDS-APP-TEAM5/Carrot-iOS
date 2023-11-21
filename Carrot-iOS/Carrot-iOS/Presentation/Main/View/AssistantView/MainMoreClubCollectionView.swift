@@ -12,11 +12,6 @@ import Then
 
 final class MainMoreClubCollectionView: UICollectionView {
     
-    // MARK: - Properties
-    
-    
-    // MARK: - UI Components
-    
     // MARK: - Life Cycle
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -34,10 +29,26 @@ final class MainMoreClubCollectionView: UICollectionView {
     // MARK: - Custom Method
     
     private func register() {
+        self.register(
+            MainMoreClubCollectionViewCell.self,
+            forCellWithReuseIdentifier: MainMoreClubCollectionViewCell.cellIdentifier
+        )
     }
     
     private func style() {
-        
+        self.do {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(
+                width: 66,
+                height: 99
+            )
+            layout.minimumLineSpacing = 13
+            layout.minimumInteritemSpacing = 0
+            
+            $0.collectionViewLayout = layout
+            $0.backgroundColor = .clear
+        }
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class MainWeatherCollectionViewCell: UICollectionViewCell {
+final class MainMoreClubCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
