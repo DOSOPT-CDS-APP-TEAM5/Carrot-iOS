@@ -14,6 +14,7 @@ final class MainView: UIView {
     
     // MARK: - Properties
     
+    private let topView = MainTopView()
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     private let moreClubView = UIView()
@@ -42,14 +43,14 @@ final class MainView: UIView {
         scrollView.do {
             $0.alwaysBounceVertical = true
         }
-        
+        topView.backgroundColor = .green
         moreClubView.backgroundColor = .yellow
         categoryView.backgroundColor = .red
         postView.backgroundColor = .blue
     }
     
     private func hieararchy() {
-        self.addSubview(scrollView)
+        self.addSubviews(topView, scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(
             moreClubView,
@@ -59,8 +60,14 @@ final class MainView: UIView {
     }
     
     private func layout() {
+        topView.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(5)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(36)
+        }
+        
         scrollView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.top.equalTo(topView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
         }

@@ -16,9 +16,6 @@ final class MainViewController: UIViewController {
     
     private let rootView = MainView()
     
-    private let neighborhoodButton = UIBarButtonItem()
-    private let iconStackView = UIBarButtonItem()
-    
     //MARK: - Life Cycle
     
     override func loadView() {
@@ -28,27 +25,5 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        style()
-    }
-    
-    private func style() {
-        navigationItem.do {
-            $0.title = "날씨"
-            $0.rightBarButtonItem = neighborhoodButton
-            $0.leftBarButtonItem = iconStackView
-        }
-        
-        self.navigationController?.navigationBar.do {
-            $0.barTintColor = .black.withAlphaComponent(0.75)
-            $0.prefersLargeTitles = true
-            $0.titleTextAttributes = [.foregroundColor: UIColor.white]
-        }
-        
-        neighborhoodButton.do {
-            $0.tintColor = .red
-        }
-        
-        iconStackView.tintColor = .yellow
-    }
-    
+    }    
 }
