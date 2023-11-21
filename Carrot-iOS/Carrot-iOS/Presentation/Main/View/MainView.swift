@@ -20,7 +20,7 @@ final class MainView: UIView {
     let moreClubView = MainMoreClubCollectionView()
     let moreClubFooterView = MainMoreClubFooterView()
     let categoryView = MainCategoryCollectionView()
-    private let postView = UIView()
+    let postView = MainPostCollectionView()
     
     // MARK: - UI Components
     
@@ -46,7 +46,6 @@ final class MainView: UIView {
         scrollView.do {
             $0.alwaysBounceVertical = true
         }
-        postView.backgroundColor = .blue
     }
     
     private func hieararchy() {
@@ -74,13 +73,12 @@ final class MainView: UIView {
         }
         
         contentView.snp.makeConstraints {
-            $0.edges.equalTo(scrollView.contentLayoutGuide)
-            $0.width.equalTo(scrollView.frameLayoutGuide)
-            $0.height.equalTo(scrollView.frameLayoutGuide).priority(.low)
+            $0.edges.equalTo(scrollView)
+            $0.width.equalTo(scrollView)
         }
         
         moreClubView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(50)
+            $0.top.equalTo(contentView).offset(15)
             $0.leading.equalToSuperview().offset(15)
             $0.trailing.equalToSuperview()
             $0.height.equalTo(100)
@@ -88,7 +86,7 @@ final class MainView: UIView {
         
         moreClubFooterView.snp.makeConstraints {
             $0.top.equalTo(moreClubView.snp.bottom).offset(17)
-            $0.width.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(56)
         }
         
@@ -101,10 +99,9 @@ final class MainView: UIView {
         
         postView.snp.makeConstraints {
             $0.top.equalTo(categoryView.snp.bottom)
-            $0.width.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+             $0.height.equalTo(1270)
+            $0.bottom.equalToSuperview().offset(-15) // 하단 여백 추가
         }
-        
     }
 }
-

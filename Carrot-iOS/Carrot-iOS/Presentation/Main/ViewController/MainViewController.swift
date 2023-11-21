@@ -34,6 +34,9 @@ final class MainViewController: UIViewController {
         
         rootView.categoryView.dataSource = self
         rootView.categoryView.delegate = self
+        
+        rootView.postView.dataSource = self
+        rootView.postView.delegate = self
     }
 }
 
@@ -46,6 +49,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
             let tmpLabel : UILabel = UILabel()
             tmpLabel.text = MainCategoryModel.categoryList[indexPath.item].text
             return CGSize(width: Int(tmpLabel.intrinsicContentSize.width) + 13, height: 33)
+        case rootView.postView:
+            return CGSize(width: 376, height: 127)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -56,8 +61,12 @@ extension MainViewController: UICollectionViewDataSource {
         switch collectionView {
         case rootView.moreClubView:
             return 10
-        default:
+        case rootView.categoryView:
             return MainCategoryModel.categoryList.count
+        case rootView.postView:
+            return 10
+        default:
+            return 0
         }
     }
     
@@ -69,6 +78,9 @@ extension MainViewController: UICollectionViewDataSource {
         case rootView.categoryView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCategoryCollectionViewCell.cellIdentifier, for: indexPath) as? MainCategoryCollectionViewCell else { return UICollectionViewCell() }
             cell.categoryLabel.text =  MainCategoryModel.categoryList[indexPath.item].text
+            return cell
+        case rootView.postView:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPostCollectionViewCell.cellIdentifier, for: indexPath) as? MainPostCollectionViewCell else { return UICollectionViewCell() }
             return cell
         default:
             return UICollectionViewCell()
