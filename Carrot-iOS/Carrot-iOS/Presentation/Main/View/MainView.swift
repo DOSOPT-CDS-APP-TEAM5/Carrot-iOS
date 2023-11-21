@@ -21,6 +21,7 @@ final class MainView: UIView {
     let moreClubFooterView = MainMoreClubFooterView()
     let categoryView = MainCategoryCollectionView()
     let postView = MainPostCollectionView()
+    private let tabbarView = UIImageView(image: Image.tabbar)
     
     // MARK: - UI Components
     
@@ -49,7 +50,7 @@ final class MainView: UIView {
     }
     
     private func hieararchy() {
-        self.addSubviews(topView, scrollView)
+        self.addSubviews(topView, scrollView, tabbarView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(
             moreClubView,
@@ -69,7 +70,7 @@ final class MainView: UIView {
         scrollView.snp.makeConstraints {
             $0.top.equalTo(topView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(85)
         }
         
         contentView.snp.makeConstraints {
@@ -102,6 +103,12 @@ final class MainView: UIView {
             $0.leading.trailing.equalToSuperview()
              $0.height.equalTo(1270)
             $0.bottom.equalToSuperview().offset(-15) // 하단 여백 추가
+        }
+        
+        tabbarView.snp.makeConstraints {
+            $0.bottom.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(85)
         }
     }
 }
