@@ -1,5 +1,5 @@
 //
-//  MainMoreClubCollectionView.swift
+//  MainCategoryCollectionView.swift
 //  Carrot-iOS
 //
 //  Created by 류희재 on 2023/11/21.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class MainMoreClubCollectionView: UICollectionView {
+final class MainCategoryCollectionView: UICollectionView {
     
     // MARK: - Life Cycle
     
@@ -30,8 +30,8 @@ final class MainMoreClubCollectionView: UICollectionView {
     
     private func register() {
         self.register(
-            MainMoreClubCollectionViewCell.self,
-            forCellWithReuseIdentifier: MainMoreClubCollectionViewCell.cellIdentifier
+            MainCategoryCollectionViewCell.self,
+            forCellWithReuseIdentifier: MainCategoryCollectionViewCell.cellIdentifier
         )
     }
     
@@ -39,8 +39,8 @@ final class MainMoreClubCollectionView: UICollectionView {
         self.do {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 13
-            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 0
+            layout.minimumInteritemSpacing = 8
             
             $0.collectionViewLayout = layout
             $0.showsHorizontalScrollIndicator = false
@@ -48,3 +48,9 @@ final class MainMoreClubCollectionView: UICollectionView {
         }
     }
 }
+
+
+
+
+
+

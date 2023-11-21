@@ -19,7 +19,7 @@ final class MainView: UIView {
     private let contentView = UIView()
     let moreClubView = MainMoreClubCollectionView()
     let moreClubFooterView = MainMoreClubFooterView()
-    private let categoryView = UIView()
+    let categoryView = MainCategoryCollectionView()
     private let postView = UIView()
     
     // MARK: - UI Components
@@ -46,7 +46,6 @@ final class MainView: UIView {
         scrollView.do {
             $0.alwaysBounceVertical = true
         }
-        categoryView.backgroundColor = .red
         postView.backgroundColor = .blue
     }
     
@@ -90,13 +89,14 @@ final class MainView: UIView {
         moreClubFooterView.snp.makeConstraints {
             $0.top.equalTo(moreClubView.snp.bottom).offset(17)
             $0.width.equalToSuperview()
-            $0.height.equalTo(48)
+            $0.height.equalTo(56)
         }
         
         categoryView.snp.makeConstraints {
-            $0.top.equalTo(moreClubFooterView.snp.bottom).offset(8)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(349)
+            $0.top.equalTo(moreClubFooterView.snp.bottom)
+            $0.leading.equalToSuperview().offset(15)
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(56)
         }
         
         postView.snp.makeConstraints {

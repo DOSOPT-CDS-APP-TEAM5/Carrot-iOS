@@ -15,6 +15,7 @@ final class MainMoreClubFooterView: UIView {
     //MARK: - UI Components
     
     private let separator = UIView()
+    private let separator2 = UIView()
     private let searchClubIcon = UIImageView(image: Image.searchclub)
     private let titleLabel = UILabel()
     private let navigationRightIcon = UIImageView(image: Image.navigationRight)
@@ -32,9 +33,8 @@ final class MainMoreClubFooterView: UIView {
     }
     
     private func style() {
-        separator.do {
-            $0.backgroundColor = .grey100
-        }
+        separator.backgroundColor = .grey100
+        separator2.backgroundColor = .grey100
         
         titleLabel.do {
             $0.text = "모임 더 둘러보기"
@@ -49,7 +49,8 @@ final class MainMoreClubFooterView: UIView {
             separator,
             searchClubIcon,
             titleLabel,
-            navigationRightIcon
+            navigationRightIcon,
+            separator2
         )
     }
     
@@ -62,20 +63,26 @@ final class MainMoreClubFooterView: UIView {
         
         searchClubIcon.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(121)
-            $0.centerY.equalToSuperview()
+            $0.top.equalToSuperview().offset(16)
             $0.width.equalTo(16)
             $0.height.equalTo(13)
         }
         
         titleLabel.snp.makeConstraints {
             $0.leading.equalTo(searchClubIcon.snp.trailing).offset(13)
-            $0.centerY.equalToSuperview()
+            $0.top.equalToSuperview().offset(16)
         }
         
         navigationRightIcon.snp.makeConstraints {
             $0.leading.equalTo(titleLabel.snp.trailing).offset(2)
-            $0.centerY.equalToSuperview()
+            $0.top.equalToSuperview().offset(16)
             $0.size.equalTo(16)
+        }
+        
+        separator2.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(8)
+            $0.width.equalToSuperview()
+            $0.height.equalTo(8)
         }
     }
 }
