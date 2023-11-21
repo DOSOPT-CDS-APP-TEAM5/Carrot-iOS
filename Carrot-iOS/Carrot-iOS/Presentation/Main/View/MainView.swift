@@ -40,10 +40,11 @@ final class MainView: UIView {
     // MARK: - Custom Method
     
     private func style() {
+        self.backgroundColor = .carrotWhite
+        
         scrollView.do {
             $0.alwaysBounceVertical = true
         }
-        topView.backgroundColor = .green
         moreClubView.backgroundColor = .yellow
         categoryView.backgroundColor = .red
         postView.backgroundColor = .blue
@@ -81,7 +82,7 @@ final class MainView: UIView {
         moreClubView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide).offset(50)
             $0.width.equalToSuperview()
-            $0.height.equalTo(222)
+            $0.height.equalTo(163)
         }
         categoryView.snp.makeConstraints {
             $0.top.equalTo(moreClubView.snp.bottom).offset(8)

@@ -15,7 +15,6 @@
 		007822492B089F8F008F0E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822482B089F8F008F0E17 /* ViewController.swift */; };
 		0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0078224D2B089F90008F0E17 /* Assets.xcassets */; };
 		007822512B089F90008F0E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */; };
-		007BAC932B08A6A5005A34C3 /* 8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC922B08A6A5005A34C3 /* 8.swift */; };
 		007BAC992B08A6CC005A34C3 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC982B08A6CC005A34C3 /* 11.swift */; };
 		007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9A2B08A6D0005A34C3 /* 12.swift */; };
 		007BAC9D2B08A6D4005A34C3 /* 13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9C2B08A6D4005A34C3 /* 13.swift */; };
@@ -33,6 +32,8 @@
 		D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA572B0C5B9E007ECC1B /* MainViewController.swift */; };
 		D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA592B0C5EE1007ECC1B /* MainView.swift */; };
 		D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5C2B0C6538007ECC1B /* MainTopView.swift */; };
+		D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */; };
+		D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
 		D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CA2B0A693A0098432F /* UIApplication+.swift */; };
 		D23475CD2B0A69450098432F /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CC2B0A69450098432F /* UIButton+.swift */; };
@@ -64,7 +65,6 @@
 		0078224D2B089F90008F0E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007822502B089F90008F0E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007822522B089F90008F0E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007BAC922B08A6A5005A34C3 /* 8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
 		007BAC982B08A6CC005A34C3 /* 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
 		007BAC9A2B08A6D0005A34C3 /* 12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		007BAC9C2B08A6D4005A34C3 /* 13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 13.swift; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		D206CA572B0C5B9E007ECC1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D206CA592B0C5EE1007ECC1B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D206CA5C2B0C6538007ECC1B /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
+		D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionViewCell.swift; sourceTree = "<group>"; };
+		D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionView.swift; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D23475CA2B0A693A0098432F /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D23475CC2B0A69450098432F /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -249,7 +251,7 @@
 		007822642B08A487008F0E17 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC922B08A6A5005A34C3 /* 8.swift */,
+				D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -409,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				D206CA5C2B0C6538007ECC1B /* MainTopView.swift */,
+				D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */,
 			);
 			path = AssistantView;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
 				007BAC9D2B08A6D4005A34C3 /* 13.swift in Sources */,
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
+				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
 				007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */,
 				007BACA72B08A6FB005A34C3 /* 18.swift in Sources */,
@@ -551,10 +555,10 @@
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
 				D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */,
+				D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */,
 				D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */,
 				007822472B089F8F008F0E17 /* SceneDelegate.swift in Sources */,
 				D23475E12B0A6B070098432F /* UIView+.swift in Sources */,
-				007BAC932B08A6A5005A34C3 /* 8.swift in Sources */,
 				D23475D92B0A69D30098432F /* UIStackView+.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				007BACB52B08A78B005A34C3 /* 1.swift in Sources */,
