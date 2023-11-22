@@ -68,8 +68,9 @@ final class MainMoreClubCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func dataBind() {
-        
+    func dataBind(_ data: MainClubModel) {
+        clubImageView.image = data.image
+        clubNameLabel.text = data.title
     }
 }
 

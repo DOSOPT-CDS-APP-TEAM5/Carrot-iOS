@@ -42,13 +42,21 @@ public enum Image {
     
     //MARK: - Dummy
     
-    static let dummyMain = UIImage(named: "img_2")
-    static let dummyClub1 = UIImage(named: "img_8")
-    static let dummyClub2 = UIImage(named: "img_18")
-    static let dummyClub3 = UIImage(named: "img_14")
-    static let dummyDetail1 = UIImage(named: "img_27")
-    static let dummyDetail2 = UIImage(named: "img_28")
-    static let dummyDetail3 = UIImage(named: "img_29")
-    static let dummySignUp = UIImage(named: "Group 45")
+    static let dummyMain1 = UIImage(named: "img_1")!
+    static let dummyMain2 = UIImage(named: "img_2")!
+    static let dummyMain3 = UIImage(named: "img_3")!
+    static let dummyMain4 = UIImage(named: "img_4")!
+    static let dummyMain5 = UIImage(named: "img_5")!
+    static let dummyMain6 = UIImage(named: "img_6")!
+    static let dummyMain7 = UIImage(named: "img_7")!
     
+    static let dummyClub1 = UIImage(named: "img_8")!
+    static let dummyClub2 = UIImage(named: "img_18")!
+    static let dummyClub3 = UIImage(named: "img_14")!
+    static let dummyDetail1 = UIImage(named: "img_27")!
+    static let dummyDetail2 = UIImage(named: "img_28")!
+    static let dummyDetail3 = UIImage(named: "img_29")!
+    static let dummySignUp = UIImage(named: "Group 45")!
+    
+    static let tabbar = UIImage(named: "tabbar")!
 }
