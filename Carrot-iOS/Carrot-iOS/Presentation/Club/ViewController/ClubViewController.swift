@@ -14,7 +14,10 @@ final class ClubViewController: UIViewController {
     
     // MARK: - Properties
     
-    let searchBar = UISearchBar()
+    private let profileButton = UIBarButtonItem(image: UIImage(named: "ic_profile"), style: .plain, target: self, action: nil)
+    private let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+    private let alarmButton = UIBarButtonItem(image: UIImage(named: "ic_alarm"), style: .plain, target: self, action: nil)
+    private let searchBar = UISearchBar()
     
     // MARK: - View Life Cycle
     
@@ -22,6 +25,7 @@ final class ClubViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        setNavigation()
         setUI()
     }
 
@@ -48,8 +52,30 @@ extension ClubViewController {
             $0.searchTextField.layer.cornerRadius = 5
             $0.searchTextField.layer.masksToBounds = true
         }
+        
+        profileButton.do {
+            $0.imageInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+        }
+        
+        alarmButton.do {
+            $0.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
     }
     
-    private func setLayout() {}
+    private func setLayout() {
+        view.addSubview(searchBar)
+        
+        searchBar.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(90)
+            $0.leading.trailing.equalToSuperview().inset(15)
+        }
+        
+    }
+    
+    private func setNavigation() {
+        navigationItem.rightBarButtonItems = [alarmButton, profileButton]
+        self.navigationController?.navigationBar.topItem?.title = "동천동 모임"
+        self.navigationController?.navigationBar.tintColor = .black
+    }
     
 }
