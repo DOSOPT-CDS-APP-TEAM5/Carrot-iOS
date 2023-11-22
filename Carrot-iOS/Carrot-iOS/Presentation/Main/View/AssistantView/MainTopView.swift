@@ -40,7 +40,7 @@ final class MainTopView: UIView {
     private func style() {
         neighborhoodLabel.do {
             $0.text = "동천동"
-            $0.font = .carrotButton()
+            $0.font = .carrotButton
             $0.textColor = .carrotBlack
             $0.textAlignment = .left
         }

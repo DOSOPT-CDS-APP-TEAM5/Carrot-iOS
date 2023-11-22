@@ -40,7 +40,7 @@ final class MainMoreClubFooterView: UIView {
             $0.text = "모임 더 둘러보기"
             $0.textAlignment = .left
             $0.textColor = .carrotBlack
-            $0.font = .carrotSubtitle()
+            $0.font = .carrotSubtitle
         }
     }
     

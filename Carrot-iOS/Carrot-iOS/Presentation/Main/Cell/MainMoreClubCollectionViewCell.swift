@@ -42,7 +42,7 @@ final class MainMoreClubCollectionViewCell: UICollectionViewCell {
         
         clubNameLabel.do {
             $0.text = "팝송으로 영어 깨부시기"
-            $0.font = .carrotBody()
+            $0.font = .carrotBody
             $0.setLineSpacing(spacing: 7)
             $0.textColor = .carrotBlack
             $0.textAlignment = .center
