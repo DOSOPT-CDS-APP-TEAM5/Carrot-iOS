@@ -26,6 +26,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
+        target()
     }
     
     private func delegate() {
@@ -37,6 +38,25 @@ final class MainViewController: UIViewController {
         
         rootView.postView.dataSource = self
         rootView.postView.delegate = self
+    }
+    
+    private func target() {
+        rootView.floatingButton.addTarget(self, action: #selector(floatingButtonDidTap), for: .touchUpInside)
+    }
+    
+    @objc func floatingButtonDidTap() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.rootView.floatingButton.writeLabel.isHidden.toggle()
+            self.rootView.floatingButton.snp.remakeConstraints {
+                $0.bottom.equalToSuperview().inset(133)
+                $0.trailing.equalToSuperview().inset(15)
+                $0.size.equalTo(48)
+            }
+            self.rootView.floatingButton.stackView.snp.remakeConstraints {
+                $0.center.equalToSuperview()
+                $0.top.leading.equalToSuperview().inset(6)
+            }
+        }, completion: nil)
     }
 }
 
