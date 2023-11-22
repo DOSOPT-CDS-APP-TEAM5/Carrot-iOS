@@ -21,6 +21,9 @@ final class DetailView: UIView {
     private let pageScrollView = UIScrollView()
     private let scrollContentView = UIStackView()
     
+    private let bannerImageView = DetailBannerImageView()
+    private let topView = DetailTopView()
+    
     // MARK: - Life Cycle
     
     override init(frame: CGRect) {
@@ -41,6 +44,11 @@ final class DetailView: UIView {
         self.do {
             $0.backgroundColor = .carrotWhite
         }
+        
+        scrollContentView.do {
+            $0.axis = .vertical
+            $0.alignment = .fill
+        }
     }
     
     private func hieararchy() {
@@ -49,7 +57,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            
+            bannerImageView, topView
         )
     }
     
@@ -57,9 +65,14 @@ final class DetailView: UIView {
         pageScrollView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
         scrollContentView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
+        }
+        
+        topView.snp.makeConstraints {
+            $0.top.equalTo(bannerImageView.snp.bottom).offset(-20)
         }
     }
 }
