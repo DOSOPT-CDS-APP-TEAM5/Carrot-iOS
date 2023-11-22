@@ -26,10 +26,11 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
-        target()
     }
     
     private func delegate() {
+        rootView.scrollView.delegate = self
+        
         rootView.moreClubView.dataSource = self
         rootView.moreClubView.delegate = self
         
@@ -38,25 +39,6 @@ final class MainViewController: UIViewController {
         
         rootView.postView.dataSource = self
         rootView.postView.delegate = self
-    }
-    
-    private func target() {
-        rootView.floatingButton.addTarget(self, action: #selector(floatingButtonDidTap), for: .touchUpInside)
-    }
-    
-    @objc func floatingButtonDidTap() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.rootView.floatingButton.writeLabel.isHidden.toggle()
-            self.rootView.floatingButton.snp.remakeConstraints {
-                $0.bottom.equalToSuperview().inset(133)
-                $0.trailing.equalToSuperview().inset(15)
-                $0.size.equalTo(48)
-            }
-            self.rootView.floatingButton.stackView.snp.remakeConstraints {
-                $0.center.equalToSuperview()
-                $0.top.leading.equalToSuperview().inset(6)
-            }
-        }, completion: nil)
     }
 }
 
@@ -106,5 +88,45 @@ extension MainViewController: UICollectionViewDataSource {
         default:
             return UICollectionViewCell()
         }
+    }
+}
+
+extension MainViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateFloatingButtonLayout(scrollView.contentOffset.y == 0 )
+    }
+}
+
+extension MainViewController {
+    func updateFloatingButtonLayout(_ isTop: Bool) {
+        self.rootView.floatingButton.writeLabel.isHidden = !isTop
+        UIView.animate(withDuration: 0.2, animations: {
+            if isTop {
+                self.rootView.floatingButton.writeLabel.alpha = 1.0
+                self.rootView.floatingButton.snp.remakeConstraints {
+                    $0.bottom.equalToSuperview().inset(133)
+                    $0.trailing.equalToSuperview().inset(15)
+                    $0.width.equalTo(89)
+                    $0.height.equalTo(48)
+                }
+                
+                self.rootView.floatingButton.stackView.snp.remakeConstraints {
+                    $0.leading.trailing.equalToSuperview().inset(13)
+                    $0.top.bottom.equalToSuperview().inset(14)
+                }
+            } else {
+                self.rootView.floatingButton.writeLabel.alpha = 0.0
+                self.rootView.floatingButton.snp.remakeConstraints {
+                    $0.bottom.equalToSuperview().inset(133)
+                    $0.trailing.equalToSuperview().inset(15)
+                    $0.size.equalTo(48)
+                }
+                self.rootView.floatingButton.stackView.snp.remakeConstraints {
+                    $0.center.equalToSuperview()
+                    $0.top.leading.equalToSuperview().inset(6)
+                }
+            }
+            self.rootView.floatingButton.layoutIfNeeded()
+        }, completion: nil)
     }
 }

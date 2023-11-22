@@ -36,6 +36,7 @@ final class MainFloatingButton: UIButton {
         self.do {
             $0.backgroundColor = .primaryButton
             $0.makeCornerRound(radius: 24)
+            $0.isUserInteractionEnabled = true
         }
         
         stackView.do {

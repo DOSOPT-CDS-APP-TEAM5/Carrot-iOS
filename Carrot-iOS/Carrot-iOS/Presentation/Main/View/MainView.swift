@@ -15,7 +15,7 @@ final class MainView: UIView {
     // MARK: - Properties
     
     private let topView = MainTopView()
-    private let scrollView = UIScrollView()
+    let scrollView = UIScrollView()
     private let contentView = UIView()
     let moreClubView = MainMoreClubCollectionView()
     let moreClubFooterView = MainMoreClubFooterView()
