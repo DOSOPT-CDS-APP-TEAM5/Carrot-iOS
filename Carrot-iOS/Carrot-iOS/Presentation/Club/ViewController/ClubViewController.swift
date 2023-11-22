@@ -15,7 +15,6 @@ final class ClubViewController: UIViewController {
     // MARK: - Properties
     
     private let profileButton = UIBarButtonItem(image: UIImage(named: "ic_profile"), style: .plain, target: self, action: nil)
-    private let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
     private let alarmButton = UIBarButtonItem(image: UIImage(named: "ic_alarm"), style: .plain, target: self, action: nil)
     private let searchBar = UISearchBar()
     
@@ -69,13 +68,13 @@ extension ClubViewController {
             $0.top.equalToSuperview().inset(90)
             $0.leading.trailing.equalToSuperview().inset(15)
         }
-        
     }
     
     private func setNavigation() {
         navigationItem.rightBarButtonItems = [alarmButton, profileButton]
         self.navigationController?.navigationBar.topItem?.title = "동천동 모임"
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
 }
