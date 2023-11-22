@@ -15,9 +15,6 @@
 		007822492B089F8F008F0E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822482B089F8F008F0E17 /* ViewController.swift */; };
 		0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0078224D2B089F90008F0E17 /* Assets.xcassets */; };
 		007822512B089F90008F0E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */; };
-		007BAC932B08A6A5005A34C3 /* 8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC922B08A6A5005A34C3 /* 8.swift */; };
-		007BAC952B08A6B4005A34C3 /* 9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC942B08A6B4005A34C3 /* 9.swift */; };
-		007BAC972B08A6BD005A34C3 /* 10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC962B08A6BD005A34C3 /* 10.swift */; };
 		007BAC992B08A6CC005A34C3 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC982B08A6CC005A34C3 /* 11.swift */; };
 		007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9A2B08A6D0005A34C3 /* 12.swift */; };
 		007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9E2B08A6E4005A34C3 /* 14.swift */; };
@@ -31,6 +28,12 @@
 		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
+		D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA572B0C5B9E007ECC1B /* MainViewController.swift */; };
+		D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA592B0C5EE1007ECC1B /* MainView.swift */; };
+		D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5C2B0C6538007ECC1B /* MainTopView.swift */; };
+		D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */; };
+		D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */; };
+		D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */; };
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
@@ -64,9 +67,6 @@
 		0078224D2B089F90008F0E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007822502B089F90008F0E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007822522B089F90008F0E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007BAC922B08A6A5005A34C3 /* 8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8.swift; sourceTree = "<group>"; };
-		007BAC942B08A6B4005A34C3 /* 9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9.swift; sourceTree = "<group>"; };
-		007BAC962B08A6BD005A34C3 /* 10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10.swift; sourceTree = "<group>"; };
 		007BAC982B08A6CC005A34C3 /* 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
 		007BAC9A2B08A6D0005A34C3 /* 12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		007BAC9E2B08A6E4005A34C3 /* 14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14.swift; sourceTree = "<group>"; };
@@ -80,6 +80,12 @@
 		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
+		D206CA572B0C5B9E007ECC1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D206CA592B0C5EE1007ECC1B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D206CA5C2B0C6538007ECC1B /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
+		D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionViewCell.swift; sourceTree = "<group>"; };
+		D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionView.swift; sourceTree = "<group>"; };
+		D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMoreClubCollectionFooterView.swift; sourceTree = "<group>"; };
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -249,7 +255,8 @@
 		007822642B08A487008F0E17 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC922B08A6A5005A34C3 /* 8.swift */,
+				D206CA622B0C6E5F007ECC1B /* HeaderFooterView */,
+				D206CA5E2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -257,7 +264,8 @@
 		007822652B08A48D008F0E17 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC942B08A6B4005A34C3 /* 9.swift */,
+				D206CA5B2B0C6509007ECC1B /* AssistantView */,
+				D206CA592B0C5EE1007ECC1B /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,7 +273,7 @@
 		007822662B08A494008F0E17 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC962B08A6BD005A34C3 /* 10.swift */,
+				D206CA572B0C5B9E007ECC1B /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -404,6 +412,23 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		D206CA5B2B0C6509007ECC1B /* AssistantView */ = {
+			isa = PBXGroup;
+			children = (
+				D206CA632B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift */,
+				D206CA5C2B0C6538007ECC1B /* MainTopView.swift */,
+				D206CA602B0C69F4007ECC1B /* MainMoreClubCollectionView.swift */,
+			);
+			path = AssistantView;
+			sourceTree = "<group>";
+		};
+		D206CA622B0C6E5F007ECC1B /* HeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HeaderFooterView;
+			sourceTree = "<group>";
+		};
 		D23475C32B0A68E70098432F /* Foundation+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,9 +544,9 @@
 				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
-				007BAC952B08A6B4005A34C3 /* 9.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
+				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
@@ -530,23 +555,26 @@
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
+				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
 				007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */,
 				007BACA72B08A6FB005A34C3 /* 18.swift in Sources */,
 				007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,
 				D23475D52B0A69B90098432F /* UILabel+.swift in Sources */,
+				D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */,
 				D23475D72B0A69C70098432F /* UINavagationController+.swift in Sources */,
-				007BAC972B08A6BD005A34C3 /* 10.swift in Sources */,
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
+				D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
+				D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */,
+				D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */,
 				D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */,
 				0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */,
 				007822472B089F8F008F0E17 /* SceneDelegate.swift in Sources */,
 				D23475E12B0A6B070098432F /* UIView+.swift in Sources */,
-				007BAC932B08A6A5005A34C3 /* 8.swift in Sources */,
 				D23475D92B0A69D30098432F /* UIStackView+.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				007BACB52B08A78B005A34C3 /* 1.swift in Sources */,
