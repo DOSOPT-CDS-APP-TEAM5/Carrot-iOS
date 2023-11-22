@@ -23,7 +23,7 @@
 		007BACA52B08A6F4005A34C3 /* 17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA42B08A6F4005A34C3 /* 17.swift */; };
 		007BACA72B08A6FB005A34C3 /* 18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA62B08A6FB005A34C3 /* 18.swift */; };
 		007BACA92B08A703005A34C3 /* 19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA82B08A703005A34C3 /* 19.swift */; };
-		007BACAB2B08A711005A34C3 /* 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAA2B08A711005A34C3 /* 7.swift */; };
+		007BACAB2B08A711005A34C3 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */; };
 		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
@@ -58,6 +58,10 @@
 		D206CA9E2B0E881B007ECC1B /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA9D2B0E881B007ECC1B /* GenericResponse.swift */; };
 		D206CAA02B0E8824007ECC1B /* VoidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA9F2B0E8824007ECC1B /* VoidResult.swift */; };
 		D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA12B0E882B007ECC1B /* SimpleResponse.swift */; };
+		D206CAA42B0E88A6007ECC1B /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */; };
+		D206CAA62B0E8900007ECC1B /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA52B0E8900007ECC1B /* APIConstant.swift */; };
+		D206CAA82B0E8945007ECC1B /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA72B0E8945007ECC1B /* BaseAPI.swift */; };
+		D206CAAA2B0E895A007ECC1B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA92B0E895A007ECC1B /* NetworkResult.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
 		D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CA2B0A693A0098432F /* UIApplication+.swift */; };
 		D23475CD2B0A69450098432F /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CC2B0A69450098432F /* UIButton+.swift */; };
@@ -97,7 +101,7 @@
 		007BACA42B08A6F4005A34C3 /* 17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17.swift; sourceTree = "<group>"; };
 		007BACA62B08A6FB005A34C3 /* 18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18.swift; sourceTree = "<group>"; };
 		007BACA82B08A703005A34C3 /* 19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.swift; sourceTree = "<group>"; };
-		007BACAA2B08A711005A34C3 /* 7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
+		007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
@@ -132,6 +136,10 @@
 		D206CA9D2B0E881B007ECC1B /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		D206CA9F2B0E8824007ECC1B /* VoidResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResult.swift; sourceTree = "<group>"; };
 		D206CAA12B0E882B007ECC1B /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
+		D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		D206CAA52B0E8900007ECC1B /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		D206CAA72B0E8945007ECC1B /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		D206CAA92B0E895A007ECC1B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D23475CA2B0A693A0098432F /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D23475CC2B0A69450098432F /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -277,7 +285,11 @@
 		007822612B08A286008F0E17 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				007BACAA2B08A711005A34C3 /* 7.swift */,
+				007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */,
+				D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */,
+				D206CAA52B0E8900007ECC1B /* APIConstant.swift */,
+				D206CAA72B0E8945007ECC1B /* BaseAPI.swift */,
+				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -726,10 +738,11 @@
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				D206CA812B0E86B1007ECC1B /* ClubRepository.swift in Sources */,
+				D206CAAA2B0E895A007ECC1B /* NetworkResult.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
 				D206CA712B0C991D007ECC1B /* MainClubModel.swift in Sources */,
 				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
-				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
+				007BACAB2B08A711005A34C3 /* MoyaLoggingPlugin.swift in Sources */,
 				D206CA6B2B0C7FC8007ECC1B /* MainCategoryModel.swift in Sources */,
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D206CA682B0C7C50007ECC1B /* MainCategoryCollectionViewCell.swift in Sources */,
@@ -755,6 +768,7 @@
 				D206CAA02B0E8824007ECC1B /* VoidResult.swift in Sources */,
 				D23475D72B0A69C70098432F /* UINavagationController+.swift in Sources */,
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
+				D206CAA42B0E88A6007ECC1B /* BaseTargetType.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
 				D206CA6F2B0C895E007ECC1B /* MainPostCollectionViewCell.swift in Sources */,
 				D206CA942B0E875C007ECC1B /* DetailEntity.swift in Sources */,
@@ -766,6 +780,7 @@
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
+				D206CAA62B0E8900007ECC1B /* APIConstant.swift in Sources */,
 				D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */,
 				D206CA7F2B0E86A4007ECC1B /* MainRepository.swift in Sources */,
 				D206CA902B0E874D007ECC1B /* MainEntity.swift in Sources */,
@@ -779,6 +794,7 @@
 				D206CA9B2B0E87DC007ECC1B /* DetailTransform.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				D23475DD2B0A6AE60098432F /* UITableViewCell+.swift in Sources */,
+				D206CAA82B0E8945007ECC1B /* BaseAPI.swift in Sources */,
 				007BACA12B08A6E8005A34C3 /* 15.swift in Sources */,
 				007BACBB2B08A79E005A34C3 /* 4.swift in Sources */,
 			);
