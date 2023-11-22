@@ -60,7 +60,7 @@ final class MainPostCollectionViewCell: UICollectionViewCell {
         categoryLabel.do {
             $0.text = "동네 사건사고"
             $0.textColor = .grey500
-            $0.font = .carrotTag()
+            $0.font = .carrotTag
             $0.textAlignment = .center
             $0.backgroundColor = .grey100
         }
@@ -68,35 +68,35 @@ final class MainPostCollectionViewCell: UICollectionViewCell {
         titleLabel.do {
             $0.text = "강아지 잃어버리신 분 있나요?"
             $0.textColor = .carrotBlack
-            $0.font = .carrotTitleMd()
+            $0.font = .carrotTitleMd
             $0.textAlignment = .left
         }
         
         subTitleLabel.do {
             $0.text = "하얀색 말티즈 강아지 은행 앞에서 발견했어요."
             $0.textColor = .grey400
-            $0.font = .carrotBody()
+            $0.font = .carrotBody
             $0.textAlignment = .left
         }
         
         infoLabel.do {
             $0.text = "동천동 · 1분 전 · 조회 22"
             $0.textColor = .grey400
-            $0.font = .carrotBody()
+            $0.font = .carrotBody
             $0.textAlignment = .left
         }
         
         likeCntLabel.do {
             $0.text = "1"
             $0.textColor = .carrotBlack
-            $0.font = .carrotTitleMd()
+            $0.font = .carrotTitleMd
             $0.textAlignment = .left
         }
         
         commentCntLabel.do {
             $0.text = "3"
             $0.textColor = .carrotBlack
-            $0.font = .carrotTitleMd()
+            $0.font = .carrotTitleMd
             $0.textAlignment = .left
         }
         

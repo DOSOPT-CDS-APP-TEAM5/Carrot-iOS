@@ -9,59 +9,59 @@ import UIKit
 
 extension UIFont {
     
-    static func carrotTitleHead(ofSize size: CGFloat = 25) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Bold", size: size)!
+    static var carrotTitleHead: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 25)!
     }
     
-    static func carrotHead(ofSize size: CGFloat = 19) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-ExtraBold", size: size)!
+    static var carrotHead: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-ExtraBold", size: 19)!
     }
     
-    static func carrotButton(ofSize size: CGFloat = 18) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Bold", size: size)!
+    static var carrotButton: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 18)!
     }
     
-    static func carrotInfo(ofSize size: CGFloat = 16) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Medium", size: size)!
+    static var carrotInfo: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 16)!
     }
     
-    static func carrotTitleBd(ofSize size: CGFloat = 15) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Bold", size: size)!
+    static var carrotTitleBd: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 15)!
     }
     
-    static func carrotTitleMd(ofSize size: CGFloat = 15) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Medium", size: size)!
+    static var carrotTitleMd: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 15)!
     }
     
-    static func carrotTag(ofSize size: CGFloat = 10) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Regular", size: size)!
+    static var carrotTag: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Regular", size: 10)!
     }
     
-    static func carrotSubtitle(ofSize size: CGFloat = 13) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Bold", size: size)!
+    static var carrotSubtitle: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 13)!
     }
     
-    static func carrotBody(ofSize size: CGFloat = 12) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Medium", size: size)!
+    static var carrotBody: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 12)!
     }
     
-    static func carrotBodyNumber(ofSize size: CGFloat = 12) -> UIFont {
-        return UIFont(name: "SFPro-Medium", size: size)!
+    static var carrotBodyNumber: UIFont {
+        return UIFont(name: "SFPro-Medium", size: 12)!
     }
     
-    static func carrotInfoNumber(ofSize size: CGFloat = 11) -> UIFont {
-        return UIFont(name: "SFPro-Medium", size: size)!
+    static var carrotInfoNumber: UIFont {
+        return UIFont(name: "SFPro-Medium", size: 11)!
     }
     
-    static func carrotBodyUnder(ofSize size: CGFloat = 12) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Regular", size: size)!
+    static var carrotBodyUnder: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Regular", size: 12)!
     }
     
-    static func carrotInfoUnder(ofSize size: CGFloat = 16) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Medium", size: size)!
+    static var carrotInfoUnder: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 16)!
     }
     
-    static func carrotClassBody(ofSize size: CGFloat = 11) -> UIFont {
-        return UIFont(name: "AppleSDGothicNeo-Regular", size: size)!
+    static var carrotClassBody: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Regular", size: 11)!
     }
 }

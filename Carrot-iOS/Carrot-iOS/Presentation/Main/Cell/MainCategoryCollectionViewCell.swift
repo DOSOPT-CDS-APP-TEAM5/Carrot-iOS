@@ -39,7 +39,7 @@ final class MainCategoryCollectionViewCell: UICollectionViewCell {
         }
         
         categoryLabel.do {
-            $0.font = .carrotBody()
+            $0.font = .carrotBody
             $0.textColor = .carrotBlack
             $0.textAlignment = .center
         }
