@@ -31,6 +31,8 @@
 		39D1EEC32B0DEA6900A1A779 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC22B0DEA6900A1A779 /* DetailView.swift */; };
 		39D1EEC62B0DED6700A1A779 /* DetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */; };
 		39D1EEC82B0DEEE500A1A779 /* DetailBannerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC72B0DEEE500A1A779 /* DetailBannerImageView.swift */; };
+		39D1EECA2B0E064A00A1A779 /* DetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */; };
+		39D1EECC2B0E08F700A1A779 /* DetailTagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EECB2B0E08F700A1A779 /* DetailTagLabel.swift */; };
 		39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */; };
 		39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56742B0DA82600A17A03 /* SF-Pro.ttf */; };
 		D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA572B0C5B9E007ECC1B /* MainViewController.swift */; };
@@ -92,6 +94,8 @@
 		39D1EEC22B0DEA6900A1A779 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTopView.swift; sourceTree = "<group>"; };
 		39D1EEC72B0DEEE500A1A779 /* DetailBannerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBannerImageView.swift; sourceTree = "<group>"; };
+		39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionView.swift; sourceTree = "<group>"; };
+		39D1EECB2B0E08F700A1A779 /* DetailTagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTagLabel.swift; sourceTree = "<group>"; };
 		39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		39FE56742B0DA82600A17A03 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D206CA572B0C5B9E007ECC1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -436,8 +440,10 @@
 		39D1EEC42B0DED4900A1A779 /* AssistantView */ = {
 			isa = PBXGroup;
 			children = (
-				39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */,
 				39D1EEC72B0DEEE500A1A779 /* DetailBannerImageView.swift */,
+				39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */,
+				39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */,
+				39D1EECB2B0E08F700A1A779 /* DetailTagLabel.swift */,
 			);
 			path = AssistantView;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
+				39D1EECA2B0E064A00A1A779 /* DetailDescriptionView.swift in Sources */,
 				D206CA712B0C991D007ECC1B /* MainClubModel.swift in Sources */,
 				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
@@ -598,6 +605,7 @@
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D206CA682B0C7C50007ECC1B /* MainCategoryCollectionViewCell.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
+				39D1EECC2B0E08F700A1A779 /* DetailTagLabel.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,

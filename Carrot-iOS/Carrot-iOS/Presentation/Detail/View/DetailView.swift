@@ -23,14 +23,15 @@ final class DetailView: UIView {
     
     private let bannerImageView = DetailBannerImageView()
     private let topView = DetailTopView()
+    private let descriptionView = DetailDescriptionView()
     
     // MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        style()
         hieararchy()
+        style()
         layout()
     }
     
@@ -48,6 +49,8 @@ final class DetailView: UIView {
         scrollContentView.do {
             $0.axis = .vertical
             $0.alignment = .fill
+            $0.setCustomSpacing(-20, after: bannerImageView)
+            $0.setCustomSpacing(26, after: topView)
         }
     }
     
@@ -57,7 +60,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            bannerImageView, topView
+            bannerImageView, topView, descriptionView
         )
     }
     
@@ -69,10 +72,6 @@ final class DetailView: UIView {
         scrollContentView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
-        }
-        
-        topView.snp.makeConstraints {
-            $0.top.equalTo(bannerImageView.snp.bottom).offset(-20)
         }
     }
 }
