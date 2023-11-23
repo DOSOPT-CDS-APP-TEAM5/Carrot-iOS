@@ -20,7 +20,7 @@ final class DetailView: UIView {
     private let bannerImageView = DetailBannerImageView()
     private let topView = DetailTopView()
     private let descriptionView = DetailDescriptionView()
-    
+    private let tabBar = DetailCustomTabBar()
     private let joinButton = DetailJoinButton()
     
     // MARK: - Life Cycle
@@ -49,6 +49,7 @@ final class DetailView: UIView {
             $0.alignment = .fill
             $0.setCustomSpacing(-20, after: bannerImageView)
             $0.setCustomSpacing(26, after: topView)
+            $0.setCustomSpacing(20, after: descriptionView)
         }
     }
     
@@ -58,7 +59,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            bannerImageView, topView, descriptionView
+            bannerImageView, topView, descriptionView, tabBar
         )
     }
     

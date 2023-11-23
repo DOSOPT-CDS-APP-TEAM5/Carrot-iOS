@@ -28,6 +28,7 @@
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
 		397253002B0F10FA009CCD88 /* DetailJoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */; };
+		397253022B0F159D009CCD88 /* DetailCustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */; };
 		39D1EEC12B0DEA3900A1A779 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC02B0DEA3900A1A779 /* DetailViewController.swift */; };
 		39D1EEC32B0DEA6900A1A779 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC22B0DEA6900A1A779 /* DetailView.swift */; };
 		39D1EEC62B0DED6700A1A779 /* DetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */; };
@@ -92,6 +93,7 @@
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJoinButton.swift; sourceTree = "<group>"; };
+		397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCustomTabBar.swift; sourceTree = "<group>"; };
 		39D1EEC02B0DEA3900A1A779 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		39D1EEC22B0DEA6900A1A779 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTopView.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */,
 				39D1EECB2B0E08F700A1A779 /* DetailTagLabel.swift */,
 				397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */,
+				397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */,
 			);
 			path = AssistantView;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				39D1EECC2B0E08F700A1A779 /* DetailTagLabel.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
+				397253022B0F159D009CCD88 /* DetailCustomTabBar.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,

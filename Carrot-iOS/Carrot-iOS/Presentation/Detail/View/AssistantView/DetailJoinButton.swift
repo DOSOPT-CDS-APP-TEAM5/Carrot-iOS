@@ -40,7 +40,7 @@ final class DetailJoinButton: UIView {
             $0.makeCornerRound(radius: 6)
             $0.setTitle("모임 가입하기", for: .normal)
             $0.titleLabel?.font = .carrotButton
-            $0.titleLabel?.textColor = .carrotWhite
+            $0.setTitleColor(.carrotWhite, for: .normal)
         }
     }
     
