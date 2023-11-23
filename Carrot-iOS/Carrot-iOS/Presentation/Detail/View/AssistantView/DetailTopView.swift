@@ -12,9 +12,6 @@ import Then
 
 final class DetailTopView: UIView {
     
-    // MARK: - Properties
-    
-    
     // MARK: - UI Components
     
     private let upperStackView = UIStackView()

@@ -12,9 +12,6 @@ import Then
 
 final class DetailDescriptionView: UIView {
     
-    // MARK: - Properties
-    
-    
     // MARK: - UI Components
     
     private let upperStackView = UIStackView()
@@ -22,7 +19,7 @@ final class DetailDescriptionView: UIView {
     private let tagStackView = UIStackView()
     private let tag1 = DetailTagLabel()
     private let tag2 = DetailTagLabel()
-
+    
     private let descriptionLabel = UILabel()
     
     // MARK: - Life Cycle

@@ -12,13 +12,9 @@ import Then
 
 final class DetailBannerImageView: UIView {
     
-    // MARK: - Properties
-    
-    
     // MARK: - UI Components
     
     private let bannerImageView = UIImageView()
-    
     
     // MARK: - Life Cycle
     

@@ -11,11 +11,7 @@ import SnapKit
 import Then
 
 final class DetailView: UIView {
-    
-    // MARK: - Properties
-    
-    
-    
+
     // MARK: - UI Components
     
     private let pageScrollView = UIScrollView()
