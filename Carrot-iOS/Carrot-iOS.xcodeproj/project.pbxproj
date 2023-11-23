@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003876A62B0E657A00D5C299 /* OurTownHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */; };
 		0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1512B0A6C83002D06A5 /* UIColor+.swift */; };
 		0057F1542B0A6F20002D06A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1532B0A6F20002D06A5 /* Image.swift */; };
 		0057F1562B0A7C91002D06A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1552B0A7C91002D06A5 /* Device.swift */; };
@@ -15,8 +16,6 @@
 		007822492B089F8F008F0E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822482B089F8F008F0E17 /* ViewController.swift */; };
 		0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0078224D2B089F90008F0E17 /* Assets.xcassets */; };
 		007822512B089F90008F0E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0078224F2B089F90008F0E17 /* LaunchScreen.storyboard */; };
-		007BAC992B08A6CC005A34C3 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC982B08A6CC005A34C3 /* 11.swift */; };
-		007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9A2B08A6D0005A34C3 /* 12.swift */; };
 		007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9E2B08A6E4005A34C3 /* 14.swift */; };
 		007BACA12B08A6E8005A34C3 /* 15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA02B08A6E8005A34C3 /* 15.swift */; };
 		007BACA32B08A6ED005A34C3 /* 16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA22B08A6ED005A34C3 /* 16.swift */; };
@@ -64,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OurTownHeaderView.swift; path = "Carrot-iOS/Presentation/Club/View/OurTownHeaderView.swift"; sourceTree = SOURCE_ROOT; };
 		0057F1512B0A6C83002D06A5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0057F1532B0A6F20002D06A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0057F1552B0A7C91002D06A5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -74,8 +74,6 @@
 		0078224D2B089F90008F0E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007822502B089F90008F0E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007822522B089F90008F0E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007BAC982B08A6CC005A34C3 /* 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
-		007BAC9A2B08A6D0005A34C3 /* 12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		007BAC9E2B08A6E4005A34C3 /* 14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14.swift; sourceTree = "<group>"; };
 		007BACA02B08A6E8005A34C3 /* 15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15.swift; sourceTree = "<group>"; };
 		007BACA22B08A6ED005A34C3 /* 16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16.swift; sourceTree = "<group>"; };
@@ -325,7 +323,7 @@
 		007BAC892B08A5F2005A34C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC9A2B08A6D0005A34C3 /* 12.swift */,
+				003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,7 +331,6 @@
 		007BAC8A2B08A5FC005A34C3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC982B08A6CC005A34C3 /* 11.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -571,10 +568,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003876A62B0E657A00D5C299 /* OurTownHeaderView.swift in Sources */,
 				007BACB92B08A79A005A34C3 /* 3.swift in Sources */,
 				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
-				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
 				D206CA712B0C991D007ECC1B /* MainClubModel.swift in Sources */,
@@ -591,7 +588,6 @@
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
-				007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */,
 				007BACA72B08A6FB005A34C3 /* 18.swift in Sources */,
 				007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,

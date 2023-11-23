@@ -14,8 +14,11 @@ final class ClubViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let backButton = UIBarButtonItem(image: UIImage.icNavigationLeft, style: .plain, target: self, action: nil)
     private let profileButton = UIBarButtonItem(image: UIImage(named: "ic_profile"), style: .plain, target: self, action: nil)
     private let alarmButton = UIBarButtonItem(image: UIImage(named: "ic_alarm"), style: .plain, target: self, action: nil)
+    private let scrollView = UIScrollView()
+    private var contentView = UIView()
     private let searchBar = UISearchBar()
     
     // MARK: - View Life Cycle
@@ -62,10 +65,26 @@ extension ClubViewController {
     }
     
     private func setLayout() {
-        view.addSubview(searchBar)
+        view.addSubview(scrollView)
+        
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        scrollView.addSubview(contentView)
+        
+        contentView.snp.makeConstraints {
+            $0.edges.equalTo(scrollView)
+            $0.width.equalTo(scrollView)
+            $0.height.greaterThanOrEqualTo(scrollView.snp.height)
+        }
+        
+        [searchBar].forEach {
+            contentView.addSubview($0)
+        }
         
         searchBar.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(90)
+            $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(15)
         }
     }
@@ -75,6 +94,11 @@ extension ClubViewController {
         self.navigationController?.navigationBar.topItem?.title = "동천동 모임"
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
