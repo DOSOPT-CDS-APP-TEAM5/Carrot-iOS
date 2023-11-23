@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		003876A62B0E657A00D5C299 /* OurTownHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */; };
+		003876AB2B0F0EE900D5C299 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 003876AA2B0F0EE900D5C299 /* Tabman */; };
+		003876AD2B0F0FB100D5C299 /* ClubTabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876AC2B0F0FB100D5C299 /* ClubTabmanViewController.swift */; };
+		003876AF2B0F116E00D5C299 /* AllClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876AE2B0F116E00D5C299 /* AllClubViewController.swift */; };
+		003876B12B0F117B00D5C299 /* MyClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876B02B0F117B00D5C299 /* MyClubViewController.swift */; };
 		0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1512B0A6C83002D06A5 /* UIColor+.swift */; };
 		0057F1542B0A6F20002D06A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1532B0A6F20002D06A5 /* Image.swift */; };
 		0057F1562B0A7C91002D06A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1552B0A7C91002D06A5 /* Device.swift */; };
@@ -64,6 +68,9 @@
 
 /* Begin PBXFileReference section */
 		003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OurTownHeaderView.swift; path = "Carrot-iOS/Presentation/Club/View/OurTownHeaderView.swift"; sourceTree = SOURCE_ROOT; };
+		003876AC2B0F0FB100D5C299 /* ClubTabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTabmanViewController.swift; sourceTree = "<group>"; };
+		003876AE2B0F116E00D5C299 /* AllClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllClubViewController.swift; sourceTree = "<group>"; };
+		003876B02B0F117B00D5C299 /* MyClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubViewController.swift; sourceTree = "<group>"; };
 		0057F1512B0A6C83002D06A5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0057F1532B0A6F20002D06A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0057F1552B0A7C91002D06A5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -121,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003876AB2B0F0EE900D5C299 /* Tabman in Frameworks */,
 				D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */,
 				D23475E62B0A6B5D0098432F /* SnapKit in Frameworks */,
 				D23475E92B0A6B660098432F /* Then in Frameworks */,
@@ -316,6 +324,9 @@
 			isa = PBXGroup;
 			children = (
 				0083B1A12B0BCAA500357725 /* ClubViewController.swift */,
+				003876AC2B0F0FB100D5C299 /* ClubTabmanViewController.swift */,
+				003876AE2B0F116E00D5C299 /* AllClubViewController.swift */,
+				003876B02B0F117B00D5C299 /* MyClubViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -505,6 +516,7 @@
 				D23475E82B0A6B660098432F /* Then */,
 				D23475EB2B0A6B7D0098432F /* Moya */,
 				D23475EE2B0A6B890098432F /* Kingfisher */,
+				003876AA2B0F0EE900D5C299 /* Tabman */,
 			);
 			productName = "Carrot-iOS";
 			productReference = 007822412B089F8F008F0E17 /* Carrot-iOS.app */;
@@ -539,6 +551,7 @@
 				D23475E72B0A6B660098432F /* XCRemoteSwiftPackageReference "Then" */,
 				D23475EA2B0A6B7D0098432F /* XCRemoteSwiftPackageReference "Moya" */,
 				D23475ED2B0A6B890098432F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				003876A92B0F0EE900D5C299 /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = 007822422B089F8F008F0E17 /* Products */;
 			projectDirPath = "";
@@ -583,6 +596,7 @@
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
 				007BACA32B08A6ED005A34C3 /* 16.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
+				003876AD2B0F0FB100D5C299 /* ClubTabmanViewController.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
@@ -597,7 +611,9 @@
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
 				D206CA6F2B0C895E007ECC1B /* MainPostCollectionViewCell.swift in Sources */,
+				003876AF2B0F116E00D5C299 /* AllClubViewController.swift in Sources */,
 				D206CA6D2B0C8930007ECC1B /* MainPostCollectionView.swift in Sources */,
+				003876B12B0F117B00D5C299 /* MyClubViewController.swift in Sources */,
 				D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
@@ -829,6 +845,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		003876A92B0F0EE900D5C299 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 		D23475E42B0A6B5D0098432F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -864,6 +888,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		003876AA2B0F0EE900D5C299 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 003876A92B0F0EE900D5C299 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
 		D23475E52B0A6B5D0098432F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D23475E42B0A6B5D0098432F /* XCRemoteSwiftPackageReference "SnapKit" */;

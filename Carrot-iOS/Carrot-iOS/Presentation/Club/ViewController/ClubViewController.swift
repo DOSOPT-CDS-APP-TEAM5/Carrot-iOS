@@ -20,6 +20,7 @@ final class ClubViewController: UIViewController {
     private let scrollView = UIScrollView()
     private var contentView = UIView()
     private let searchBar = UISearchBar()
+    private let clubTabmanViewController = ClubTabmanViewController()
     
     // MARK: - View Life Cycle
     
@@ -30,7 +31,7 @@ final class ClubViewController: UIViewController {
         setNavigation()
         setUI()
     }
-
+    
 }
 
 // MARK: - Extensions
@@ -79,13 +80,18 @@ extension ClubViewController {
             $0.height.greaterThanOrEqualTo(scrollView.snp.height)
         }
         
-        [searchBar].forEach {
+        [searchBar, clubTabmanViewController.view].forEach {
             contentView.addSubview($0)
         }
         
         searchBar.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(15)
+        }
+        
+        clubTabmanViewController.view.snp.makeConstraints {
+            $0.top.equalTo(searchBar.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
