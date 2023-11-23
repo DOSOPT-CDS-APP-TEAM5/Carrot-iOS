@@ -21,6 +21,8 @@ final class DetailView: UIView {
     private let topView = DetailTopView()
     private let descriptionView = DetailDescriptionView()
     
+    private let joinButton = DetailJoinButton()
+    
     // MARK: - Life Cycle
     
     override init(frame: CGRect) {
@@ -51,7 +53,7 @@ final class DetailView: UIView {
     }
     
     private func hieararchy() {
-        self.addSubviews(pageScrollView)
+        self.addSubviews(pageScrollView, joinButton)
         
         pageScrollView.addSubviews(scrollContentView)
         
@@ -62,12 +64,19 @@ final class DetailView: UIView {
     
     private func layout() {
         pageScrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.bottom.equalTo(joinButton)
         }
         
         scrollContentView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
+        }
+        
+        joinButton.snp.makeConstraints {
+            $0.horizontalEdges.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaLayoutGuide)
         }
     }
 }
