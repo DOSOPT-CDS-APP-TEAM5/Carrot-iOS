@@ -20,15 +20,13 @@ final class DetailAlbumView: UIView {
     // MARK: - UI Components
     
     private let totalStack = UIStackView()
-    
-    private let titleLabel = PaddingLabel(padding: UIEdgeInsets(top: 20, left: 15, bottom: 14, right: 15) )
-    
     private let upperStack = UIStackView()
     private let lowerStack = UIStackView()
-    
+    private let titleLabel = PaddingLabel(padding: UIEdgeInsets(top: 20, left: 15, bottom: 14, right: 15) )
     private lazy var imageViews: [UIImageView] = images.map { UIImageView(image: $0) }
-    
     private let moreButton = UIButton()
+    private let morePictrueButton = UIImageView()
+    
     
     // MARK: - Life Cycle
     
@@ -72,6 +70,10 @@ final class DetailAlbumView: UIView {
             $0.titleLabel?.setKerning(withPercentage: 1)
             $0.backgroundColor = .grey100
         }
+        
+        morePictrueButton.do {
+            $0.image = Image.gallery
+        }
     }
     
     private func hieararchy() {
@@ -87,18 +89,26 @@ final class DetailAlbumView: UIView {
         lowerStack.addArrangedSubViews(
             imageViews[3], imageViews[4], moreButton
         )
+        imageViews[3].addSubviews(
+            morePictrueButton
+        )
         
     }
     
     private func layout() {
         totalStack.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(20)
         }
         upperStack.snp.makeConstraints {
             $0.height.equalTo(upperStack.snp.width).multipliedBy(1.1/3)
         }
         lowerStack.snp.makeConstraints {
             $0.height.equalTo(upperStack.snp.width).multipliedBy(1.1/3)
+        }
+        morePictrueButton.snp.makeConstraints {
+            $0.top.trailing.equalToSuperview().inset(9)
         }
     }
 }

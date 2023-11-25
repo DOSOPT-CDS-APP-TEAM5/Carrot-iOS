@@ -63,7 +63,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            bannerImageView, topView, descriptionView, tabBar, albumView
+            bannerImageView, topView, descriptionView, tabBar, albumView, DetailSpacerView()
         )
     }
     
@@ -76,7 +76,6 @@ final class DetailView: UIView {
         
         scrollContentView.snp.makeConstraints {
             $0.edges.equalTo(pageScrollView.contentLayoutGuide)
-//            $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
         }
         
