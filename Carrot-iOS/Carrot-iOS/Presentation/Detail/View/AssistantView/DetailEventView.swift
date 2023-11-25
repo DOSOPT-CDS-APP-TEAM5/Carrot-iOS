@@ -30,7 +30,7 @@ final class DetailEventView: UIView {
     private let timeLabel = UILabel()
     private let personnelIcon = UIImageView()
     private let personnelLabel = UILabel()
-    
+    private let spacer = UIView()
     private let moreEventButton = UIButton()
     private let buttonStackView = UIStackView()
     private let buttontitle = UILabel()
@@ -59,7 +59,6 @@ final class DetailEventView: UIView {
             $0.spacing = 16
             $0.layoutMargins = UIEdgeInsets(top: 24, left: 15, bottom: 20, right: 15)
             $0.isLayoutMarginsRelativeArrangement = true
-            $0.setCustomSpacing(20, after: eventDetail)
         }
         
         titleLabel.do {
@@ -170,7 +169,7 @@ final class DetailEventView: UIView {
         )
         
         eventDetail.addSubviews(
-            dateStack, noticeIcon, noticeLabel, stateLabel, detailInfoStack
+            dateStack, noticeIcon, noticeLabel, stateLabel, detailInfoStack, spacer
         )
         
         dateStack.addArrangedSubViews(
@@ -227,7 +226,6 @@ final class DetailEventView: UIView {
         detailInfoStack.snp.makeConstraints {
             $0.top.equalTo(stateLabel.snp.bottom).offset(14)
             $0.leading.equalTo(dateStack.snp.trailing).offset(8)
-            $0.bottom.equalToSuperview()
         }
         
         timeLabel.snp.makeConstraints {
@@ -238,6 +236,12 @@ final class DetailEventView: UIView {
             $0.width.equalTo(66)
         }
         
+        spacer.snp.makeConstraints {
+            $0.top.equalTo(detailInfoStack.snp.bottom)
+            $0.height.equalTo(4)
+            $0.horizontalEdges.bottom.equalToSuperview()
+        }
+
         moreEventButton.snp.makeConstraints {
             $0.height.equalTo(40)
             $0.horizontalEdges.equalToSuperview().inset(15)
