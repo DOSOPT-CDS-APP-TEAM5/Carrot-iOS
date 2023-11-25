@@ -18,9 +18,8 @@
 		007BAC992B08A6CC005A34C3 /* 11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC982B08A6CC005A34C3 /* 11.swift */; };
 		007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9A2B08A6D0005A34C3 /* 12.swift */; };
 		007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BAC9E2B08A6E4005A34C3 /* 14.swift */; };
-		007BACA52B08A6F4005A34C3 /* 17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA42B08A6F4005A34C3 /* 17.swift */; };
-		007BACA72B08A6FB005A34C3 /* 18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA62B08A6FB005A34C3 /* 18.swift */; };
-		007BACA92B08A703005A34C3 /* 19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA82B08A703005A34C3 /* 19.swift */; };
+		007BACA72B08A6FB005A34C3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA62B08A6FB005A34C3 /* SignUpView.swift */; };
+		007BACA92B08A703005A34C3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA82B08A703005A34C3 /* SignUpViewController.swift */; };
 		007BACAB2B08A711005A34C3 /* 7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAA2B08A711005A34C3 /* 7.swift */; };
 		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
@@ -81,9 +80,8 @@
 		007BAC982B08A6CC005A34C3 /* 11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11.swift; sourceTree = "<group>"; };
 		007BAC9A2B08A6D0005A34C3 /* 12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12.swift; sourceTree = "<group>"; };
 		007BAC9E2B08A6E4005A34C3 /* 14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14.swift; sourceTree = "<group>"; };
-		007BACA42B08A6F4005A34C3 /* 17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17.swift; sourceTree = "<group>"; };
-		007BACA62B08A6FB005A34C3 /* 18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 18.swift; sourceTree = "<group>"; };
-		007BACA82B08A703005A34C3 /* 19.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 19.swift; sourceTree = "<group>"; };
+		007BACA62B08A6FB005A34C3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		007BACA82B08A703005A34C3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		007BACAA2B08A711005A34C3 /* 7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7.swift; sourceTree = "<group>"; };
 		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 		007BAC8B2B08A603005A34C3 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				007BAC912B08A65F005A34C3 /* Cell */,
 				007BAC902B08A65B005A34C3 /* View */,
 				007BAC8F2B08A653005A34C3 /* ViewController */,
 			);
@@ -384,7 +381,7 @@
 		007BAC8F2B08A653005A34C3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				007BACA82B08A703005A34C3 /* 19.swift */,
+				007BACA82B08A703005A34C3 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -392,17 +389,9 @@
 		007BAC902B08A65B005A34C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				007BACA62B08A6FB005A34C3 /* 18.swift */,
+				007BACA62B08A6FB005A34C3 /* SignUpView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		007BAC912B08A65F005A34C3 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				007BACA42B08A6F4005A34C3 /* 17.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		007BACB02B08A752005A34C3 /* Main */ = {
@@ -592,7 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007BACB92B08A79A005A34C3 /* 3.swift in Sources */,
-				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
+				007BACA92B08A703005A34C3 /* SignUpViewController.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
 				007BAC992B08A6CC005A34C3 /* 11.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
@@ -609,12 +598,11 @@
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
-				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
 				007BAC9B2B08A6D0005A34C3 /* 12.swift in Sources */,
 				39D1EEC12B0DEA3900A1A779 /* DetailViewController.swift in Sources */,
-				007BACA72B08A6FB005A34C3 /* 18.swift in Sources */,
+				007BACA72B08A6FB005A34C3 /* SignUpView.swift in Sources */,
 				007BAC9F2B08A6E4005A34C3 /* 14.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,
 				D23475D52B0A69B90098432F /* UILabel+.swift in Sources */,
