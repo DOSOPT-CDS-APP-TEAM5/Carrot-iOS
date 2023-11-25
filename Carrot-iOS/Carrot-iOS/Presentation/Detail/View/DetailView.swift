@@ -22,6 +22,7 @@ final class DetailView: UIView {
     private let descriptionView = DetailDescriptionView()
     private let tabBar = DetailCustomTabBar()
     private let albumView = DetailAlbumView()
+    private let eventView = DetailEventView()
     private let joinButton = DetailJoinButton()
     
     // MARK: - Life Cycle
@@ -63,7 +64,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            bannerImageView, topView, descriptionView, tabBar, albumView, DetailSpacerView()
+            bannerImageView, topView, descriptionView, tabBar, albumView, DetailSpacerView(), eventView, DetailSpacerView()
         )
     }
     
