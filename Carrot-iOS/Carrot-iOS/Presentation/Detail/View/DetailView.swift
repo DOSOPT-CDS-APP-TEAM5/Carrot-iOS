@@ -21,6 +21,7 @@ final class DetailView: UIView {
     private let topView = DetailTopView()
     private let descriptionView = DetailDescriptionView()
     private let tabBar = DetailCustomTabBar()
+    private let albumView = DetailAlbumView()
     private let joinButton = DetailJoinButton()
     
     // MARK: - Life Cycle
@@ -43,6 +44,9 @@ final class DetailView: UIView {
         self.do {
             $0.backgroundColor = .carrotWhite
         }
+        pageScrollView.do {
+            $0.contentInsetAdjustmentBehavior = .never
+        }
         
         scrollContentView.do {
             $0.axis = .vertical
@@ -59,7 +63,7 @@ final class DetailView: UIView {
         pageScrollView.addSubviews(scrollContentView)
         
         scrollContentView.addArrangedSubViews(
-            bannerImageView, topView, descriptionView, tabBar
+            bannerImageView, topView, descriptionView, tabBar, albumView
         )
     }
     
@@ -67,11 +71,12 @@ final class DetailView: UIView {
         pageScrollView.snp.makeConstraints {
             $0.horizontalEdges.equalToSuperview()
             $0.top.equalToSuperview()
-            $0.bottom.equalTo(joinButton)
+            $0.bottom.equalTo(joinButton.snp.top)
         }
         
         scrollContentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(pageScrollView.contentLayoutGuide)
+//            $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
         }
         
