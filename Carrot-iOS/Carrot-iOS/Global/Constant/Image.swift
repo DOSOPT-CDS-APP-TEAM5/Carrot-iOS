@@ -56,6 +56,10 @@ public enum Image {
     static let dummyDetail1 = UIImage(named: "img_27")!
     static let dummyDetail2 = UIImage(named: "img_28")!
     static let dummyDetail3 = UIImage(named: "img_29")!
+    static let dummyDetail4 = UIImage(named: "img_30")!
+    static let dummyDetail5 = UIImage(named: "img_31")!
+    static let dummyDetail6 = UIImage(named: "img_32")!
+    static let dummyDetail7 = UIImage(named: "img_33")!
     static let dummySignUp = UIImage(named: "Group 45")!
     
     static let tabbar = UIImage(named: "tabbar")!

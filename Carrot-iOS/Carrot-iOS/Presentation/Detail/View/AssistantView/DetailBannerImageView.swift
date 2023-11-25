@@ -34,7 +34,7 @@ final class DetailBannerImageView: UIView {
     
     private func style() {
         bannerImageView.do {
-            $0.image = .img27
+            $0.image = Image.dummyDetail1
         }
     }
     

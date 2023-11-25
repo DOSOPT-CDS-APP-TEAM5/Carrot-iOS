@@ -14,7 +14,7 @@ final class DetailAlbumView: UIView {
     // MARK: - Properties
     
     private let images: [UIImage] = [
-        .img29, .img30, .img31, .img32, .img33
+        Image.dummyDetail3, Image.dummyDetail4, Image.dummyDetail5, Image.dummyDetail6, Image.dummyDetail7
     ]
     
     // MARK: - UI Components

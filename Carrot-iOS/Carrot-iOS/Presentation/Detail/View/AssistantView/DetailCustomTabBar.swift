@@ -18,7 +18,16 @@ final class DetailCustomTabBar: UIView {
         didSet {
             buttons.forEach {
                 $0.isSelected = $0.tag == index
-                $0.addBottomBorder(with: $0.tag == self.index ? .grey500 : .grey100, andWidth: 1.5)
+                
+                selectLine.snp.remakeConstraints {
+                    $0.leading.equalTo(buttons[index].snp.leading)
+                    $0.width.equalToSuperview().dividedBy(4)
+                    $0.bottom.equalToSuperview().offset(0.75)
+                    $0.height.equalTo(1.5)
+                }
+                UIView.animate(withDuration: 0.2) {
+                    self.layoutIfNeeded()
+                }
             }
         }
     }
@@ -33,6 +42,9 @@ final class DetailCustomTabBar: UIView {
     private let button2 = UIButton()
     private let button3 = UIButton()
     private let button4 = UIButton()
+    
+    private let backgroundLine = UIView()
+    private let selectLine = UIView()
 
     // MARK: - Life Cycle
     
@@ -66,13 +78,23 @@ final class DetailCustomTabBar: UIView {
                 $0.setTitleColor(.grey400, for: .normal)
                 $0.setTitleColor(.carrotBlack, for: .selected)
                 $0.addTarget(self, action: #selector(tap(_:)), for: .touchUpInside)
-                $0.addBottomBorder(with: i == index ? .grey500 : .grey100, andWidth: 1.5)
             }
         }
+        
+        backgroundLine.do {
+            $0.backgroundColor = .grey100
+        }
+        
+        selectLine.do {
+            $0.backgroundColor = .grey500
+        }
+        
     }
     
     private func hieararchy() {
-        self.addSubviews(horizontalStackView)
+        self.addSubviews(
+            horizontalStackView, backgroundLine, selectLine
+        )
         
         horizontalStackView.addArrangedSubViews(
             button1, button2, button3, button4
@@ -84,6 +106,20 @@ final class DetailCustomTabBar: UIView {
             $0.edges.equalToSuperview()
             $0.height.equalTo(36)
         }
+        
+        backgroundLine.snp.makeConstraints {
+            $0.horizontalEdges.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(0.75)
+            $0.height.equalTo(1.5)
+        }
+        
+        selectLine.snp.makeConstraints {
+            $0.leading.equalTo(buttons[index].snp.leading)
+            $0.width.equalToSuperview().dividedBy(4)
+            $0.bottom.equalToSuperview().offset(0.75)
+            $0.height.equalTo(1.5)
+        }
+        
     }
     
 
