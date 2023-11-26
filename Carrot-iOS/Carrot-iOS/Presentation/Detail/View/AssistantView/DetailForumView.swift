@@ -17,10 +17,18 @@ final class DetailForumView: UIView {
     private let totalStack = UIStackView()
     
     private let titleView = UILabel()
-    private let spacer = UIView()
+    private let spacer1 = UIView()
     private let forumLines = [0, 1, 2, 3, 4].map { _ in
         return DetailForumLineView()
     }
+    
+    private let spacer2 = UIView()
+    
+    private let moreEventButton = UIButton()
+    private let buttonStackView = UIStackView()
+    private let buttontitle = UILabel()
+    private let buttonImage = UIImageView()
+    
     
     // MARK: - Life Cycle
     
@@ -92,14 +100,43 @@ final class DetailForumView: UIView {
             )
         }
         
+        moreEventButton.do {
+            $0.backgroundColor = .grey100
+            $0.layer.cornerRadius = 6
+        }
+        
+        buttonStackView.do {
+            $0.axis = .horizontal
+            $0.spacing = 6
+        }
+        
+        buttontitle.do {
+            $0.text = "전체보기"
+            $0.font = .carrotSubtitle
+            $0.textColor = .carrotBlack
+        }
+        
+        buttonImage.do {
+            $0.image = .icNavigationRight.withRenderingMode(.alwaysTemplate)
+            $0.tintColor = .carrotBlack
+        }
+        
     }
     
     private func hieararchy() {
         self.addSubviews(totalStack)
         
         totalStack.addArrangedSubViews(
-            titleView, spacer, forumLines[0], forumLines[1],
-            forumLines[2], forumLines[3], forumLines[4]
+            titleView, spacer1, forumLines[0], forumLines[1],
+            forumLines[2], forumLines[3], forumLines[4], spacer2, moreEventButton
+        )
+        
+        moreEventButton.addSubviews(
+            buttonStackView
+        )
+        
+        buttonStackView.addArrangedSubViews(
+            buttontitle, buttonImage
         )
     }
     
@@ -108,8 +145,21 @@ final class DetailForumView: UIView {
             $0.edges.equalToSuperview()
         }
         
-        spacer.snp.makeConstraints {
+        spacer1.snp.makeConstraints {
             $0.height.equalTo(16)
+        }
+        
+        spacer2.snp.makeConstraints {
+            $0.height.equalTo(17)
+        }
+        
+        moreEventButton.snp.makeConstraints {
+            $0.height.equalTo(40)
+            $0.horizontalEdges.equalToSuperview().inset(15)
+        }
+        
+        buttonStackView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
         }
     }
 }
