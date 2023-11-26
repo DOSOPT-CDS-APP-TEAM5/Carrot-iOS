@@ -77,7 +77,7 @@ extension ClubViewController {
         contentView.snp.makeConstraints {
             $0.edges.equalTo(scrollView)
             $0.width.equalTo(scrollView)
-            $0.height.greaterThanOrEqualTo(scrollView.snp.height)
+            $0.height.equalTo(1100)
         }
         
         [searchBar, clubTabmanViewController.view].forEach {

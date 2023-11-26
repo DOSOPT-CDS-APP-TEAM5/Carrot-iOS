@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003876A62B0E657A00D5C299 /* OurTownHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */; };
+		003876A62B0E657A00D5C299 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876A52B0E657A00D5C299 /* HeaderView.swift */; };
 		003876AB2B0F0EE900D5C299 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 003876AA2B0F0EE900D5C299 /* Tabman */; };
 		003876AD2B0F0FB100D5C299 /* ClubTabmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876AC2B0F0FB100D5C299 /* ClubTabmanViewController.swift */; };
 		003876AF2B0F116E00D5C299 /* AllClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876AE2B0F116E00D5C299 /* AllClubViewController.swift */; };
 		003876B12B0F117B00D5C299 /* MyClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876B02B0F117B00D5C299 /* MyClubViewController.swift */; };
+		003876B32B0F231000D5C299 /* TownClubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876B22B0F231000D5C299 /* TownClubCollectionViewCell.swift */; };
+		003876B52B0F3DA000D5C299 /* NewClubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876B42B0F3DA000D5C299 /* NewClubCollectionViewCell.swift */; };
+		003876C12B0FB90100D5C299 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876C02B0FB90100D5C299 /* FilterCollectionViewCell.swift */; };
+		003876C32B0FBEC600D5C299 /* HighlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876C22B0FBEC600D5C299 /* HighlightCollectionViewCell.swift */; };
+		003876C52B0FC2D600D5C299 /* ViewAllFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876C42B0FC2D600D5C299 /* ViewAllFooterView.swift */; };
+		003876C72B0FC82F00D5C299 /* FarClubFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003876C62B0FC82F00D5C299 /* FarClubFooterView.swift */; };
 		0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1512B0A6C83002D06A5 /* UIColor+.swift */; };
 		0057F1542B0A6F20002D06A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1532B0A6F20002D06A5 /* Image.swift */; };
 		0057F1562B0A7C91002D06A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1552B0A7C91002D06A5 /* Device.swift */; };
@@ -31,6 +37,8 @@
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
+		008E59F32B105B9A00E4F7E0 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E59F22B105B9A00E4F7E0 /* PageCell.swift */; };
+		008E59F52B105E6100E4F7E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E59F42B105E6100E4F7E0 /* CustomCell.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
 		39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */; };
 		39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56742B0DA82600A17A03 /* SF-Pro.ttf */; };
@@ -67,10 +75,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OurTownHeaderView.swift; path = "Carrot-iOS/Presentation/Club/View/OurTownHeaderView.swift"; sourceTree = SOURCE_ROOT; };
+		003876A52B0E657A00D5C299 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = "Carrot-iOS/Presentation/Club/View/HeaderView.swift"; sourceTree = SOURCE_ROOT; };
 		003876AC2B0F0FB100D5C299 /* ClubTabmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTabmanViewController.swift; sourceTree = "<group>"; };
 		003876AE2B0F116E00D5C299 /* AllClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllClubViewController.swift; sourceTree = "<group>"; };
 		003876B02B0F117B00D5C299 /* MyClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubViewController.swift; sourceTree = "<group>"; };
+		003876B22B0F231000D5C299 /* TownClubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownClubCollectionViewCell.swift; sourceTree = "<group>"; };
+		003876B42B0F3DA000D5C299 /* NewClubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClubCollectionViewCell.swift; sourceTree = "<group>"; };
+		003876C02B0FB90100D5C299 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		003876C22B0FBEC600D5C299 /* HighlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		003876C42B0FC2D600D5C299 /* ViewAllFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllFooterView.swift; sourceTree = "<group>"; };
+		003876C62B0FC82F00D5C299 /* FarClubFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarClubFooterView.swift; sourceTree = "<group>"; };
 		0057F1512B0A6C83002D06A5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0057F1532B0A6F20002D06A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0057F1552B0A7C91002D06A5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -92,6 +106,8 @@
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		008E59F22B105B9A00E4F7E0 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		008E59F42B105E6100E4F7E0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		39FE56742B0DA82600A17A03 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -334,7 +350,9 @@
 		007BAC892B08A5F2005A34C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				003876A52B0E657A00D5C299 /* OurTownHeaderView.swift */,
+				003876A52B0E657A00D5C299 /* HeaderView.swift */,
+				003876C42B0FC2D600D5C299 /* ViewAllFooterView.swift */,
+				003876C62B0FC82F00D5C299 /* FarClubFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +360,12 @@
 		007BAC8A2B08A5FC005A34C3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				003876B22B0F231000D5C299 /* TownClubCollectionViewCell.swift */,
+				003876B42B0F3DA000D5C299 /* NewClubCollectionViewCell.swift */,
+				003876C02B0FB90100D5C299 /* FilterCollectionViewCell.swift */,
+				003876C22B0FBEC600D5C299 /* HighlightCollectionViewCell.swift */,
+				008E59F22B105B9A00E4F7E0 /* PageCell.swift */,
+				008E59F42B105E6100E4F7E0 /* CustomCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -581,12 +605,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				003876A62B0E657A00D5C299 /* OurTownHeaderView.swift in Sources */,
+				003876A62B0E657A00D5C299 /* HeaderView.swift in Sources */,
 				007BACB92B08A79A005A34C3 /* 3.swift in Sources */,
 				007BACA92B08A703005A34C3 /* 19.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
+				008E59F32B105B9A00E4F7E0 /* PageCell.swift in Sources */,
 				D206CA712B0C991D007ECC1B /* MainClubModel.swift in Sources */,
 				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
@@ -594,11 +619,13 @@
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D206CA682B0C7C50007ECC1B /* MainCategoryCollectionViewCell.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
+				003876C12B0FB90100D5C299 /* FilterCollectionViewCell.swift in Sources */,
 				007BACA32B08A6ED005A34C3 /* 16.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
 				003876AD2B0F0FB100D5C299 /* ClubTabmanViewController.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
+				003876C72B0FC82F00D5C299 /* FarClubFooterView.swift in Sources */,
 				007BACA52B08A6F4005A34C3 /* 17.swift in Sources */,
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
@@ -617,6 +644,8 @@
 				D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
+				003876C52B0FC2D600D5C299 /* ViewAllFooterView.swift in Sources */,
+				003876C32B0FBEC600D5C299 /* HighlightCollectionViewCell.swift in Sources */,
 				D206CA5D2B0C6538007ECC1B /* MainTopView.swift in Sources */,
 				D206CA5F2B0C69E6007ECC1B /* MainMoreClubCollectionViewCell.swift in Sources */,
 				D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */,
@@ -627,8 +656,11 @@
 				D23475D92B0A69D30098432F /* UIStackView+.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				D23475DD2B0A6AE60098432F /* UITableViewCell+.swift in Sources */,
+				003876B32B0F231000D5C299 /* TownClubCollectionViewCell.swift in Sources */,
 				007BACA12B08A6E8005A34C3 /* 15.swift in Sources */,
 				007BACBB2B08A79E005A34C3 /* 4.swift in Sources */,
+				008E59F52B105E6100E4F7E0 /* CustomCell.swift in Sources */,
+				003876B52B0F3DA000D5C299 /* NewClubCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class MyClubViewController: UIViewController {
     
     // MARK: - View Life Cycle
@@ -14,7 +17,7 @@ class MyClubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
     }
 
 }

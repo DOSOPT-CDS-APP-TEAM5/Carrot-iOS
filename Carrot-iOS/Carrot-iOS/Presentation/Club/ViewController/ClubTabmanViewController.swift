@@ -16,6 +16,7 @@ class ClubTabmanViewController: TabmanViewController {
     
     // MARK: - Properties
     
+    let barView = UIView()
     let botttomLineView = UIView()
     let bar = TMBar.ButtonBar()
 
@@ -27,6 +28,7 @@ class ClubTabmanViewController: TabmanViewController {
         self.navigationController?.navigationBar.topItem?.title = "게시판"
         setUI()
         self.isScrollEnabled = false
+        self.dataSource = self
     }
 
 }
@@ -38,10 +40,13 @@ extension ClubTabmanViewController {
     private func setUI() {
         setStyle()
         setLayout()
-        self.dataSource = self
     }
     
     private func setStyle() {
+        
+        barView.do {
+            $0.backgroundColor = .white
+        }
         
         botttomLineView.do {
             $0.backgroundColor = .grey200
@@ -50,7 +55,7 @@ extension ClubTabmanViewController {
         bar.do {
             $0.layout.transitionStyle = .snap
             $0.layout.contentMode = .fit
-            $0.backgroundView.style = .blur(style: .light)
+            $0.backgroundView.style = .custom(view: barView)
             $0.buttons.customize { (button) in
                 button.selectedTintColor = .carrotBlack
                 button.tintColor = .grey400

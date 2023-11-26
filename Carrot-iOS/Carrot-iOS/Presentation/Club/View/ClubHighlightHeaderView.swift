@@ -1,5 +1,5 @@
 //
-//  OurTownHeaderView.swift
+//  ClubHighlightHeaderView.swift
 //  Carrot-iOS
 //
 //  Created by 티모시 킴 on 11/23/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OurTownHeaderView: UIView {
+final class ClubHighlightHeaderView: UIView {
 
     // MARK: - Properties
     
@@ -28,7 +28,7 @@ final class OurTownHeaderView: UIView {
 
 // MARK: - Extensions
 
-extension OurTownHeaderView {
+extension ClubHighlightHeaderView {
     
     // MARK: - @Functions
     
@@ -41,7 +41,7 @@ extension OurTownHeaderView {
     private func setStyle() {
         titleLabel.do {
             $0.font = .carrotTitleBd
-            $0.text = "우리동네 모임"
+            $0.text = "모임 하이라이트"
         }
     }
     
