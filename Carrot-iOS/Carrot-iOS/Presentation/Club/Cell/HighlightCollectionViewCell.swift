@@ -48,7 +48,7 @@ extension HighlightCollectionViewCell {
         }
         
         titleLabel.do {
-            $0.font = .carrotTitleMd
+            $0.font = .carrotBody
             $0.textColor = .carrotWhite
             $0.numberOfLines = 2
             $0.text = "나의 취향 찾기(원데이 클래스)"
@@ -66,7 +66,7 @@ extension HighlightCollectionViewCell {
         
         titleLabel.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(12)
-            $0.bottom.equalToSuperview().inset(9)
+            $0.bottom.equalToSuperview()
         }
     }
     
