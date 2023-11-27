@@ -37,8 +37,7 @@
 		007BACB92B08A79A005A34C3 /* 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB82B08A79A005A34C3 /* 3.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
-		008E59F32B105B9A00E4F7E0 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E59F22B105B9A00E4F7E0 /* PageCell.swift */; };
-		008E59F52B105E6100E4F7E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E59F42B105E6100E4F7E0 /* CustomCell.swift */; };
+		00FC5EEE2B13B47B001615BB /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
 		39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */; };
 		39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56742B0DA82600A17A03 /* SF-Pro.ttf */; };
@@ -106,8 +105,7 @@
 		007BACB82B08A79A005A34C3 /* 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
-		008E59F22B105B9A00E4F7E0 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
-		008E59F42B105E6100E4F7E0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		39FE56742B0DA82600A17A03 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
@@ -360,12 +358,11 @@
 		007BAC8A2B08A5FC005A34C3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */,
+				003876C02B0FB90100D5C299 /* FilterCollectionViewCell.swift */,
 				003876B22B0F231000D5C299 /* TownClubCollectionViewCell.swift */,
 				003876B42B0F3DA000D5C299 /* NewClubCollectionViewCell.swift */,
-				003876C02B0FB90100D5C299 /* FilterCollectionViewCell.swift */,
 				003876C22B0FBEC600D5C299 /* HighlightCollectionViewCell.swift */,
-				008E59F22B105B9A00E4F7E0 /* PageCell.swift */,
-				008E59F42B105E6100E4F7E0 /* CustomCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -611,7 +608,6 @@
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
-				008E59F32B105B9A00E4F7E0 /* PageCell.swift in Sources */,
 				D206CA712B0C991D007ECC1B /* MainClubModel.swift in Sources */,
 				D206CA642B0C6E8C007ECC1B /* MainMoreClubCollectionFooterView.swift in Sources */,
 				007BACAB2B08A711005A34C3 /* 7.swift in Sources */,
@@ -637,6 +633,7 @@
 				D23475D72B0A69C70098432F /* UINavagationController+.swift in Sources */,
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
+				00FC5EEE2B13B47B001615BB /* TabCollectionViewCell.swift in Sources */,
 				D206CA6F2B0C895E007ECC1B /* MainPostCollectionViewCell.swift in Sources */,
 				003876AF2B0F116E00D5C299 /* AllClubViewController.swift in Sources */,
 				D206CA6D2B0C8930007ECC1B /* MainPostCollectionView.swift in Sources */,
@@ -659,7 +656,6 @@
 				003876B32B0F231000D5C299 /* TownClubCollectionViewCell.swift in Sources */,
 				007BACA12B08A6E8005A34C3 /* 15.swift in Sources */,
 				007BACBB2B08A79E005A34C3 /* 4.swift in Sources */,
-				008E59F52B105E6100E4F7E0 /* CustomCell.swift in Sources */,
 				003876B52B0F3DA000D5C299 /* NewClubCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

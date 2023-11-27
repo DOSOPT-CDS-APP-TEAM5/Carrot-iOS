@@ -30,6 +30,7 @@ final class NewClubCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setUI()
     }
     

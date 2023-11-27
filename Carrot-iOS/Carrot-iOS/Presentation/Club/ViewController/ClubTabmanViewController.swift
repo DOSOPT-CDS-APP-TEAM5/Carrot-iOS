@@ -12,7 +12,7 @@ import Then
 import Tabman
 import Pageboy
 
-class ClubTabmanViewController: TabmanViewController {
+final class ClubTabmanViewController: TabmanViewController {
     
     // MARK: - Properties
     

@@ -64,39 +64,41 @@ extension AllClubViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = false
+        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
+        collectionView.register(ViewAllFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ViewAllFooterView.identifier)
+        collectionView.register(FarClubFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FarClubFooterView.identifier)
+        collectionView.register(TabCollectionViewCell.self, forCellWithReuseIdentifier: TabCollectionViewCell.identifier)
         collectionView.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
         collectionView.register(TownClubCollectionViewCell.self, forCellWithReuseIdentifier: TownClubCollectionViewCell.identifier)
-        collectionView.register(ViewAllFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: ViewAllFooterView.identifier)
-        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.identifier)
         collectionView.register(NewClubCollectionViewCell.self, forCellWithReuseIdentifier: NewClubCollectionViewCell.identifier)
         collectionView.register(HighlightCollectionViewCell.self, forCellWithReuseIdentifier: HighlightCollectionViewCell.identifier)
-        collectionView.register(FarClubFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FarClubFooterView.identifier)
     }
     
     private func createSectionLayout(section: Int) -> NSCollectionLayoutSection {
         switch section {
         case 0:
-            return createFirstSectionLayout()
+            return firstSectionLayout()
         case 1:
-            return createSecondSectionLayout()
+            return secondSectionLayout()
         case 2:
-            return createThirdSectionLayout()
+            return thirdSectionLayout()
         default:
-            return createDefaultLayout()
+            return defaultLayout()
         }
     }
     
-    private func createFirstSectionLayout() -> NSCollectionLayoutSection {
+    private func firstSectionLayout() -> NSCollectionLayoutSection {
         let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
         let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         
         let footerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(60))
         let footerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerItemSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
         
-        let firstGroup = createFirstSectionFirstGroupLayout()
-        let secondGroup = createFirstSectionSecondGroupLayout()
+        let firstGroup = firstSectionFirstGroupLayout()
+        let secondGroup = firstSectionSecondGroupLayout()
+        let thirdGroup = firstSectionThirdGroupLayout()
         
-        let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(280)), subitems: [firstGroup, secondGroup])
+        let containerGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(312)), subitems: [firstGroup, secondGroup, thirdGroup])
         
         let section = NSCollectionLayoutSection(group: containerGroup)
         section.boundarySupplementaryItems = [headerItem, footerItem]
@@ -104,21 +106,28 @@ extension AllClubViewController {
         return section
     }
     
-    private func createFirstSectionFirstGroupLayout() -> NSCollectionLayoutGroup {
-        let filterItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40)))
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [filterItem])
+    private func firstSectionFirstGroupLayout() -> NSCollectionLayoutGroup {
+        let categoryItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(32)))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(32))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: categoryItem, count: 1)
         return group
     }
     
-    private func createFirstSectionSecondGroupLayout() -> NSCollectionLayoutGroup {
+    private func firstSectionSecondGroupLayout() -> NSCollectionLayoutGroup {
+        let filterItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40)))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: filterItem, count: 1)
+        return group
+    }
+    
+    private func firstSectionThirdGroupLayout() -> NSCollectionLayoutGroup {
         let townClubItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(80)))
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(240))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: townClubItem, count: 3)
         return group
     }
     
-    private func createSecondSectionLayout() -> NSCollectionLayoutSection {
+    private func secondSectionLayout() -> NSCollectionLayoutSection {
         let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
         
         let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
@@ -136,7 +145,7 @@ extension AllClubViewController {
         return section
     }
     
-    private func createThirdSectionLayout() -> NSCollectionLayoutSection {
+    private func thirdSectionLayout() -> NSCollectionLayoutSection {
         let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
         
         let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
@@ -159,7 +168,7 @@ extension AllClubViewController {
         return section
     }
     
-    private func createDefaultLayout() -> NSCollectionLayoutSection {
+    private func defaultLayout() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44)))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44)), subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
@@ -177,7 +186,7 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 4
+            return 5
         case 1:
             return 3
         case 2:
@@ -192,9 +201,12 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
         case 0:
             switch indexPath.row {
             case 0:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCollectionViewCell.identifier, for: indexPath) as! TabCollectionViewCell
+                return cell
+            case 1:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.identifier, for: indexPath) as! FilterCollectionViewCell
                 return cell
-            case 1, 2, 3:
+            case 2, 3, 4:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TownClubCollectionViewCell.identifier, for: indexPath) as! TownClubCollectionViewCell
                 return cell
             default:
