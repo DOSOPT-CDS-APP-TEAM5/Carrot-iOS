@@ -31,19 +31,19 @@ extension BaseService {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GenericResponse<T>.self, from: data)
         else {
-            print("⛔️ \(self)애서 디코딩 오류가 발생했습니다 ⛔️")
+            print("⛔️ \(self)애서 디코딩 오류가 발생했습니다⛔️")
             return .decodedErr
         }
         
         switch statusCode {
         case 200..<205:
             guard decodedData.data != nil else {
-                print("⛔️ \(self)애서 디코딩 오류가 발생했습니다 ⛔️")
+                print("⛔️ \(self)애서 디코딩 오류가 발생했습니다⛔️")
                 return .decodedErr
             }
             return .success(decodedData.data as Any)
         case 406:
-            return .authorizationFail((decodedData.message, decodedData.status))
+            return .authorizationFail((decodedData.message, decodedData.code))
         case 400..<500:
             return .requestErr(decodedData.message ?? "요청에러")
         case 500:

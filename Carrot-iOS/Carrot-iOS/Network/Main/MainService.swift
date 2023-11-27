@@ -19,6 +19,6 @@ protocol MainService {
 
 extension DefaultMainService: MainService {
     func getMainData() async -> NetworkResult<Any> {
-        await self.request(target: .getMainData, dataModel: MainDTO.self)
+        await self.request(target: .getMainData, dataModel: [MainDTO].self)
     }
 }

@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct MainDTO: Codable {
+    let lifeID: Int
+    let lifeCategoryContent, lifeTitle, lifeContent, contentInformation: String
+    let likeCount, commentCount: Int
+
+    enum CodingKeys: String, CodingKey {
+        case lifeID = "lifeId"
+        case lifeCategoryContent, lifeTitle, lifeContent, contentInformation, likeCount, commentCount
+    }
+}

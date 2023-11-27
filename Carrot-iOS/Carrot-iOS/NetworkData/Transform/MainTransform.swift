@@ -7,10 +7,9 @@
 
 import Foundation
 
-
 extension MainDTO {
     func toDomain() -> MainModel {
-        MainModel(
+        return MainModel(
             id: lifeID,
             tag: lifeCategoryContent,
             title: lifeTitle,
