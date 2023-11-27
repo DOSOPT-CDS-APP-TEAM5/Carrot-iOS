@@ -19,18 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .light 
-        
-        let mainViewController = DetailViewController()
-        
-        self.window?.rootViewController = mainViewController
+
+        let mainViewController = MainViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+
+        navigationController.isNavigationBarHidden = true
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        
-//        let mainViewController = MainViewController()
-//        let navigationController = UINavigationController(rootViewController: mainViewController)
-//
-//        navigationController.isNavigationBarHidden = true
-//        self.window?.rootViewController = navigationController
-//        self.window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
