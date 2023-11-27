@@ -13,8 +13,7 @@ protocol BaseTargetType: TargetType{ }
 extension BaseTargetType{
     
     var baseURL: URL {
-        return URL(fileURLWithPath: "")
-//        return URL(string: Config.baseURL)! -> 나중에 정해지면 반영할게욤!
+        return URL(string: Config.Keys.Plist.baseURL)!
     }
     
     var headers: [String : String]? {

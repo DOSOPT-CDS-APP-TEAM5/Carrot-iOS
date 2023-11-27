@@ -81,6 +81,7 @@
 		D23475EC2B0A6B7D0098432F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EB2B0A6B7D0098432F /* Moya */; };
 		D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EE2B0A6B890098432F /* Kingfisher */; };
 		D2A7A03C2B148DAD00DBD284 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A03B2B148DAD00DBD284 /* Config.swift */; };
+		D2A7A03F2B148ECD00DBD284 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A03E2B148ECD00DBD284 /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +158,7 @@
 		D23475E22B0A6B180098432F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		D2A7A03B2B148DAD00DBD284 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D2A7A03D2B148DD500DBD284 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D2A7A03E2B148ECD00DBD284 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 			children = (
 				0057F1552B0A7C91002D06A5 /* Device.swift */,
 				0057F1532B0A6F20002D06A5 /* Image.swift */,
+				D2A7A03E2B148ECD00DBD284 /* URLs.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				D23475D72B0A69C70098432F /* UINavagationController+.swift in Sources */,
 				0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */,
 				D206CAA42B0E88A6007ECC1B /* BaseTargetType.swift in Sources */,
+				D2A7A03F2B148ECD00DBD284 /* URLs.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
 				D206CA6F2B0C895E007ECC1B /* MainPostCollectionViewCell.swift in Sources */,
 				D206CA942B0E875C007ECC1B /* DetailEntity.swift in Sources */,
