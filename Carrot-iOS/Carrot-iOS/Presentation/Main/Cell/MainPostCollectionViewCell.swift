@@ -166,6 +166,15 @@ final class MainPostCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(1)
         }
     }
+    
+    func dataBind(_ data: MainModel) {
+        categoryLabel.text = data.tag
+        titleLabel.text = data.title
+        subTitleLabel.text = data.content
+        infoLabel.text = data.contentInformation
+        likeCntLabel.text = String(data.likeCnt)
+        commentCntLabel.text = String(data.commentCnt)
+    }
 }
 
 

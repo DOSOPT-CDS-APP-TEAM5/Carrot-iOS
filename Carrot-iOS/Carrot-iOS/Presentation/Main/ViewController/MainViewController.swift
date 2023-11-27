@@ -15,6 +15,11 @@ final class MainViewController: UIViewController {
     //MARK: - Properties
     
     let mainRepository: MainRepository
+    var postData: [MainModel] = [] {
+        didSet {
+            rootView.postView.reloadData()
+        }
+    }
     
     //MARK: - UI Components
     
@@ -39,10 +44,12 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
-        Task {
-            try await mainRepository.getMainData()
-        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        requsetMainAPI()
     }
     
     private func delegate() {
@@ -54,6 +61,12 @@ final class MainViewController: UIViewController {
         
         rootView.postView.dataSource = self
         rootView.postView.delegate = self
+    }
+    
+    private func requsetMainAPI() {
+        Task {
+            postData = try await mainRepository.getMainData()
+        }
     }
 }
 
@@ -81,7 +94,7 @@ extension MainViewController: UICollectionViewDataSource {
         case rootView.categoryView:
             return MainCategoryModel.categoryList.count
         case rootView.postView:
-            return 10
+            return postData.count
         default:
             return 0
         }
@@ -99,6 +112,9 @@ extension MainViewController: UICollectionViewDataSource {
             return cell
         case rootView.postView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPostCollectionViewCell.cellIdentifier, for: indexPath) as? MainPostCollectionViewCell else { return UICollectionViewCell() }
+            if !postData.isEmpty {
+                cell.dataBind(postData[indexPath.item])
+            }
             return cell
         default:
             return UICollectionViewCell()
