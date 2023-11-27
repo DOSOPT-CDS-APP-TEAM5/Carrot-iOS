@@ -80,6 +80,7 @@
 		D23475E92B0A6B660098432F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D23475E82B0A6B660098432F /* Then */; };
 		D23475EC2B0A6B7D0098432F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EB2B0A6B7D0098432F /* Moya */; };
 		D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EE2B0A6B890098432F /* Kingfisher */; };
+		D2A7A03C2B148DAD00DBD284 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A03B2B148DAD00DBD284 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,8 @@
 		D23475DE2B0A6AFA0098432F /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		D23475E02B0A6B070098432F /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		D23475E22B0A6B180098432F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		D2A7A03B2B148DAD00DBD284 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D2A7A03D2B148DD500DBD284 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,8 @@
 				D206CAA52B0E8900007ECC1B /* APIConstant.swift */,
 				D206CAA72B0E8945007ECC1B /* BaseAPI.swift */,
 				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
+				D2A7A03B2B148DAD00DBD284 /* Config.swift */,
+				D2A7A03D2B148DD500DBD284 /* Config.xcconfig */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -791,6 +796,7 @@
 				D206CA662B0C7C34007ECC1B /* MainCategoryCollectionView.swift in Sources */,
 				D23475E12B0A6B070098432F /* UIView+.swift in Sources */,
 				D23475D92B0A69D30098432F /* UIStackView+.swift in Sources */,
+				D2A7A03C2B148DAD00DBD284 /* Config.swift in Sources */,
 				D206CA9B2B0E87DC007ECC1B /* DetailTransform.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				D23475DD2B0A6AE60098432F /* UITableViewCell+.swift in Sources */,
@@ -816,6 +822,7 @@
 /* Begin XCBuildConfiguration section */
 		007822532B089F90008F0E17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A7A03D2B148DD500DBD284 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -879,6 +886,7 @@
 		};
 		007822542B089F90008F0E17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A7A03D2B148DD500DBD284 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
