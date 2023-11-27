@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+
+extension MainDTO {
+    func toDomain() -> MainModel {
+        MainModel(
+            id: lifeID,
+            tag: lifeCategoryContent,
+            title: lifeTitle,
+            content: lifeContent,
+            contentInformation: contentInformation,
+            likeCnt: likeCount,
+            commentCnt: commentCount
+        )
+    }
+}
+

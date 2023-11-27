@@ -82,6 +82,10 @@
 		D23475EF2B0A6B890098432F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D23475EE2B0A6B890098432F /* Kingfisher */; };
 		D2A7A03C2B148DAD00DBD284 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A03B2B148DAD00DBD284 /* Config.swift */; };
 		D2A7A03F2B148ECD00DBD284 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A03E2B148ECD00DBD284 /* URLs.swift */; };
+		D2A7A0412B14904600DBD284 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0402B14904600DBD284 /* MainService.swift */; };
+		D2A7A0432B1490EC00DBD284 /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0422B1490EC00DBD284 /* MainAPI.swift */; };
+		D2A7A0462B14939E00DBD284 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0452B14939E00DBD284 /* BaseService.swift */; };
+		D2A7A04A2B14C87500DBD284 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0492B14C87500DBD284 /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +163,10 @@
 		D2A7A03B2B148DAD00DBD284 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D2A7A03D2B148DD500DBD284 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D2A7A03E2B148ECD00DBD284 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		D2A7A0402B14904600DBD284 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		D2A7A0422B1490EC00DBD284 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
+		D2A7A0452B14939E00DBD284 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		D2A7A0492B14C87500DBD284 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +248,7 @@
 		0078225B2B08A209008F0E17 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D2A7A0442B14912200DBD284 /* Main */,
 				D206CA782B0E85EF007ECC1B /* DTO */,
 				007822612B08A286008F0E17 /* Foundation */,
 			);
@@ -298,6 +307,7 @@
 				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
 				D2A7A03B2B148DAD00DBD284 /* Config.swift */,
 				D2A7A03D2B148DD500DBD284 /* Config.xcconfig */,
+				D2A7A0452B14939E00DBD284 /* BaseService.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -507,6 +517,7 @@
 			children = (
 				D206CA6A2B0C7FC8007ECC1B /* MainCategoryModel.swift */,
 				D206CA702B0C991D007ECC1B /* MainClubModel.swift */,
+				D2A7A0492B14C87500DBD284 /* MainModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -656,6 +667,15 @@
 			path = "UIKit+";
 			sourceTree = "<group>";
 		};
+		D2A7A0442B14912200DBD284 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7A0422B1490EC00DBD284 /* MainAPI.swift */,
+				D2A7A0402B14904600DBD284 /* MainService.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -758,6 +778,7 @@
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
 				D206CA972B0E87C4007ECC1B /* MainTransform.swift in Sources */,
 				007BACA32B08A6ED005A34C3 /* 16.swift in Sources */,
+				D2A7A0462B14939E00DBD284 /* BaseService.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
 				D206CA832B0E86BC007ECC1B /* DetailRepository.swift in Sources */,
 				D23475CD2B0A69450098432F /* UIButton+.swift in Sources */,
@@ -784,7 +805,10 @@
 				D206CA6D2B0C8930007ECC1B /* MainPostCollectionView.swift in Sources */,
 				D206CA5A2B0C5EE1007ECC1B /* MainView.swift in Sources */,
 				D206CA852B0E86C9007ECC1B /* MainDTO.swift in Sources */,
+				D2A7A0432B1490EC00DBD284 /* MainAPI.swift in Sources */,
 				D206CA892B0E86D8007ECC1B /* DetailDTO.swift in Sources */,
+				D2A7A0412B14904600DBD284 /* MainService.swift in Sources */,
+				D2A7A04A2B14C87500DBD284 /* MainModel.swift in Sources */,
 				D206CA9E2B0E881B007ECC1B /* GenericResponse.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */,
@@ -947,6 +971,7 @@
 		};
 		007822562B089F90008F0E17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A7A03D2B148DD500DBD284 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -975,6 +1000,7 @@
 		};
 		007822572B089F90008F0E17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A7A03D2B148DD500DBD284 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -12,11 +12,24 @@ import Then
 
 final class MainViewController: UIViewController {
     
+    //MARK: - Properties
+    
+    let mainRepository: MainRepository
+    
     //MARK: - UI Components
     
     private let rootView = MainView()
     
     //MARK: - Life Cycle
+    
+    init(mainRepository: MainRepository) {
+        self.mainRepository = mainRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         self.view = rootView
@@ -26,6 +39,10 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
+        Task {
+            try await mainRepository.getMainData()
+        }
+        
     }
     
     private func delegate() {

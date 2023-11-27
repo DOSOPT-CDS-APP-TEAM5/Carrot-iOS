@@ -13,7 +13,7 @@ protocol BaseTargetType: TargetType{ }
 extension BaseTargetType{
     
     var baseURL: URL {
-        return URL(string: Config.Keys.Plist.baseURL)!
+        return URL(string: Bundle.main.object(forInfoDictionaryKey: Config.Keys.Plist.baseURL) as! String)!
     }
     
     var headers: [String : String]? {
