@@ -29,7 +29,16 @@ final class SignUpViewController: UIViewController {
     }
     
     private func delegate() {
-        
+        rootView.introduceTextView.delegate = self
+    }
+}
+
+extension SignUpViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "자기소개를 입력해주세요." {
+            textView.text = nil
+            textView.textColor = .black
+        }
     }
 }
 

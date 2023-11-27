@@ -39,6 +39,7 @@ public enum Image {
     static let searchclub = UIImage(named: "ic_searchclub")
     static let shareCircle = UIImage(named: "ic_share_circle")
     static let time = UIImage(named: "ic_time")
+    static let editProfile = UIImage(named: "ic_editprofile")!
     
     //MARK: - Dummy
     

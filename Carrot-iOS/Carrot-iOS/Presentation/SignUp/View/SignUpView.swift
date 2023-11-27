@@ -17,13 +17,13 @@ final class SignUpView: UIView {
     let backButton = UIButton()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
-    private let profileImageView = UIImageView(image: Image.profile)
+    private let profileImageView = UIImageView(image: Image.editProfile)
     
     private let nameLabel = UILabel()
     private let nameTextField = UITextField()
     private let nameCntLabel = UILabel()
     
-    private let introduceTextView = UITextView()
+    let introduceTextView = UITextView()
     private let introduceLabel = UILabel()
     private let introduceCntLabel = UILabel()
     
@@ -49,6 +49,8 @@ final class SignUpView: UIView {
     // MARK: - Custom Method
     
     private func style() {
+        self.backgroundColor = .carrotWhite
+        
         backButton.do {
             $0.setImage(Image.navigationLeft, for: .normal)
         }
@@ -79,36 +81,47 @@ final class SignUpView: UIView {
             $0.makeCornerRound(radius: 5)
             $0.setBorder(borderWidth: 1, borderColor: .grey400)
         }
+        
         nameCntLabel.do {
             $0.text = "0/12"
             $0.textColor = .grey400
             $0.textAlignment = .left
             $0.font = .carrotBodyNumber
+            $0.setLineSpacing(spacing: 7)
         }
         
         introduceLabel.do {
-            $0.text = "닉네임"
+            $0.text = "자기소개"
             $0.textColor = .carrotBlack
             $0.font = .carrotSubtitle
             $0.textAlignment = .center
         }
+        
         introduceTextView.do {
-            $0.text = "닉네임을 입력해주세요."
-//            $0.setPlaceholderColor(color: .grey400)
+            $0.text = "자기소개를 입력해주세요."
+            $0.font = .carrotInfo
+            $0.textAlignment = .left
             $0.makeCornerRound(radius: 5)
+            $0.textContainerInset = UIEdgeInsets(top: 17.0, left: 15.0, bottom: 0.0, right: 0.0)
+            $0.textColor = .grey400
             $0.setBorder(borderWidth: 1, borderColor: .grey400)
         }
         
         introduceCntLabel.do {
-            $0.text = "0/200"
+            $0.text = "9/200"
             $0.textColor = .grey400
             $0.textAlignment = .left
             $0.font = .carrotBodyNumber
         }
         
-//        signUpButton.do {
-////            $0.setTitle("", for: <#T##UIControl.State#>)
-//        }
+        signUpButton.do {
+            $0.setTitle("가입하기", for: .normal)
+            $0.titleLabel?.textColor = .carrotWhite
+            $0.titleLabel?.font = .carrotButton
+            $0.titleLabel?.textAlignment = .center
+            $0.makeCornerRound(radius: 6)
+            $0.backgroundColor = .primaryButton
+        }
     }
     
     private func hieararchy() {
@@ -119,13 +132,11 @@ final class SignUpView: UIView {
             profileImageView,
             nameLabel,
             nameTextField,
-            nameCntLabel
-//            introduceTextView,
-//            introduceLabel,
-//            introduceCntLabel,
-//            signUpButton
-//
-//
+            nameCntLabel,
+            introduceTextView,
+            introduceLabel,
+            introduceCntLabel,
+            signUpButton
         )
     }
     
@@ -157,12 +168,12 @@ final class SignUpView: UIView {
         
         nameLabel.snp.makeConstraints {
             $0.top.equalTo(profileImageView.snp.bottom).offset(51)
-            $0.leading.equalToSuperview().offset(7)
+            $0.leading.equalToSuperview().offset(15)
         }
         
         nameTextField.snp.makeConstraints {
             $0.top.equalTo(nameLabel.snp.bottom).offset(15)
-            $0.leading.equalToSuperview().offset(7)
+            $0.leading.equalToSuperview().offset(15)
             $0.trailing.equalToSuperview().inset(23)
             $0.height.equalTo(54)
         }
@@ -172,6 +183,27 @@ final class SignUpView: UIView {
             $0.top.equalTo(nameTextField.snp.bottom).offset(2)
         }
         
+        introduceLabel.snp.makeConstraints {
+            $0.top.equalTo(nameTextField.snp.bottom).offset(51)
+            $0.leading.equalToSuperview().offset(15)
+        }
+        
+        introduceTextView.snp.makeConstraints {
+            $0.top.equalTo(introduceLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.height.equalTo(102)
+        }
+        
+        introduceCntLabel.snp.makeConstraints {
+            $0.top.equalTo(introduceTextView.snp.bottom).offset(2)
+            $0.trailing.equalTo(introduceTextView)
+        }
+        
+        signUpButton.snp.makeConstraints {
+            $0.bottom.equalTo(safeAreaLayoutGuide).inset(11)
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.height.equalTo(53)
+        }
     }
 }
 
