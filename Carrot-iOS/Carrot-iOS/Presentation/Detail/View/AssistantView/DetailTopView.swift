@@ -61,7 +61,7 @@ final class DetailTopView: UIView {
         }
         
         thumbnailView.do {
-            $0.image = Image.dummyDetail2
+            $0.image = Image.dummyDetail1
             $0.makeCornerRound(radius: 14)
         }
         
