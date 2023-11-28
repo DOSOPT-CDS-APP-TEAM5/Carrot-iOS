@@ -1,8 +1,8 @@
 //
-//  DetailBannerImageView.swift
+//  DetailSpacerView.swift
 //  Carrot-iOS
 //
-//  Created by 이윤학 on 11/22/23.
+//  Created by 이윤학 on 11/25/23.
 //
 
 import UIKit
@@ -10,11 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
-final class DetailBannerImageView: UIView {
+final class DetailSpacerView: UIView {
     
     // MARK: - UI Components
     
-    private let bannerImageView = UIImageView()
+    private let spacerView = UIView()
     
     // MARK: - Life Cycle
     
@@ -33,18 +33,17 @@ final class DetailBannerImageView: UIView {
     // MARK: - Custom Method
     
     private func style() {
-        bannerImageView.do {
-            $0.image = Image.dummyDetail1
-        }
+        self.backgroundColor = .grey100
     }
     
     private func hieararchy() {
-        self.addSubviews(bannerImageView)
+        self.addSubviews(spacerView)
     }
     
     private func layout() {
-        bannerImageView.snp.makeConstraints {
+        spacerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+            $0.height.equalTo(8)
         }
     }
 }

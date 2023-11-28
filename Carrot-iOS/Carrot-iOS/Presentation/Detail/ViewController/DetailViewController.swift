@@ -29,6 +29,5 @@ final class DetailViewController: UIViewController {
     }
     
     private func delegate() {
-        
     }
 }
