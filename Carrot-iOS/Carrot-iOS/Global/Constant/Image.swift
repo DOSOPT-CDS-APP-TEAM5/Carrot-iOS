@@ -39,6 +39,7 @@ public enum Image {
     static let searchclub = UIImage(named: "ic_searchclub")
     static let shareCircle = UIImage(named: "ic_share_circle")
     static let time = UIImage(named: "ic_time")
+    static let editProfile = UIImage(named: "ic_editprofile")!
     
     //MARK: - Dummy
     
@@ -51,11 +52,17 @@ public enum Image {
     static let dummyMain7 = UIImage(named: "img_7")!
     
     static let dummyClub1 = UIImage(named: "img_8")!
-    static let dummyClub2 = UIImage(named: "img_18")!
-    static let dummyClub3 = UIImage(named: "img_14")!
+    static let dummyClub2 = UIImage(named: "img_group_1")
+    static let dummyClub3 = UIImage(named: "img_18")!
+    static let dummyClub4 = UIImage(named: "img_14")!
+    
     static let dummyDetail1 = UIImage(named: "img_27")!
     static let dummyDetail2 = UIImage(named: "img_28")!
     static let dummyDetail3 = UIImage(named: "img_29")!
+    static let dummyDetail4 = UIImage(named: "img_30")!
+    static let dummyDetail5 = UIImage(named: "img_31")!
+    static let dummyDetail6 = UIImage(named: "img_32")!
+    static let dummyDetail7 = UIImage(named: "img_33")!
     static let dummySignUp = UIImage(named: "Group 45")!
     
     static let tabbar = UIImage(named: "tabbar")!

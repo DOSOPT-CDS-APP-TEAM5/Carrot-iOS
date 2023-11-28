@@ -36,6 +36,19 @@ extension UILabel {
         attributedText = attributeString
     }
     
+    func setLineSpacing(percentage: Double) {
+        let spacing = (self.font.pointSize * CGFloat(percentage/100) - self.font.pointSize)/2
+        guard let text = text else { return }
+        
+        let attributeString = NSMutableAttributedString(string: text)
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = spacing
+        attributeString.addAttribute(.paragraphStyle,
+                                     value: style,
+                                     range: NSRange(location: 0, length: attributeString.length))
+        attributedText = attributeString
+    }
+    
     func setAttributeLabel(targetString: [String], color: UIColor?, font: UIFont?, spacing: CGFloat = 0, baseLineOffset: CGFloat = 0) {
         let fullText = text ?? ""
         let style = NSMutableParagraphStyle()
@@ -64,6 +77,33 @@ extension UILabel {
         self.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.kern: kerning])
     }
     
+    func setKerning(withPercentage value: Double) {
+        let kerning = self.font.pointSize * CGFloat(value/100)
+        guard let text = text, !text.isEmpty else { return }
+        self.attributedText = NSAttributedString(string: text, attributes: [NSAttributedString.Key.kern: kerning])
+    }
+    
+    func setLineSpacingAndKerning(spacingPercentage: Double, kerningPercentage: Double) {
+        let kerning = self.font.pointSize * CGFloat(kerningPercentage/100)
+        let spacing = (self.font.pointSize * CGFloat(spacingPercentage/100) - self.font.pointSize)/2
+        guard let text = text, !text.isEmpty else { return }
+        
+        let attributeString = NSMutableAttributedString(string: text)
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = spacing
+        attributeString.addAttribute(
+            .paragraphStyle,
+            value: style,
+            range: NSRange(location: 0, length: attributeString.length)
+        )
+        
+        attributeString.addAttribute(
+            .kern,
+            value: kerning,
+            range: NSRange(location: 0, length: attributeString.length - 1))
+        
+        attributedText = attributeString
+    }
 }
 
 extension String {

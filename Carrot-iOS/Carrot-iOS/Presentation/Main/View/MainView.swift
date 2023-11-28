@@ -15,12 +15,13 @@ final class MainView: UIView {
     // MARK: - Properties
     
     private let topView = MainTopView()
-    private let scrollView = UIScrollView()
+    let scrollView = UIScrollView()
     private let contentView = UIView()
     let moreClubView = MainMoreClubCollectionView()
     let moreClubFooterView = MainMoreClubFooterView()
     let categoryView = MainCategoryCollectionView()
     let postView = MainPostCollectionView()
+    let floatingButton = MainFloatingButton()
     private let tabbarView = UIImageView(image: Image.tabbar)
     
     // MARK: - UI Components
@@ -50,7 +51,7 @@ final class MainView: UIView {
     }
     
     private func hieararchy() {
-        self.addSubviews(topView, scrollView, tabbarView)
+        self.addSubviews(topView, scrollView, floatingButton, tabbarView)
         scrollView.addSubview(contentView)
         contentView.addSubviews(
             moreClubView,
@@ -109,6 +110,13 @@ final class MainView: UIView {
             $0.bottom.equalToSuperview()
             $0.width.equalToSuperview()
             $0.height.equalTo(85)
+        }
+        
+        floatingButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(133)
+            $0.trailing.equalToSuperview().inset(15)
+            $0.width.equalTo(89)
+            $0.height.equalTo(48)
         }
     }
 }
