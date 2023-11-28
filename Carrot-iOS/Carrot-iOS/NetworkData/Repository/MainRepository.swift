@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 protocol MainRepository {
     
@@ -21,14 +20,17 @@ class DefaultMainRepository: MainRepository {
     }
     
     func getMainData() async throws -> [MainModel] {
-        let result = try await self.mainService.getMainData()
-        switch result {
-        case .success(let data):
-            return (data as! [MainDTO]).map { $0.toDomain() }
-        default:
-            break
+        do {
+            let result = try await self.mainService.getMainData()
+            switch result {
+            case .success(let data):
+                return (data as! [MainDTO]).map { $0.toDomain() }
+            default:
+                return []
+            }
+        } catch {
+            throw error
         }
-        return []
     }
     
     private func decode<T: Decodable>(data: Data, to target: T.Type) -> T? {

@@ -9,7 +9,6 @@ import Foundation
 
 import Moya
 import UIKit
-import Combine
 
 typealias DefaultMainService = BaseService<MainAPI>
 
