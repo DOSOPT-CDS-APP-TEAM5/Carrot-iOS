@@ -12,11 +12,29 @@ import Then
 
 final class MainViewController: UIViewController {
     
+    //MARK: - Properties
+    
+    let mainRepository: MainRepository
+    var postData: [MainModel] = [] {
+        didSet {
+            rootView.postView.reloadData()
+        }
+    }
+    
     //MARK: - UI Components
     
     private let rootView = MainView()
     
     //MARK: - Life Cycle
+    
+    init(mainRepository: MainRepository) {
+        self.mainRepository = mainRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         self.view = rootView
@@ -26,6 +44,12 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        requsetMainAPI()
     }
     
     private func delegate() {
@@ -39,6 +63,13 @@ final class MainViewController: UIViewController {
         
         rootView.postView.dataSource = self
         rootView.postView.delegate = self
+    }
+    
+    private func requsetMainAPI(_ category: String? = nil) {
+        Task {
+            let tag: String? = (category == "주제") ? nil : category
+            postData = try await mainRepository.getMainData(tag)
+        }
     }
 }
 
@@ -66,7 +97,7 @@ extension MainViewController: UICollectionViewDataSource {
         case rootView.categoryView:
             return MainCategoryModel.categoryList.count
         case rootView.postView:
-            return 10
+            return postData.count
         default:
             return 0
         }
@@ -84,10 +115,19 @@ extension MainViewController: UICollectionViewDataSource {
             return cell
         case rootView.postView:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainPostCollectionViewCell.cellIdentifier, for: indexPath) as? MainPostCollectionViewCell else { return UICollectionViewCell() }
+            if !postData.isEmpty {
+                cell.dataBind(postData[indexPath.item])
+            }
             return cell
         default:
             return UICollectionViewCell()
         }
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        requsetMainAPI(MainCategoryModel.categoryList[indexPath.item].text)
     }
 }
 
