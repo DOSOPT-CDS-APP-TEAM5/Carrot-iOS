@@ -13,11 +13,11 @@ import UIKit
 typealias DefaultMainService = BaseService<MainAPI>
 
 protocol MainService {
-    func getMainData() async throws -> NetworkResult<Any>
+    func getMainData(_ category: String?) async throws -> NetworkResult<Any>
 }
 
 extension DefaultMainService: MainService {
-    func getMainData() async -> NetworkResult<Any> {
-        await self.request(target: .getMainData, dataModel: [MainDTO].self)
+    func getMainData(_ category: String?) async -> NetworkResult<Any> {
+        await self.request(target: .getMainData(category), dataModel: [MainDTO].self)
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 protocol MainRepository {
     
-    func getMainData() async throws -> [MainModel]
+    func getMainData(_ category: String?) async throws -> [MainModel]
 }
 
 class DefaultMainRepository: MainRepository {
@@ -19,9 +19,9 @@ class DefaultMainRepository: MainRepository {
         self.mainService = mainService
     }
     
-    func getMainData() async throws -> [MainModel] {
+    func getMainData(_ category: String? = nil) async throws -> [MainModel] {
         do {
-            let result = try await self.mainService.getMainData()
+            let result = try await self.mainService.getMainData(category ?? nil)
             switch result {
             case .success(let data):
                 return (data as! [MainDTO]).map { $0.toDomain() }

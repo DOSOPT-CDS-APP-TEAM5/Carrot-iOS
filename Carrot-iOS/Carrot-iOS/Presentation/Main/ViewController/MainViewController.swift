@@ -63,9 +63,10 @@ final class MainViewController: UIViewController {
         rootView.postView.delegate = self
     }
     
-    private func requsetMainAPI() {
+    private func requsetMainAPI(_ category: String? = nil) {
         Task {
-            postData = try await mainRepository.getMainData()
+            let tag: String? = (category == "주제") ? nil : category
+            postData = try await mainRepository.getMainData(tag)
         }
     }
 }
@@ -119,5 +120,11 @@ extension MainViewController: UICollectionViewDataSource {
         default:
             return UICollectionViewCell()
         }
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        requsetMainAPI(MainCategoryModel.categoryList[indexPath.item].text)
     }
 }

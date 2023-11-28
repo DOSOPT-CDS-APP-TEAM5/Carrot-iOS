@@ -60,7 +60,6 @@
 		D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA12B0E882B007ECC1B /* SimpleResponse.swift */; };
 		D206CAA42B0E88A6007ECC1B /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */; };
 		D206CAA62B0E8900007ECC1B /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA52B0E8900007ECC1B /* APIConstant.swift */; };
-		D206CAA82B0E8945007ECC1B /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA72B0E8945007ECC1B /* BaseAPI.swift */; };
 		D206CAAA2B0E895A007ECC1B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAA92B0E895A007ECC1B /* NetworkResult.swift */; };
 		D23475C92B0A69220098432F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475C82B0A69220098432F /* String+.swift */; };
 		D23475CB2B0A693A0098432F /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23475CA2B0A693A0098432F /* UIApplication+.swift */; };
@@ -145,7 +144,6 @@
 		D206CAA12B0E882B007ECC1B /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
 		D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		D206CAA52B0E8900007ECC1B /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
-		D206CAA72B0E8945007ECC1B /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		D206CAA92B0E895A007ECC1B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		D23475C82B0A69220098432F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D23475CA2B0A693A0098432F /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 				007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */,
 				D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */,
 				D206CAA52B0E8900007ECC1B /* APIConstant.swift */,
-				D206CAA72B0E8945007ECC1B /* BaseAPI.swift */,
 				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
 				D2A7A03B2B148DAD00DBD284 /* Config.swift */,
 				D2A7A03D2B148DD500DBD284 /* Config.xcconfig */,
@@ -840,7 +837,6 @@
 				D206CA9B2B0E87DC007ECC1B /* DetailTransform.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
 				D23475DD2B0A6AE60098432F /* UITableViewCell+.swift in Sources */,
-				D206CAA82B0E8945007ECC1B /* BaseAPI.swift in Sources */,
 				007BACA12B08A6E8005A34C3 /* 15.swift in Sources */,
 				007BACBB2B08A79E005A34C3 /* 4.swift in Sources */,
 			);

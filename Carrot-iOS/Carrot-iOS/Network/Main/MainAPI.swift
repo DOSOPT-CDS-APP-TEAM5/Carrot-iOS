@@ -11,7 +11,7 @@ import Moya
 import UIKit
 
 enum MainAPI {
-    case getMainData
+    case getMainData(_ category: String?)
 }
 
 extension MainAPI: BaseTargetType {
@@ -31,8 +31,12 @@ extension MainAPI: BaseTargetType {
     
     var task: Task {
         switch self {
-        case .getMainData:
-            return .requestPlain
+        case .getMainData(let category):
+            if let category = category {
+                return .requestParameters(parameters: ["category" : category], encoding: URLEncoding.queryString)
+            } else {
+                return .requestPlain
+            }
         }
     }
 }

@@ -64,7 +64,7 @@ extension BaseService {
         case 200..<205:
             return .success(decodedData)
         case 406:
-            return .authorizationFail((decodedData.message, decodedData.status))
+            return .authorizationFail((decodedData.message, decodedData.code))
         case 400..<500:
             return .requestErr(decodedData.message ?? "요청에러")
         case 500:
