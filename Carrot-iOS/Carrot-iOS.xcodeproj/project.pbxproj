@@ -86,6 +86,7 @@
 		D2A7A0432B1490EC00DBD284 /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0422B1490EC00DBD284 /* MainAPI.swift */; };
 		D2A7A0462B14939E00DBD284 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0452B14939E00DBD284 /* BaseService.swift */; };
 		D2A7A04A2B14C87500DBD284 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A0492B14C87500DBD284 /* MainModel.swift */; };
+		D2A7A04D2B15BDFD00DBD284 /* Moya+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A7A04C2B15BDFD00DBD284 /* Moya+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +168,7 @@
 		D2A7A0422B1490EC00DBD284 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
 		D2A7A0452B14939E00DBD284 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		D2A7A0492B14C87500DBD284 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		D2A7A04C2B15BDFD00DBD284 /* Moya+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		007822602B08A272008F0E17 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D2A7A04B2B15BDCD00DBD284 /* ThirdPartyLibs+ */,
 				0057F1512B0A6C83002D06A5 /* UIColor+.swift */,
 				D23475C42B0A68EE0098432F /* UIKit+ */,
 				D23475C32B0A68E70098432F /* Foundation+ */,
@@ -676,6 +679,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D2A7A04B2B15BDCD00DBD284 /* ThirdPartyLibs+ */ = {
+			isa = PBXGroup;
+			children = (
+				D2A7A04C2B15BDFD00DBD284 /* Moya+.swift */,
+			);
+			path = "ThirdPartyLibs+";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -775,6 +786,7 @@
 				0057F1562B0A7C91002D06A5 /* Device.swift in Sources */,
 				D206CA682B0C7C50007ECC1B /* MainCategoryCollectionViewCell.swift in Sources */,
 				D206CA872B0E86D0007ECC1B /* ClubDTO.swift in Sources */,
+				D2A7A04D2B15BDFD00DBD284 /* Moya+.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
 				D206CA972B0E87C4007ECC1B /* MainTransform.swift in Sources */,
 				007BACA32B08A6ED005A34C3 /* 16.swift in Sources */,
