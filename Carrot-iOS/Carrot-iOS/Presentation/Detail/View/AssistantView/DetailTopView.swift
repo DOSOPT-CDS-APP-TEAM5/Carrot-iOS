@@ -71,10 +71,10 @@ final class DetailTopView: UIView {
         }
         
         shareButton.do {
-            $0.setImage(.icShareCircle, for: .normal)
+            $0.setImage(Image.shareCircle, for: .normal)
         }
         moreButton.do {
-            $0.setImage(.icMeatballCircle, for: .normal)
+            $0.setImage(Image.meatballCircle, for: .normal)
         }
         
         titleView.do {

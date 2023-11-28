@@ -17,8 +17,8 @@ final class DetailDescriptionView: UIView {
     private let upperStackView = UIStackView()
     
     private let tagStackView = UIStackView()
-    private let tag1 = DetailTagLabel()
-    private let tag2 = DetailTagLabel()
+    private let tag1 = PaddingLabel()
+    private let tag2 = PaddingLabel()
     
     private let descriptionLabel = UILabel()
     
