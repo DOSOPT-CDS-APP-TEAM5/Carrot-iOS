@@ -34,6 +34,8 @@
 		007D08642B17336E00A52FB8 /* ClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08632B17336E00A52FB8 /* ClubModel.swift */; };
 		007D08672B17821500A52FB8 /* ClubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08662B17821500A52FB8 /* ClubAPI.swift */; };
 		007D08692B17822600A52FB8 /* ClubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08682B17822600A52FB8 /* ClubService.swift */; };
+		007D086B2B190A4600A52FB8 /* NewClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D086A2B190A4600A52FB8 /* NewClubModel.swift */; };
+		007D086D2B190F3700A52FB8 /* HighlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D086C2B190F3700A52FB8 /* HighlightModel.swift */; };
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
 		00FC5EEE2B13B47B001615BB /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
@@ -142,6 +144,8 @@
 		007D08632B17336E00A52FB8 /* ClubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModel.swift; sourceTree = "<group>"; };
 		007D08662B17821500A52FB8 /* ClubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubAPI.swift; sourceTree = "<group>"; };
 		007D08682B17822600A52FB8 /* ClubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubService.swift; sourceTree = "<group>"; };
+		007D086A2B190A4600A52FB8 /* NewClubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewClubModel.swift; sourceTree = "<group>"; };
+		007D086C2B190F3700A52FB8 /* HighlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightModel.swift; sourceTree = "<group>"; };
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
@@ -548,6 +552,8 @@
 			isa = PBXGroup;
 			children = (
 				007D08632B17336E00A52FB8 /* ClubModel.swift */,
+				007D086A2B190A4600A52FB8 /* NewClubModel.swift */,
+				007D086C2B190F3700A52FB8 /* HighlightModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -957,7 +963,9 @@
 				D23475D92B0A69D30098432F /* UIStackView+.swift in Sources */,
 				D2A7A03C2B148DAD00DBD284 /* Config.swift in Sources */,
 				D206CA9B2B0E87DC007ECC1B /* DetailTransform.swift in Sources */,
+				007D086D2B190F3700A52FB8 /* HighlightModel.swift in Sources */,
 				D23475C92B0A69220098432F /* String+.swift in Sources */,
+				007D086B2B190A4600A52FB8 /* NewClubModel.swift in Sources */,
 				397E10752B122F93004DAD8A /* DetailForumView.swift in Sources */,
 				D23475DD2B0A6AE60098432F /* UITableViewCell+.swift in Sources */,
 				003876B32B0F231000D5C299 /* TownClubCollectionViewCell.swift in Sources */,

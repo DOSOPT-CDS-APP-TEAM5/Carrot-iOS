@@ -14,6 +14,9 @@ final class AllClubViewController: UIViewController {
     
     // MARK: - Properties
     
+    let newClubDummy: [NewClubModel] = NewClubModel.newClubDummy()
+    let highlightDummy: [HighlightModel] = HighlightModel.highlightDummy()
+    
     let clubRepository: ClubRepository
     var postData: [ClubModel] = [] {
         didSet {
@@ -245,12 +248,14 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
             switch indexPath.row {
             case 0, 1, 2:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewClubCollectionViewCell.identifier, for: indexPath) as! NewClubCollectionViewCell
+                cell.bindData(model: newClubDummy[indexPath.row])
                 return cell
             default:
                 return UICollectionViewCell()
             }
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightCollectionViewCell.identifier, for: indexPath) as! HighlightCollectionViewCell
+            cell.bindData(model: highlightDummy[indexPath.row])
             return cell
         default:
             return UICollectionViewCell()
