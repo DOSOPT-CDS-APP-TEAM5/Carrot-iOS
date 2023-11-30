@@ -10,9 +10,16 @@ import UIKit
 import SnapKit
 import Then
 
-class AllClubViewController: UIViewController {
+final class AllClubViewController: UIViewController {
     
     // MARK: - Properties
+    
+    let clubRepository: ClubRepository
+    var postData: [ClubModel] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, _ in
         return self.createSectionLayout(section: sectionIndex)
@@ -20,11 +27,22 @@ class AllClubViewController: UIViewController {
     
     // MARK: - View Life Cycle
     
+    init(clubRepository: ClubRepository) {
+        self.clubRepository = clubRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         setCollectionViewConfig()
+        requsetClubAPI("운동")
+        print(postData)
     }
     
 }
@@ -34,6 +52,13 @@ class AllClubViewController: UIViewController {
 extension AllClubViewController {
     
     // MARK: - @Functions
+    
+    private func requsetClubAPI(_ category: String? = nil) {
+        Task {
+            let tag: String? = (category == "주제") ? nil : category
+            postData = try await clubRepository.getClubData(tag)
+        }
+    }
     
     private func setUI() {
         setStyle()
@@ -202,12 +227,16 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
             switch indexPath.row {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCollectionViewCell.identifier, for: indexPath) as! TabCollectionViewCell
+                cell.delegate = self
                 return cell
             case 1:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.identifier, for: indexPath) as! FilterCollectionViewCell
                 return cell
             case 2, 3, 4:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TownClubCollectionViewCell.identifier, for: indexPath) as! TownClubCollectionViewCell
+                if postData.count > 2 {
+                    cell.bindData(model: postData[indexPath.row-2])
+                }
                 return cell
             default:
                 return UICollectionViewCell()
@@ -260,4 +289,25 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
+}
+
+extension AllClubViewController: TapDelegate {
+    func tapDelegate(index: Int) {
+        switch index {
+        case 0:
+            requsetClubAPI("운동")
+        case 1:
+            requsetClubAPI("운동")
+        case 2:
+            requsetClubAPI("동네친구")
+        case 3:
+            requsetClubAPI("스터디")
+        case 4:
+            requsetClubAPI("가족/육아")
+        case 5:
+            requsetClubAPI("반려동물")
+        default:
+            break
+        }
+    }
 }

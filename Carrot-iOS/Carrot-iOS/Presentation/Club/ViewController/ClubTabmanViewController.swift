@@ -91,7 +91,10 @@ extension ClubTabmanViewController: PageboyViewControllerDataSource {
         
         switch index {
         case 0:
-            return AllClubViewController()
+            return AllClubViewController(
+                clubRepository: DefaultClubRepository(
+                    clubService: DefaultClubService()
+                ))
         default:
             return MyClubViewController()
         }

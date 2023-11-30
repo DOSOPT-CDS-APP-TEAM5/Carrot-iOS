@@ -10,9 +10,14 @@ import UIKit
 import SnapKit
 import Then
 
+protocol TapDelegate {
+    func tapDelegate(index: Int)
+}
+
 final class TabCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "TabCollectionViewCell"
+    var delegate: TapDelegate?
     
     // MARK: - Properties
     
@@ -130,6 +135,7 @@ extension TabCollectionViewCell {
             }
             self.layoutIfNeeded()
         })
+        delegate?.tapDelegate(index: selectedIndex)
     }
     
 }

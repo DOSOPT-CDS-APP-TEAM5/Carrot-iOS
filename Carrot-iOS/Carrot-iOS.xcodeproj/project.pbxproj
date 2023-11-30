@@ -29,8 +29,11 @@
 		007BACA72B08A6FB005A34C3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA62B08A6FB005A34C3 /* SignUpView.swift */; };
 		007BACA92B08A703005A34C3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACA82B08A703005A34C3 /* SignUpViewController.swift */; };
 		007BACAB2B08A711005A34C3 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */; };
-		007BACB72B08A796005A34C3 /* 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACB62B08A796005A34C3 /* 2.swift */; };
 		007BACBB2B08A79E005A34C3 /* 4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BACBA2B08A79E005A34C3 /* 4.swift */; };
+		007D08612B17324D00A52FB8 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 007D08602B17324D00A52FB8 /* Config.xcconfig */; };
+		007D08642B17336E00A52FB8 /* ClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08632B17336E00A52FB8 /* ClubModel.swift */; };
+		007D08672B17821500A52FB8 /* ClubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08662B17821500A52FB8 /* ClubAPI.swift */; };
+		007D08692B17822600A52FB8 /* ClubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D08682B17822600A52FB8 /* ClubService.swift */; };
 		0083B1A22B0BCAA500357725 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083B1A12B0BCAA500357725 /* ClubViewController.swift */; };
 		00FC5EEE2B13B47B001615BB /* TabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */; };
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
@@ -131,11 +134,14 @@
 		0078224D2B089F90008F0E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007822502B089F90008F0E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		007822522B089F90008F0E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		007BACA62B08A6FB005A34C3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		007BACA82B08A703005A34C3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		007BACB62B08A796005A34C3 /* 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2.swift; sourceTree = "<group>"; };
+		007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		007BACBA2B08A79E005A34C3 /* 4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4.swift; sourceTree = "<group>"; };
+		007D08602B17324D00A52FB8 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		007D08632B17336E00A52FB8 /* ClubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModel.swift; sourceTree = "<group>"; };
+		007D08662B17821500A52FB8 /* ClubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubAPI.swift; sourceTree = "<group>"; };
+		007D08682B17822600A52FB8 /* ClubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubService.swift; sourceTree = "<group>"; };
 		0083B1A12B0BCAA500357725 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 		00FC5EED2B13B47B001615BB /* TabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionViewCell.swift; sourceTree = "<group>"; };
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
@@ -293,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				D2A7A0442B14912200DBD284 /* Main */,
+				007D08652B1781F700A52FB8 /* Club */,
 				D206CA782B0E85EF007ECC1B /* DTO */,
 				007822612B08A286008F0E17 /* Foundation */,
 			);
@@ -351,6 +358,7 @@
 				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
 				D2A7A03B2B148DAD00DBD284 /* Config.swift */,
 				D2A7A03D2B148DD500DBD284 /* Config.xcconfig */,
+				007D08602B17324D00A52FB8 /* Config.xcconfig */,
 				D2A7A0452B14939E00DBD284 /* BaseService.swift */,
 			);
 			path = Foundation;
@@ -515,7 +523,7 @@
 		007BACB12B08A75B005A34C3 /* Club */ = {
 			isa = PBXGroup;
 			children = (
-				007BACB62B08A796005A34C3 /* 2.swift */,
+				007D08622B17336100A52FB8 /* Model */,
 			);
 			path = Club;
 			sourceTree = "<group>";
@@ -534,6 +542,23 @@
 				007BACBA2B08A79E005A34C3 /* 4.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		007D08622B17336100A52FB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				007D08632B17336E00A52FB8 /* ClubModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		007D08652B1781F700A52FB8 /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				007D08662B17821500A52FB8 /* ClubAPI.swift */,
+				007D08682B17822600A52FB8 /* ClubService.swift */,
+			);
+			path = Club;
 			sourceTree = "<group>";
 		};
 		397253052B0F31BF009CCD88 /* Model */ = {
@@ -627,7 +652,7 @@
 			children = (
 				D206CA9C2B0E8807007ECC1B /* Common */,
 				D206CA7B2B0E8660007ECC1B /* Detail */,
-				D206CA7A2B0E8656007ECC1B /* CLub */,
+				D206CA7A2B0E8656007ECC1B /* Club */,
 				D206CA792B0E864A007ECC1B /* Main */,
 			);
 			path = DTO;
@@ -641,12 +666,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		D206CA7A2B0E8656007ECC1B /* CLub */ = {
+		D206CA7A2B0E8656007ECC1B /* Club */ = {
 			isa = PBXGroup;
 			children = (
 				D206CA862B0E86D0007ECC1B /* ClubDTO.swift */,
 			);
-			path = CLub;
+			path = Club;
 			sourceTree = "<group>";
 		};
 		D206CA7B2B0E8660007ECC1B /* Detail */ = {
@@ -830,6 +855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007822512B089F90008F0E17 /* LaunchScreen.storyboard in Resources */,
+				007D08612B17324D00A52FB8 /* Config.xcconfig in Resources */,
 				39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */,
 				39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */,
 				0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */,
@@ -860,6 +886,7 @@
 				D206CA682B0C7C50007ECC1B /* MainCategoryCollectionViewCell.swift in Sources */,
 				D206CA872B0E86D0007ECC1B /* ClubDTO.swift in Sources */,
 				D2A7A04D2B15BDFD00DBD284 /* Moya+.swift in Sources */,
+				007D08642B17336E00A52FB8 /* ClubModel.swift in Sources */,
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
 				D206CA972B0E87C4007ECC1B /* MainTransform.swift in Sources */,
 				D2A7A0462B14939E00DBD284 /* BaseService.swift in Sources */,
@@ -872,6 +899,7 @@
 				397253022B0F159D009CCD88 /* DetailCustomTabBar.swift in Sources */,
 				D23475D32B0A69AA0098432F /* UIImageView+.swift in Sources */,
 				003876C72B0FC82F00D5C299 /* FarClubFooterView.swift in Sources */,
+				007D08672B17821500A52FB8 /* ClubAPI.swift in Sources */,
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
 				D206CA922B0E8755007ECC1B /* ClubEntity.swift in Sources */,
@@ -894,6 +922,7 @@
 				D206CAA42B0E88A6007ECC1B /* BaseTargetType.swift in Sources */,
 				D2A7A03F2B148ECD00DBD284 /* URLs.swift in Sources */,
 				D23475DF2B0A6AFA0098432F /* UITextField+.swift in Sources */,
+				007D08692B17822600A52FB8 /* ClubService.swift in Sources */,
 				00FC5EEE2B13B47B001615BB /* TabCollectionViewCell.swift in Sources */,
 				D206CA6F2B0C895E007ECC1B /* MainPostCollectionViewCell.swift in Sources */,
 				D206CA942B0E875C007ECC1B /* DetailEntity.swift in Sources */,
@@ -911,7 +940,6 @@
 				397253042B0F2E89009CCD88 /* DetailTableView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */,
-				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
 				003876C52B0FC2D600D5C299 /* ViewAllFooterView.swift in Sources */,
 				003876C32B0FBEC600D5C299 /* HighlightCollectionViewCell.swift in Sources */,
 				D206CAA62B0E8900007ECC1B /* APIConstant.swift in Sources */,
