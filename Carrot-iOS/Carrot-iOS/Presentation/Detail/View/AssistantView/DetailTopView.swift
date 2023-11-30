@@ -143,4 +143,10 @@ final class DetailTopView: UIView {
             $0.centerX.centerY.equalToSuperview()
         }
     }
+    
+    func bindData(data: DetailModel) {
+        thumbnailView.kfSetImage(url: data.clubImgURL)
+        titleView.text = data.clubName
+        buttontitle.text = "\(data.participantCount)명의 멤버 보기"
+    }
 }

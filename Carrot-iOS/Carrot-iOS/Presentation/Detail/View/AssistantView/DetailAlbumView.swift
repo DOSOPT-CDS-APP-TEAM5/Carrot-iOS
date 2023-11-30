@@ -111,4 +111,10 @@ final class DetailAlbumView: UIView {
             $0.top.trailing.equalToSuperview().inset(9)
         }
     }
+    
+    func bindData(data: DetailModel) {
+        for i in 0..<imageViews.count {
+            imageViews[i].kfSetImage(url: data.albumImgURLs[i])
+        }
+    }
 }

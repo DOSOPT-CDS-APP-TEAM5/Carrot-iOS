@@ -47,4 +47,8 @@ final class DetailBannerImageView: UIView {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func bindData(data: DetailModel) {
+        bannerImageView.kfSetImage(url: data.clubBackgroundImgURL)
+    }
 }

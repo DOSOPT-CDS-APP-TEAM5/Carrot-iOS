@@ -104,4 +104,8 @@ final class DetailDescriptionView: UIView {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func bindData(data: DetailModel) {
+        descriptionLabel.text = data.clubDescription
+    }
 }
