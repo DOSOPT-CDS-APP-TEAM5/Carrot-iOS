@@ -61,7 +61,7 @@ final class DetailTopView: UIView {
         }
         
         thumbnailView.do {
-            $0.image = Image.dummyDetail1
+            $0.image = Image.dummyDetail2
             $0.makeCornerRound(radius: 14)
         }
         
@@ -100,7 +100,7 @@ final class DetailTopView: UIView {
         }
         
         buttonImage.do {
-            $0.image = .icNavigationRight.withRenderingMode(.alwaysTemplate)
+            $0.image = Image.navigationRight?.withRenderingMode(.alwaysTemplate)
             $0.tintColor = .primaryButton
         }
         

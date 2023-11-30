@@ -20,16 +20,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .light 
         
-        let mainViewController = MainViewController(
-            mainRepository: DefaultMainRepository(
-                mainService: DefaultMainService()
-            )
-        )
-        let navigationController = UINavigationController(rootViewController: mainViewController)
-
-        navigationController.isNavigationBarHidden = false
-        self.window?.rootViewController = navigationController
+        let main = DetailViewController()
+        
+        self.window?.rootViewController = main
         self.window?.makeKeyAndVisible()
+//        let mainViewController = MainViewController(
+//            mainRepository: DefaultMainRepository(
+//                mainService: DefaultMainService()
+//            )
+//        )
+//        let navigationController = UINavigationController(rootViewController: mainViewController)
+//
+//        navigationController.isNavigationBarHidden = false
+//        self.window?.rootViewController = navigationController
+//        self.window?.makeKeyAndVisible()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
