@@ -15,4 +15,6 @@ struct DetailModel {
 
 extension DetailModel {
     static var data: [DetailModel] = []
+    
+    
 }
