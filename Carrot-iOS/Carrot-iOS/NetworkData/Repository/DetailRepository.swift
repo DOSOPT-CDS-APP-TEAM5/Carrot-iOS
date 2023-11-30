@@ -9,7 +9,7 @@ import Foundation
 
 protocol DetailRepository {
     
-    func getMainData(_ clubID: Int) async -> DetailModel?
+    func getDetailData(_ clubID: Int) async -> DetailModel?
 }
 
 class DefaultDetailRepository: DetailRepository {
@@ -20,7 +20,7 @@ class DefaultDetailRepository: DetailRepository {
         self.detailService = detailService
     }
     
-    func getMainData(_ clubID: Int = 1) async -> DetailModel? {
+    func getDetailData(_ clubID: Int = 1) async -> DetailModel? {
         let result = await self.detailService.getDetailData(clubID)
         guard case .success(let data) = result else {
             return nil

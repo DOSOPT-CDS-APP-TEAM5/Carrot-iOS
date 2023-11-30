@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .light 
         
-        let main = DetailViewController()
+        let main = DetailViewController(detailRepository: DefaultDetailRepository(detailService: DefaultDetailService()))
         
         self.window?.rootViewController = main
         self.window?.makeKeyAndVisible()
