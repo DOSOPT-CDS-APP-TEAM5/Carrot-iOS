@@ -8,7 +8,7 @@
 import Foundation
 
 public enum URLs{
-    static let getClub = "/api/clubs/{clubId}"
+    static let getClub = "/api/clubs"
     static let postProfile = "/api/clubs/profile"
     static let getCategory = "/api/lives"
     static let getMoreCategory = "/api/clubs?=category"

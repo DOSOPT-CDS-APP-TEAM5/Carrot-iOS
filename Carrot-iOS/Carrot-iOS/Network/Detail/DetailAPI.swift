@@ -17,8 +17,8 @@ enum DetailAPI {
 extension DetailAPI: BaseTargetType {
     var path: String {
         switch self {
-        case .getDetailData:
-            return URLs.getClub
+        case .getDetailData(let clubID):
+            return URLs.getClub + "/\(clubID)"
         }
     }
     
@@ -31,8 +31,8 @@ extension DetailAPI: BaseTargetType {
     
     var task: Task {
         switch self {
-        case .getDetailData(let clubID):
-            return .requestParameters(parameters: ["{clubId}" : clubID], encoding: URLEncoding.queryString)
+        case .getDetailData:
+            return .requestPlain
         }
     }
 }
