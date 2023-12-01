@@ -34,7 +34,7 @@ final class DetailNavigationConrollerBackButton: UIView {
     
     private func style() {
         backButtonImage.do {
-            $0.image = Image.navigationLeft?.withRenderingMode(.alwaysTemplate)
+            $0.image = Image.navigationLeft.withRenderingMode(.alwaysTemplate)
             $0.tintColor = .carrotWhite
         }
     }
