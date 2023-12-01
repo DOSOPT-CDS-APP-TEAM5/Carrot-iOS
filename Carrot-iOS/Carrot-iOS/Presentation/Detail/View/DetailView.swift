@@ -14,7 +14,7 @@ final class DetailView: UIView {
 
     // MARK: - UI Components
     
-    private let pageScrollView = UIScrollView()
+    let pageScrollView = UIScrollView()
     private let scrollContentView = UIStackView()
     
     let bannerImageView = DetailBannerImageView()

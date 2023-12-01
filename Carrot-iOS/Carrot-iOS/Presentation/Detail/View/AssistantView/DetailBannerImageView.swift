@@ -34,6 +34,9 @@ final class DetailBannerImageView: UIView {
     // MARK: - Custom Method
     
     private func style() {
+        bannerImageView.do {
+            $0.contentMode = .scaleAspectFill
+        }
         stackView.do {
             $0.axis = .vertical
             $0.alignment = .fill
