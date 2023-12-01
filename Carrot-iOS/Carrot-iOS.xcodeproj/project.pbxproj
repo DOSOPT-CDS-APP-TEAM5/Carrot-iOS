@@ -21,6 +21,11 @@
 		0057F1522B0A6C83002D06A5 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1512B0A6C83002D06A5 /* UIColor+.swift */; };
 		0057F1542B0A6F20002D06A5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1532B0A6F20002D06A5 /* Image.swift */; };
 		0057F1562B0A7C91002D06A5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057F1552B0A7C91002D06A5 /* Device.swift */; };
+		005AFD092B1A06880001A034 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 005AFD082B1A06880001A034 /* Config.xcconfig */; };
+		005AFD0C2B1A07150001A034 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AFD0B2B1A07150001A034 /* SignUpAPI.swift */; };
+		005AFD0E2B1A072F0001A034 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AFD0D2B1A072F0001A034 /* SignUpService.swift */; };
+		005AFD102B1A0B3A0001A034 /* CustomTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AFD0F2B1A0B3A0001A034 /* CustomTargetType.swift */; };
+		005AFD122B1A0C090001A034 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AFD112B1A0C090001A034 /* SignUpRepository.swift */; };
 		007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822442B089F8F008F0E17 /* AppDelegate.swift */; };
 		007822472B089F8F008F0E17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822462B089F8F008F0E17 /* SceneDelegate.swift */; };
 		007822492B089F8F008F0E17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007822482B089F8F008F0E17 /* ViewController.swift */; };
@@ -131,6 +136,11 @@
 		0057F1512B0A6C83002D06A5 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0057F1532B0A6F20002D06A5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0057F1552B0A7C91002D06A5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		005AFD082B1A06880001A034 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		005AFD0B2B1A07150001A034 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
+		005AFD0D2B1A072F0001A034 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		005AFD0F2B1A0B3A0001A034 /* CustomTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTargetType.swift; sourceTree = "<group>"; };
+		005AFD112B1A0C090001A034 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		007822412B089F8F008F0E17 /* Carrot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		007822442B089F8F008F0E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		007822462B089F8F008F0E17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +252,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005AFD0A2B1A06F80001A034 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				005AFD0B2B1A07150001A034 /* SignUpAPI.swift */,
+				005AFD0D2B1A072F0001A034 /* SignUpService.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		007822382B089F8F008F0E17 = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +325,7 @@
 		0078225B2B08A209008F0E17 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				005AFD0A2B1A06F80001A034 /* SignUp */,
 				D2A7A0442B14912200DBD284 /* Main */,
 				007D08652B1781F700A52FB8 /* Club */,
 				39C7DAF02B188D2900CABB7F /* Detail */,
@@ -363,11 +383,13 @@
 			children = (
 				007BACAA2B08A711005A34C3 /* MoyaLoggingPlugin.swift */,
 				D206CAA32B0E88A6007ECC1B /* BaseTargetType.swift */,
+				005AFD0F2B1A0B3A0001A034 /* CustomTargetType.swift */,
 				D206CAA52B0E8900007ECC1B /* APIConstant.swift */,
 				D206CAA92B0E895A007ECC1B /* NetworkResult.swift */,
 				D2A7A03B2B148DAD00DBD284 /* Config.swift */,
 				D2A7A03D2B148DD500DBD284 /* Config.xcconfig */,
 				007D08602B17324D00A52FB8 /* Config.xcconfig */,
+				005AFD082B1A06880001A034 /* Config.xcconfig */,
 				D2A7A0452B14939E00DBD284 /* BaseService.swift */,
 			);
 			path = Foundation;
@@ -663,6 +685,7 @@
 				D206CA7E2B0E86A4007ECC1B /* MainRepository.swift */,
 				D206CA802B0E86B0007ECC1B /* ClubRepository.swift */,
 				D206CA822B0E86BC007ECC1B /* DetailRepository.swift */,
+				005AFD112B1A0C090001A034 /* SignUpRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -878,6 +901,7 @@
 				007D08612B17324D00A52FB8 /* Config.xcconfig in Resources */,
 				39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */,
 				39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */,
+				005AFD092B1A06880001A034 /* Config.xcconfig in Resources */,
 				0078224E2B089F90008F0E17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -890,6 +914,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				007BACA92B08A703005A34C3 /* SignUpViewController.swift in Sources */,
+				005AFD122B1A0C090001A034 /* SignUpRepository.swift in Sources */,
 				39775FB62B15C2D100BE39A6 /* DetailPaddingLabel.swift in Sources */,
 				003876A62B0E657A00D5C299 /* HeaderView.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
@@ -910,6 +935,7 @@
 				D23475E32B0A6B180098432F /* UIViewController+.swift in Sources */,
 				D206CA972B0E87C4007ECC1B /* MainTransform.swift in Sources */,
 				D2A7A0462B14939E00DBD284 /* BaseService.swift in Sources */,
+				005AFD0E2B1A072F0001A034 /* SignUpService.swift in Sources */,
 				003876C12B0FB90100D5C299 /* FilterCollectionViewCell.swift in Sources */,
 				39C7DAF22B188D4900CABB7F /* DetailAPI.swift in Sources */,
 				0057F1542B0A6F20002D06A5 /* Image.swift in Sources */,
@@ -924,6 +950,7 @@
 				D206CA612B0C69F4007ECC1B /* MainMoreClubCollectionView.swift in Sources */,
 				D23475D12B0A699B0098432F /* UICollectionViewCell++.swift in Sources */,
 				D206CA922B0E8755007ECC1B /* ClubEntity.swift in Sources */,
+				005AFD0C2B1A07150001A034 /* SignUpAPI.swift in Sources */,
 				D206CA992B0E87CF007ECC1B /* ClubTransform.swift in Sources */,
 				397E10772B12328F004DAD8A /* DetailForumLineView.swift in Sources */,
 				397253072B0F31DF009CCD88 /* DetailModel.swift in Sources */,
@@ -933,6 +960,7 @@
 				39D1EEC12B0DEA3900A1A779 /* DetailViewController.swift in Sources */,
 				007BACA72B08A6FB005A34C3 /* SignUpView.swift in Sources */,
 				007822452B089F8F008F0E17 /* AppDelegate.swift in Sources */,
+				005AFD102B1A0B3A0001A034 /* CustomTargetType.swift in Sources */,
 				D23475D52B0A69B90098432F /* UILabel+.swift in Sources */,
 				D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */,
 				D206CAA02B0E8824007ECC1B /* VoidResult.swift in Sources */,

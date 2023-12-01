@@ -127,7 +127,6 @@ final class SignUpView: UIView {
             $0.titleLabel?.textAlignment = .center
             $0.makeCornerRound(radius: 6)
             $0.backgroundColor = .grey200
-            $0.addTarget(nil, action: #selector(tap), for: .touchUpInside)
             $0.isUserInteractionEnabled = false
         }
     }
@@ -172,11 +171,6 @@ final class SignUpView: UIView {
             }
         }
         
-    }
-    
-    @objc func tap() {
-        // 여기에 post 구현하기.
-        print("Tap")
     }
     
     private func layout() {

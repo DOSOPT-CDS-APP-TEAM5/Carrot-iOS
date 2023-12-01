@@ -16,6 +16,7 @@ struct APIConstants{
     static let auth = "Authorization"
     static let refresh = "RefreshToken"
     static let fcm = "FcmToken"
+    static let xClubId = "X-Club-Id"
     
 }
 
@@ -23,5 +24,9 @@ extension APIConstants{
     
     static var noTokenHeader: Dictionary<String,String> {
         [contentType: applicationJSON]
+    }
+    
+    static var yesTokenHeader:Dictionary<String,String> {
+        [contentType: applicationJSON, xClubId: "1"]
     }
 }
