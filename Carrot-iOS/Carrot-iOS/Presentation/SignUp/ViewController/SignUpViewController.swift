@@ -17,6 +17,8 @@ final class SignUpViewController: UIViewController {
     var nickNameCheck: Bool = false
     var introduceCheck: Bool = false
     
+    let signUpRepository: SignUpRepository
+    
     var signUpAvailable: Bool {
         return nickNameCheck && introduceCheck
     }
@@ -26,6 +28,15 @@ final class SignUpViewController: UIViewController {
     
     //MARK: - Life Cycle
     
+    init(signUpRepository: SignUpRepository) {
+        self.signUpRepository = signUpRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         self.view = rootView
     }
@@ -34,12 +45,24 @@ final class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
+        target()
     }
     
     private func delegate() {
         rootView.introduceTextView.delegate = self
         rootView.nameTextField.delegate = self
     }
+    
+    func target() {
+        rootView.signUpButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+    }
+    
+    @objc func buttonPressed() {
+        Task {
+            try await signUpRepository.postSignUpData(nickname: rootView.nameTextField.text!, information: rootView.introducePlaceHolderLabel.text!)
+        }
+    }
+    
 }
 
 extension SignUpViewController: UITextViewDelegate {

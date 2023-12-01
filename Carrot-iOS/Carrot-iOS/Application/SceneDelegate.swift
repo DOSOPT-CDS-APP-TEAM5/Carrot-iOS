@@ -25,7 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                mainService: DefaultMainService()
 //            )
 //        )
-        let mainViewController = SignUpViewController()
+        let mainViewController = SignUpViewController(
+                        signUpRepository: DefaultSignUpRepository(
+                            signUpService: DefaultSignUpService()
+                        )
+                    )
         let navigationController = UINavigationController(rootViewController: mainViewController)
 
         navigationController.isNavigationBarHidden = false
