@@ -71,4 +71,9 @@ extension HighlightCollectionViewCell {
         }
     }
     
+    func bindData(model: HighlightModel) {
+        backgroundImageView.image = model.highlightImg
+        titleLabel.text = model.title
+    }
+    
 }

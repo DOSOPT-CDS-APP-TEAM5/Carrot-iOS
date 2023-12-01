@@ -145,4 +145,12 @@ extension NewClubCollectionViewCell {
         }
     }
     
+    func bindData(model: NewClubModel) {
+        clubImageView.image = model.clubImg
+        titleLabel.text = model.clubName
+        bodyLabel.text = model.clubContent
+        locationNameLabel.text = model.town
+        tagLabel.text = model.category
+    }
+    
 }
