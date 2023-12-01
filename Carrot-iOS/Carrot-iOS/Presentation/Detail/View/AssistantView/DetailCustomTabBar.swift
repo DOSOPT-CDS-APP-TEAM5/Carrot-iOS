@@ -121,8 +121,6 @@ final class DetailCustomTabBar: UIView {
         }
         
     }
-    
-
 
     @objc func tap(_ sender: UIButton) {
         index = sender.tag

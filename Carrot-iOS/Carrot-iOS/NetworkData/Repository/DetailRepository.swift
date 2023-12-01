@@ -6,3 +6,32 @@
 //
 
 import Foundation
+
+protocol DetailRepository {
+    
+    func getDetailData(_ clubID: Int) async -> DetailModel?
+}
+
+class DefaultDetailRepository: DetailRepository {
+    
+    var detailService: DetailService
+    
+    public init(detailService: DetailService) {
+        self.detailService = detailService
+    }
+    
+    func getDetailData(_ clubID: Int = 1) async -> DetailModel? {
+        let result = await self.detailService.getDetailData(clubID)
+        guard case .success(let data) = result else {
+            return nil
+        }
+        return (data as! DetailDTO).toDomain()
+    }
+    
+    // 없어도 되는 친구 ..?
+//    private func decode<T: Decodable>(data: Data, to target: T.Type) -> T? {
+//        return try? JSONDecoder().decode(target, from: data)
+//    }
+}
+
+
