@@ -21,6 +21,7 @@ final class ClubViewController: UIViewController {
     private var contentView = UIView()
     private let searchBar = UISearchBar()
     private let clubTabmanViewController = ClubTabmanViewController()
+    private lazy var floatingButton = UIButton()
     
     // MARK: - View Life Cycle
     
@@ -30,6 +31,7 @@ final class ClubViewController: UIViewController {
         view.backgroundColor = .white
         setNavigation()
         setUI()
+        clubTabmanViewController.allClubViewController.delegate = self
     }
     
 }
@@ -51,6 +53,8 @@ extension ClubViewController {
             $0.placeholder = "우리 동네 모임을 검색해보세요."
             $0.searchBarStyle = .minimal
             $0.searchTextField.backgroundColor = UIColor.grey100
+            $0.searchTextField.font = .carrotTitleMd
+            $0.searchTextField.textColor = .grey300
             $0.setSearchFieldBackgroundImage(UIImage(), for: .normal)
             $0.searchTextField.layer.cornerRadius = 5
             $0.searchTextField.layer.masksToBounds = true
@@ -63,14 +67,24 @@ extension ClubViewController {
         alarmButton.do {
             $0.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
+        
+        floatingButton.do {
+            var config = UIButton.Configuration.filled()
+            config.baseBackgroundColor = .primaryButton
+            config.cornerStyle = .capsule
+            config.image = UIImage(systemName: "plus")?.withConfiguration(UIImage.SymbolConfiguration(pointSize: 20, weight: .medium))
+            $0.configuration = config
+        }
     }
     
     private func setLayout() {
-        view.addSubview(scrollView)
+        view.addSubviews(scrollView, floatingButton)
         
         scrollView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        floatingButton.frame = CGRect(x: view.frame.size.width - 60 - 8 - 10, y: view.frame.size.height - 60 - 8 - 40, width: 60, height: 60)
         
         scrollView.addSubview(contentView)
         
@@ -107,4 +121,15 @@ extension ClubViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension ClubViewController: NavigationDelegate {
+    func navigationDelegate() {
+        if let navigationController = self.navigationController {
+            let detailViewController = DetailViewController(detailRepository: DefaultDetailRepository(detailService: DefaultDetailService()))
+            navigationController.pushViewController(detailViewController, animated: true)
+        } else {
+            print("Navigation controller is nil.")
+        }
+    }
 }

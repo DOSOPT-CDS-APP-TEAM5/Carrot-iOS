@@ -138,6 +138,8 @@ extension TownClubCollectionViewCell {
         userImageView.snp.makeConstraints {
             $0.leading.equalTo(clubImageView.snp.trailing).offset(14)
             $0.centerY.equalToSuperview()
+            $0.width.equalTo(42)
+            $0.height.equalTo(17)
         }
         
         
@@ -179,6 +181,14 @@ extension TownClubCollectionViewCell {
         tagLabel.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(2)
         }
+    }
+    
+    func bindData(model: ClubModel) {
+        clubImageView.kfSetImage(url: model.clubImg)
+        titleLabel.text = model.clubName
+        userImageView.kfSetImage(url: model.participantsImg)
+        numberLabel.text = "\(model.participantCount)명"
+        locationNameLabel.text = model.town
     }
     
 }

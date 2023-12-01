@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class MyClubViewController: UIViewController {
+final class MyClubViewController: UIViewController {
     
     // MARK: - View Life Cycle
     
