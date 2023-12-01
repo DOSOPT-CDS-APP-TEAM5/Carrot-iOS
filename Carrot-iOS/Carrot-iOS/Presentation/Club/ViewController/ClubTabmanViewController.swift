@@ -19,7 +19,11 @@ final class ClubTabmanViewController: TabmanViewController {
     let barView = UIView()
     let botttomLineView = UIView()
     let bar = TMBar.ButtonBar()
-
+    let allClubViewController = AllClubViewController(
+        clubRepository: DefaultClubRepository(
+            clubService: DefaultClubService()
+        ))
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -30,7 +34,7 @@ final class ClubTabmanViewController: TabmanViewController {
         self.isScrollEnabled = false
         self.dataSource = self
     }
-
+    
 }
 
 // MARK: - Extensions
@@ -91,10 +95,7 @@ extension ClubTabmanViewController: PageboyViewControllerDataSource {
         
         switch index {
         case 0:
-            return AllClubViewController(
-                clubRepository: DefaultClubRepository(
-                    clubService: DefaultClubService()
-                ))
+            return allClubViewController
         default:
             return MyClubViewController()
         }

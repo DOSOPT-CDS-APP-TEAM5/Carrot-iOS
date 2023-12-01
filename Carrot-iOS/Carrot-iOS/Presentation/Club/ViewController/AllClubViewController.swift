@@ -10,7 +10,13 @@ import UIKit
 import SnapKit
 import Then
 
+protocol NavigationDelegate {
+    func navigationDelegate()
+}
+
 final class AllClubViewController: UIViewController {
+    
+    var delegate: NavigationDelegate?
     
     // MARK: - Properties
     
@@ -292,6 +298,18 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
             return UICollectionReusableView()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            if indexPath.section == 0 && indexPath.row == 2 {
+//                if let navigationController = self.navigationController {
+//                    let detailViewController = DetailViewController()
+//                    navigationController.pushViewController(detailViewController, animated: true)
+//                } else {
+//                    print("Navigation controller is nil.")
+//                }
+                delegate?.navigationDelegate()
+            }
+        }
     
 }
 

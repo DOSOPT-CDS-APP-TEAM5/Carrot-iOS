@@ -30,6 +30,7 @@ final class ClubViewController: UIViewController {
         view.backgroundColor = .white
         setNavigation()
         setUI()
+        clubTabmanViewController.allClubViewController.delegate = self
     }
     
 }
@@ -109,4 +110,15 @@ extension ClubViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension ClubViewController: NavigationDelegate {
+    func navigationDelegate() {
+        if let navigationController = self.navigationController {
+            let detailViewController = DetailViewController()
+            navigationController.pushViewController(detailViewController, animated: true)
+        } else {
+            print("Navigation controller is nil.")
+        }
+    }
 }
