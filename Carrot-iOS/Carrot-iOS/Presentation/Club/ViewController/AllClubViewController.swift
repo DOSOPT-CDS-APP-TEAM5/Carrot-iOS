@@ -29,6 +29,7 @@ final class AllClubViewController: UIViewController {
             collectionView.reloadData()
         }
     }
+    var categoryNum: Int = 0
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, _ in
         return self.createSectionLayout(section: sectionIndex)
@@ -300,16 +301,10 @@ extension AllClubViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            if indexPath.section == 0 && indexPath.row == 2 {
-//                if let navigationController = self.navigationController {
-//                    let detailViewController = DetailViewController()
-//                    navigationController.pushViewController(detailViewController, animated: true)
-//                } else {
-//                    print("Navigation controller is nil.")
-//                }
-                delegate?.navigationDelegate()
-            }
+        if indexPath.section == 0 && indexPath.row == 2 && (categoryNum == 0 || categoryNum == 1) {
+            delegate?.navigationDelegate()
         }
+    }
     
 }
 
@@ -317,16 +312,22 @@ extension AllClubViewController: TapDelegate {
     func tapDelegate(index: Int) {
         switch index {
         case 0:
+            categoryNum = index
             requsetClubAPI("운동")
         case 1:
+            categoryNum = index
             requsetClubAPI("운동")
         case 2:
+            categoryNum = index
             requsetClubAPI("동네친구")
         case 3:
+            categoryNum = index
             requsetClubAPI("스터디")
         case 4:
+            categoryNum = index
             requsetClubAPI("가족/육아")
         case 5:
+            categoryNum = index
             requsetClubAPI("반려동물")
         default:
             break
