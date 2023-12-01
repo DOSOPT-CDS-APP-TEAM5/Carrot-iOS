@@ -45,7 +45,6 @@ final class AllClubViewController: UIViewController {
         setUI()
         setCollectionViewConfig()
         requsetClubAPI("운동")
-        print(postData)
     }
     
 }

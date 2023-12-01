@@ -51,6 +51,8 @@ extension ClubViewController {
             $0.placeholder = "우리 동네 모임을 검색해보세요."
             $0.searchBarStyle = .minimal
             $0.searchTextField.backgroundColor = UIColor.grey100
+            $0.searchTextField.font = .carrotTitleMd
+            $0.searchTextField.textColor = .grey300
             $0.setSearchFieldBackgroundImage(UIImage(), for: .normal)
             $0.searchTextField.layer.cornerRadius = 5
             $0.searchTextField.layer.masksToBounds = true
