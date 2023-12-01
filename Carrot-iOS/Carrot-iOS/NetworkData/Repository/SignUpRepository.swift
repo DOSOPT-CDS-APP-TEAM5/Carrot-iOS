@@ -9,7 +9,7 @@ import Foundation
 
 protocol SignUpRepository {
     
-    func postSignUpData(nickname: String, information: String) async throws -> Bool?
+    func postSignUpData(nickname: String, information: String) async throws -> SimpleResponse?
 }
 
 class DefaultSignUpRepository: SignUpRepository {
@@ -20,12 +20,12 @@ class DefaultSignUpRepository: SignUpRepository {
         self.signUpService = signUpService
     }
     
-    func postSignUpData(nickname: String, information: String) async throws -> Bool? {
+    func postSignUpData(nickname: String, information: String) async throws -> SimpleResponse? {
         let result = try await self.signUpService.postSignUpData(nickname: nickname, information: information)
         guard case .success(let data) = result else {
-            return false
+            return nil
         }
-        return true
+        return data as! SimpleResponse
     }
     
     // 없어도 되는 친구 ..?

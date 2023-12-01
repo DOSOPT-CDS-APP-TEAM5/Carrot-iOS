@@ -18,6 +18,7 @@ final class SignUpViewController: UIViewController {
     var introduceCheck: Bool = false
     
     let signUpRepository: SignUpRepository
+    var response: SimpleResponse?
     
     var signUpAvailable: Bool {
         return nickNameCheck && introduceCheck
@@ -59,7 +60,11 @@ final class SignUpViewController: UIViewController {
     
     @objc func buttonPressed() {
         Task {
-            try await signUpRepository.postSignUpData(nickname: rootView.nameTextField.text!, information: rootView.introducePlaceHolderLabel.text!)
+            response = try await signUpRepository.postSignUpData(nickname: rootView.nameTextField.text!, information: rootView.introducePlaceHolderLabel.text!)
+            if response?.code == 201 {
+                print("콜팝")
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
