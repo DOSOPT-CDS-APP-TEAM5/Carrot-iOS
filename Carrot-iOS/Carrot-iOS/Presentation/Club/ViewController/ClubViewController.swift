@@ -126,7 +126,7 @@ extension ClubViewController {
 extension ClubViewController: NavigationDelegate {
     func navigationDelegate() {
         if let navigationController = self.navigationController {
-            let detailViewController = DetailViewController()
+            let detailViewController = DetailViewController(detailRepository: DefaultDetailRepository(detailService: DefaultDetailService()))
             navigationController.pushViewController(detailViewController, animated: true)
         } else {
             print("Navigation controller is nil.")

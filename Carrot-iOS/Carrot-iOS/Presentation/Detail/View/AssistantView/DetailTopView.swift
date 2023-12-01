@@ -98,7 +98,7 @@ final class DetailTopView: UIView {
         }
         
         buttonImage.do {
-            $0.image = Image.navigationRight?.withRenderingMode(.alwaysTemplate)
+            $0.image = Image.navigationRight.withRenderingMode(.alwaysTemplate)
             $0.tintColor = .primaryButton
         }
         
