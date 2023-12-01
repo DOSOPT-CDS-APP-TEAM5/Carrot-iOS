@@ -61,7 +61,6 @@ final class DetailTopView: UIView {
         }
         
         thumbnailView.do {
-            $0.image = Image.dummyDetail2
             $0.makeCornerRound(radius: 14)
         }
         
@@ -73,12 +72,12 @@ final class DetailTopView: UIView {
         shareButton.do {
             $0.setImage(Image.shareCircle, for: .normal)
         }
+        
         moreButton.do {
             $0.setImage(Image.meatballCircle, for: .normal)
         }
         
         titleView.do {
-            $0.text = "[수지] 테니스 치실 동네분들 모십니다 ^^"
             $0.font = .carrotHead
             $0.textColor = .carrotBlack
         }
@@ -94,7 +93,6 @@ final class DetailTopView: UIView {
         }
         
         buttontitle.do {
-            $0.text = "40명의 멤버 보기"
             $0.font = .carrotSubtitle
             $0.textColor = .primaryButton
         }
@@ -135,6 +133,10 @@ final class DetailTopView: UIView {
             $0.edges.equalToSuperview()
         }
         
+        thumbnailView.snp.makeConstraints {
+            $0.width.height.equalTo(70)
+        }
+        
         moreMemberButton.snp.makeConstraints {
             $0.height.equalTo(41)
         }
@@ -148,5 +150,11 @@ final class DetailTopView: UIView {
         thumbnailView.kfSetImage(url: data.clubImgURL)
         titleView.text = data.clubName
         buttontitle.text = "\(data.participantCount)명의 멤버 보기"
+    }
+    
+    func bindDummyData() {
+        thumbnailView.image = Image.dummyDetail2
+        titleView.text = "[수지] 테니스 치실 동네분들 모십니다 ^^"
+        buttontitle.text = "40명의 멤버 보기"
     }
 }

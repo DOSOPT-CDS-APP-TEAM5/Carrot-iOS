@@ -13,9 +13,7 @@ import Then
 final class DetailAlbumView: UIView {
     // MARK: - Properties
     
-    private let images: [UIImage] = [
-        Image.dummyDetail3, Image.dummyDetail4, Image.dummyDetail5, Image.dummyDetail6, Image.dummyDetail7
-    ]
+    
     
     // MARK: - UI Components
     
@@ -23,7 +21,7 @@ final class DetailAlbumView: UIView {
     private let upperStack = UIStackView()
     private let lowerStack = UIStackView()
     private let titleLabel = PaddingLabel(padding: UIEdgeInsets(top: 20, left: 15, bottom: 14, right: 15) )
-    private lazy var imageViews: [UIImageView] = images.map { UIImageView(image: $0) }
+    private let imageViews: [UIImageView] = [1, 2, 3, 4, 5].map { _ in return UIImageView() }
     private let moreButton = UIButton()
     private let morePictrueButton = UIImageView()
     
@@ -52,7 +50,7 @@ final class DetailAlbumView: UIView {
         }
         
         titleLabel.do {
-            $0.text = "앨범 4"
+            $0.text = "앨범 5"
             $0.textColor = .carrotBlack
             $0.font = .carrotButton
         }
@@ -86,13 +84,14 @@ final class DetailAlbumView: UIView {
         upperStack.addArrangedSubViews(
             imageViews[0], imageViews[1], imageViews[2]
         )
+        
         lowerStack.addArrangedSubViews(
             imageViews[3], imageViews[4], moreButton
         )
+        
         imageViews[3].addSubviews(
             morePictrueButton
         )
-        
     }
     
     private func layout() {
@@ -101,12 +100,15 @@ final class DetailAlbumView: UIView {
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview().inset(20)
         }
+        
         upperStack.snp.makeConstraints {
             $0.height.equalTo(upperStack.snp.width).multipliedBy(1.1/3)
         }
+        
         lowerStack.snp.makeConstraints {
             $0.height.equalTo(upperStack.snp.width).multipliedBy(1.1/3)
         }
+        
         morePictrueButton.snp.makeConstraints {
             $0.top.trailing.equalToSuperview().inset(9)
         }
@@ -115,6 +117,15 @@ final class DetailAlbumView: UIView {
     func bindData(data: DetailModel) {
         for i in 0..<imageViews.count {
             imageViews[i].kfSetImage(url: data.albumImgURLs[i])
+        }
+    }
+    
+    func bindDummyData() {
+        let images: [UIImage] = [
+            Image.dummyDetail3, Image.dummyDetail4, Image.dummyDetail5, Image.dummyDetail6, Image.dummyDetail7
+        ]
+        for i in 0..<images.count {
+            imageViews[i].image = images[i]
         }
     }
 }

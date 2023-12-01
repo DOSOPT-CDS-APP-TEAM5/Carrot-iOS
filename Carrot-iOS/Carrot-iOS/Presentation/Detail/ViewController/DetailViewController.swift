@@ -14,7 +14,7 @@ final class DetailViewController: UIViewController {
     
     //MARK: - Properties
     
-    var clubID: Int? = nil
+    var clubID: Int = 1
     let detailRepository: DetailRepository
     
     //MARK: - UI Components
@@ -50,22 +50,28 @@ final class DetailViewController: UIViewController {
     
     private func requsetMainAPI() {
         Task {
-            guard let data = await detailRepository.getDetailData(self.clubID ?? 1) else {
+            guard let data = await detailRepository.getDetailData(self.clubID) else {
                 return
             }
-            DetailModel.data.append(data)
-            bindData()
+            bindData(data: data)
         }
     }
     
-    private func bindData() {
-        let data = DetailModel.data[clubID ?? 0]
-        
+    private func bindData(data: DetailModel) {
         rootView.do {
             $0.bannerImageView.bindData(data: data)
             $0.topView.bindData(data: data)
             $0.descriptionView.bindData(data: data)
             $0.albumView.bindData(data: data)
+        }
+    }
+    
+    private func bindDummyData() {
+        rootView.do {
+            $0.bannerImageView.bindDummyData()
+            $0.topView.bindDummyData()
+            $0.descriptionView.bindDummyData()
+            $0.albumView.bindDummyData()
         }
     }
 }

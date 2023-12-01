@@ -70,20 +70,9 @@ final class DetailDescriptionView: UIView {
         }
         
         descriptionLabel.do {
-            $0.text = """
-            우리 동네 테니스 모임(수지)
-            상시회원 모집
-            *20~50대 게임(주로 복식) 가능하신 분
-            *주소가 용인에 거주 하시는 분
-            *주 코트 위치: 신봉동(고가다리밑), 성복동(배수지코트), 풍덕천동(
-            수지체육공원)
-            *회비 없음 (유료 코트시 n/1)
-            *회원간 예약 후 원하시는 시간에 자유롭게 운동 합니다
-            """
             $0.numberOfLines = 0
             $0.font = .carrotBody
             $0.textColor = .carrotBlack
-            $0.setLineSpacingAndKerning(spacingPercentage: 160, kerningPercentage: -4.3)
         }
     }
     
@@ -95,7 +84,7 @@ final class DetailDescriptionView: UIView {
         )
         
         tagStackView.addArrangedSubViews(
-            tag1, tag2, UIView()   // 마지막 view 가 늘어나므로, 더미 뷰를 넣어줭주었음.
+            tag1, tag2, UIView()   // 마지막 view 가 늘어나므로, 더미 뷰를 넣어주었음.
         )
     }
     
@@ -106,6 +95,25 @@ final class DetailDescriptionView: UIView {
     }
     
     func bindData(data: DetailModel) {
-        descriptionLabel.text = data.clubDescription
+        descriptionLabel.do {
+            $0.text = data.clubDescription
+            $0.setLineSpacingAndKerning(spacingPercentage: 160, kerningPercentage: -4.3)
+        }
+    }
+    
+    func bindDummyData() {
+        descriptionLabel.do {
+            $0.text = """
+            우리 동네 테니스 모임(수지)
+            상시회원 모집
+            *20~50대 게임(주로 복식) 가능하신 분
+            *주소가 용인에 거주 하시는 분
+            *주 코트 위치: 신봉동(고가다리밑), 성복동(배수지코트), 풍덕천동(
+            수지체육공원)
+            *회비 없음 (유료 코트시 n/1)
+            *회원간 예약 후 원하시는 시간에 자유롭게 운동 합니다
+            """
+            $0.setLineSpacingAndKerning(spacingPercentage: 160, kerningPercentage: -4.3)
+        }
     }
 }

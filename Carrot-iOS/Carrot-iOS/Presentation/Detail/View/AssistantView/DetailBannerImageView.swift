@@ -14,6 +14,7 @@ final class DetailBannerImageView: UIView {
     
     // MARK: - UI Components
     
+    private let stackView = UIStackView()
     private let bannerImageView = UIImageView()
     
     // MARK: - Life Cycle
@@ -33,22 +34,33 @@ final class DetailBannerImageView: UIView {
     // MARK: - Custom Method
     
     private func style() {
-        bannerImageView.do {
-            $0.image = Image.dummyDetail1
+        stackView.do {
+            $0.axis = .vertical
+            $0.alignment = .fill
         }
+//        bannerImageView.do {
+//            $0.image = Image.dummyDetail1
+//        }
+        
     }
     
     private func hieararchy() {
-        self.addSubviews(bannerImageView)
+        self.addSubviews(stackView)
+        stackView.addArrangedSubview(bannerImageView)
     }
     
     private func layout() {
-        bannerImageView.snp.makeConstraints {
+        stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+            $0.height.equalTo(stackView.snp.width).multipliedBy(0.5066)
         }
     }
     
     func bindData(data: DetailModel) {
         bannerImageView.kfSetImage(url: data.clubBackgroundImgURL)
+    }
+    
+    func bindDummyData() {
+        bannerImageView.image = Image.dummyDetail1
     }
 }
