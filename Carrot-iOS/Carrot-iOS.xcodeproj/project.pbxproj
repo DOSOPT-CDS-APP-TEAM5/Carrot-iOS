@@ -36,7 +36,6 @@
 		39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39334A4B2B0C6EFE00A17275 /* UIFont+.swift */; };
 		397253002B0F10FA009CCD88 /* DetailJoinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */; };
 		397253022B0F159D009CCD88 /* DetailCustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */; };
-		397253042B0F2E89009CCD88 /* DetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397253032B0F2E89009CCD88 /* DetailTableView.swift */; };
 		397253072B0F31DF009CCD88 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397253062B0F31DF009CCD88 /* DetailModel.swift */; };
 		397253092B10477F009CCD88 /* DetailTableViewAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397253082B10477F009CCD88 /* DetailTableViewAlbumCell.swift */; };
 		3972530B2B10A0D7009CCD88 /* DetailAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972530A2B10A0D7009CCD88 /* DetailAlbumView.swift */; };
@@ -52,6 +51,8 @@
 		39D1EEC62B0DED6700A1A779 /* DetailTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC52B0DED6700A1A779 /* DetailTopView.swift */; };
 		39D1EEC82B0DEEE500A1A779 /* DetailBannerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC72B0DEEE500A1A779 /* DetailBannerImageView.swift */; };
 		39D1EECA2B0E064A00A1A779 /* DetailDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */; };
+		39FB9BE02B199C8E00E6B95F /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB9BDF2B199C8E00E6B95F /* TestVC.swift */; };
+		39FB9BE22B19A16A00E6B95F /* DetailNavigationConrollerBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FB9BE12B19A16A00E6B95F /* DetailNavigationConrollerBackButton.swift */; };
 		39FE56752B0DA82600A17A03 /* AppleSDGothicNeo.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */; };
 		39FE56762B0DA82600A17A03 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39FE56742B0DA82600A17A03 /* SF-Pro.ttf */; };
 		D206CA582B0C5B9E007ECC1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CA572B0C5B9E007ECC1B /* MainViewController.swift */; };
@@ -143,7 +144,6 @@
 		39334A4B2B0C6EFE00A17275 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJoinButton.swift; sourceTree = "<group>"; };
 		397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCustomTabBar.swift; sourceTree = "<group>"; };
-		397253032B0F2E89009CCD88 /* DetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableView.swift; sourceTree = "<group>"; };
 		397253062B0F31DF009CCD88 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		397253082B10477F009CCD88 /* DetailTableViewAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewAlbumCell.swift; sourceTree = "<group>"; };
 		3972530A2B10A0D7009CCD88 /* DetailAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumView.swift; sourceTree = "<group>"; };
@@ -159,6 +159,8 @@
 		39D1EEC72B0DEEE500A1A779 /* DetailBannerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBannerImageView.swift; sourceTree = "<group>"; };
 		39D1EEC92B0E064A00A1A779 /* DetailDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionView.swift; sourceTree = "<group>"; };
 		39D1EECB2B0E08F700A1A779 /* DetailPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPaddingLabel.swift; sourceTree = "<group>"; };
+		39FB9BDF2B199C8E00E6B95F /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		39FB9BE12B19A16A00E6B95F /* DetailNavigationConrollerBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationConrollerBackButton.swift; sourceTree = "<group>"; };
 		39FE56732B0DA82600A17A03 /* AppleSDGothicNeo.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeo.ttc; sourceTree = "<group>"; };
 		39FE56742B0DA82600A17A03 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D206CA572B0C5B9E007ECC1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				39D1EEC02B0DEA3900A1A779 /* DetailViewController.swift */,
+				39FB9BDF2B199C8E00E6B95F /* TestVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -567,12 +570,12 @@
 				39D1EECB2B0E08F700A1A779 /* DetailPaddingLabel.swift */,
 				397252FF2B0F10FA009CCD88 /* DetailJoinButton.swift */,
 				397253012B0F159D009CCD88 /* DetailCustomTabBar.swift */,
-				397253032B0F2E89009CCD88 /* DetailTableView.swift */,
 				3972530A2B10A0D7009CCD88 /* DetailAlbumView.swift */,
 				397E10702B11F5BD004DAD8A /* DetailSpacerView.swift */,
 				397E10722B11F719004DAD8A /* DetailEventView.swift */,
 				397E10742B122F93004DAD8A /* DetailForumView.swift */,
 				397E10762B12328F004DAD8A /* DetailForumLineView.swift */,
+				39FB9BE12B19A16A00E6B95F /* DetailNavigationConrollerBackButton.swift */,
 			);
 			path = AssistantView;
 			sourceTree = "<group>";
@@ -861,7 +864,9 @@
 				39775FB62B15C2D100BE39A6 /* DetailPaddingLabel.swift in Sources */,
 				003876A62B0E657A00D5C299 /* HeaderView.swift in Sources */,
 				39334A4C2B0C6EFE00A17275 /* UIFont+.swift in Sources */,
+				39FB9BE22B19A16A00E6B95F /* DetailNavigationConrollerBackButton.swift in Sources */,
 				D23475CF2B0A695C0098432F /* UICollectionReuseableView+.swift in Sources */,
+				39FB9BE02B199C8E00E6B95F /* TestVC.swift in Sources */,
 				D206CA812B0E86B1007ECC1B /* ClubRepository.swift in Sources */,
 				D206CAAA2B0E895A007ECC1B /* NetworkResult.swift in Sources */,
 				007822492B089F8F008F0E17 /* ViewController.swift in Sources */,
@@ -923,7 +928,6 @@
 				D2A7A0412B14904600DBD284 /* MainService.swift in Sources */,
 				D2A7A04A2B14C87500DBD284 /* MainModel.swift in Sources */,
 				D206CA9E2B0E881B007ECC1B /* GenericResponse.swift in Sources */,
-				397253042B0F2E89009CCD88 /* DetailTableView.swift in Sources */,
 				D23475DB2B0A69DF0098432F /* UITableHeaderFooterView+.swift in Sources */,
 				D206CAA22B0E882B007ECC1B /* SimpleResponse.swift in Sources */,
 				007BACB72B08A796005A34C3 /* 2.swift in Sources */,
