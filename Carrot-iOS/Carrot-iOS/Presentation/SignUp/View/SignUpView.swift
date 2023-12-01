@@ -20,11 +20,10 @@ final class SignUpView: UIView {
     private let profileImageView = UIImageView(image: Image.editProfile)
     
     private let nameLabel = UILabel()
-    let nameTextField = UITextField()
+    private let nameTextField = UITextField()
     private let nameCntLabel = UILabel()
     
     let introduceTextView = UITextView()
-    let introducePlaceHolderLabel = UILabel()
     private let introduceLabel = UILabel()
     private let introduceCntLabel = UILabel()
     
@@ -99,22 +98,17 @@ final class SignUpView: UIView {
         }
         
         introduceTextView.do {
+            $0.text = "자기소개를 입력해주세요."
             $0.font = .carrotInfo
             $0.textAlignment = .left
             $0.makeCornerRound(radius: 5)
-            $0.textContainerInset = UIEdgeInsets(top: 17.0, left: 15.0, bottom: 17.0, right: 15.0)
-            $0.textColor = .carrotBlack
+            $0.textContainerInset = UIEdgeInsets(top: 17.0, left: 15.0, bottom: 0.0, right: 0.0)
+            $0.textColor = .grey400
             $0.setBorder(borderWidth: 1, borderColor: .grey400)
         }
         
-        introducePlaceHolderLabel.do {
-            $0.text = "자기소개를 입력해주세요."
-            $0.font = .carrotInfo
-            $0.textColor = .grey400
-        }
-        
         introduceCntLabel.do {
-            $0.text = "0/200"
+            $0.text = "9/200"
             $0.textColor = .grey400
             $0.textAlignment = .left
             $0.font = .carrotBodyNumber
@@ -122,13 +116,11 @@ final class SignUpView: UIView {
         
         signUpButton.do {
             $0.setTitle("가입하기", for: .normal)
-            $0.titleLabel?.textColor = .grey100
+            $0.titleLabel?.textColor = .carrotWhite
             $0.titleLabel?.font = .carrotButton
             $0.titleLabel?.textAlignment = .center
             $0.makeCornerRound(radius: 6)
-            $0.backgroundColor = .grey200
-            $0.addTarget(nil, action: #selector(tap), for: .touchUpInside)
-            $0.isUserInteractionEnabled = false
+            $0.backgroundColor = .primaryButton
         }
     }
     
@@ -146,37 +138,6 @@ final class SignUpView: UIView {
             introduceCntLabel,
             signUpButton
         )
-        
-        introduceTextView.addSubviews(introducePlaceHolderLabel)
-    }
-    
-    func updateintroduceCntLabel(characterCount: Int) {
-        introduceCntLabel.text = "\(characterCount)/200"
-    }
-    func updatenameCntLabel(characterCount: Int) {
-        nameCntLabel.text = "\(characterCount)/12"
-    }
-    
-    func updateSignUpButton(available: Bool) {
-        if available {
-            signUpButton.do {
-                $0.isUserInteractionEnabled = true
-                $0.titleLabel?.textColor = .carrotWhite
-                $0.backgroundColor = .primaryButton
-            }
-        } else {
-            signUpButton.do {
-                $0.isUserInteractionEnabled = false
-                $0.titleLabel?.textColor = .grey100
-                $0.backgroundColor = .grey200
-            }
-        }
-        
-    }
-    
-    @objc func tap() {
-        // 여기에 post 구현하기.
-        print("Tap")
     }
     
     private func layout() {
@@ -231,11 +192,6 @@ final class SignUpView: UIView {
             $0.top.equalTo(introduceLabel.snp.bottom).offset(15)
             $0.leading.trailing.equalToSuperview().inset(15)
             $0.height.equalTo(102)
-        }
-        
-        introducePlaceHolderLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(17)
-            $0.leading.equalToSuperview().inset(15)
         }
         
         introduceCntLabel.snp.makeConstraints {
