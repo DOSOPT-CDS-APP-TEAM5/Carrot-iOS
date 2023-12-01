@@ -38,10 +38,6 @@ final class DetailBannerImageView: UIView {
             $0.axis = .vertical
             $0.alignment = .fill
         }
-//        bannerImageView.do {
-//            $0.image = Image.dummyDetail1
-//        }
-        
     }
     
     private func hieararchy() {
