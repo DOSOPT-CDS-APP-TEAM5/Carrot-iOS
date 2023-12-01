@@ -24,7 +24,7 @@ final class DetailView: UIView {
     let albumView = DetailAlbumView()
     private let eventView = DetailEventView()
     private let forumView = DetailForumView()
-    private let joinButton = DetailJoinButton()
+    lazy var joinButton = DetailJoinButton()
     
     // MARK: - Life Cycle
     

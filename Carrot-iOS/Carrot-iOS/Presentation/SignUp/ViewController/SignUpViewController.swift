@@ -49,13 +49,24 @@ final class SignUpViewController: UIViewController {
         target()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func target() {
+        rootView.backButton.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
+        rootView.signUpButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+    }
+    
+    @objc func backButtonDidTap() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     private func delegate() {
         rootView.introduceTextView.delegate = self
         rootView.nameTextField.delegate = self
-    }
-    
-    func target() {
-        rootView.signUpButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
     @objc func buttonPressed() {

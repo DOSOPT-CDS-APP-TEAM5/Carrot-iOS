@@ -14,7 +14,7 @@ final class DetailJoinButton: UIView {
     
     // MARK: - UI Components
     
-    private let joinButton = UIButton()
+    let joinButton = UIButton()
     
     // MARK: - Life Cycle
     

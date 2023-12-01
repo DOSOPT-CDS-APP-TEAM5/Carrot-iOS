@@ -40,14 +40,31 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate()
+        target()
         requsetMainAPI()
     }
     
-    private func delegate() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    private func target() {
+        self.rootView.joinButton.joinButton.addTarget(
+            self, 
+            action: #selector(joinButtonDidTap),
+            for: .touchUpInside
+        )
     }
     
+    @objc func joinButtonDidTap() {
+        let signUPVC = SignUpViewController(
+            signUpRepository: DefaultSignUpRepository(
+                signUpService: DefaultSignUpService()
+            )
+        )
+        self.navigationController?.pushViewController(signUPVC, animated: true)
+    }
     private func requsetMainAPI() {
         Task {
             guard let data = await detailRepository.getDetailData(self.clubID) else {

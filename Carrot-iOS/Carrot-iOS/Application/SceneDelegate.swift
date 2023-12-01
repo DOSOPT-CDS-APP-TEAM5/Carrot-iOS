@@ -20,16 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .light 
         
-//        let mainViewController = MainViewController(
-//            mainRepository: DefaultMainRepository(
-//                mainService: DefaultMainService()
-//            )
-//        )
-        let mainViewController = SignUpViewController(
-                        signUpRepository: DefaultSignUpRepository(
-                            signUpService: DefaultSignUpService()
-                        )
-                    )
+        let mainViewController = MainViewController(
+            mainRepository: DefaultMainRepository(
+                mainService: DefaultMainService()
+            )
+        )
         let navigationController = UINavigationController(rootViewController: mainViewController)
 
         navigationController.isNavigationBarHidden = false

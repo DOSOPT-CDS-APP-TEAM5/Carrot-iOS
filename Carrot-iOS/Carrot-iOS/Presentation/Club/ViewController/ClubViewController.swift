@@ -14,9 +14,9 @@ final class ClubViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let backButton = UIBarButtonItem(image: UIImage.icNavigationLeft, style: .plain, target: self, action: nil)
-    private let profileButton = UIBarButtonItem(image: UIImage(named: "ic_profile"), style: .plain, target: self, action: nil)
-    private let alarmButton = UIBarButtonItem(image: UIImage(named: "ic_alarm"), style: .plain, target: self, action: nil)
+    private lazy var backButton = UIBarButtonItem(image: UIImage.icNavigationLeft, style: .plain, target: self, action: #selector(backButtonTapped))
+    private lazy var profileButton = UIBarButtonItem(image: UIImage(named: "ic_profile"), style: .plain, target: self, action: nil)
+    private lazy var alarmButton = UIBarButtonItem(image: UIImage(named: "ic_alarm"), style: .plain, target: self, action: nil)
     private let scrollView = UIScrollView()
     private var contentView = UIView()
     private let searchBar = UISearchBar()
@@ -33,7 +33,6 @@ final class ClubViewController: UIViewController {
         setUI()
         clubTabmanViewController.allClubViewController.delegate = self
     }
-    
 }
 
 // MARK: - Extensions
@@ -117,7 +116,7 @@ extension ClubViewController {
         self.navigationItem.leftBarButtonItem = backButton
     }
     
-    @objc func backButtonTapped(_ sender: UIButton) {
+    @objc func backButtonTapped() {
         self.navigationController?.popViewController(animated: true)
     }
     

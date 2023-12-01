@@ -44,12 +44,27 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         delegate()
+        target()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         requsetMainAPI()
+    }
+    
+    private func target() {
+        let tapgesture: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(footerDidTapEvent)
+        )
+        self.rootView.moreClubFooterView.addGestureRecognizer(tapgesture)
+       
+    }
+    
+    @objc func footerDidTapEvent() {
+        let clubVC = ClubViewController()
+        self.navigationController?.pushViewController(clubVC, animated: true)
     }
     
     private func delegate() {
