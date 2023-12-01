@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                mainService: DefaultMainService()
 //            )
 //        )
-        let mainViewController = ClubViewController()
+        let mainViewController = SignUpViewController()
         let navigationController = UINavigationController(rootViewController: mainViewController)
 
         navigationController.isNavigationBarHidden = false
